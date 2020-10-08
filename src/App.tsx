@@ -1,9 +1,9 @@
 import React from "react";
 import Avatar from "./components/avatar";
 import Card from "./components/card";
-import GlobalStyle from "./components/globalStyle";
+import GlobalStyle from "./style/globalStyle";
 import { MainWrapper, Container} from "./components/layoutComponents";
-import "./fonts.css";
+import "./style/fonts.css";
 
 function App() {
   return (
