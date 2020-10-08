@@ -1,6 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Avatar from "./avatar";
 
 function App() {
   return (
@@ -18,6 +19,10 @@ function App() {
         >
           Learn React
         </a>
+        <Avatar
+          title="François Degrincourt"
+          titleId="Avatar François Degrincourt"
+        />
       </header>
     </div>
   );
