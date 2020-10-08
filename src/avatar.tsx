@@ -1,11 +1,53 @@
 import React, { useEffect } from "react";
+import styled from 'styled-components';
 
 interface AvatarProps {
   title: string;
   titleId: string;
 }
 
-const handleEyesMovement = () => {};
+const SvgStyled = styled.svg`
+  .pupil {
+  transition: transform 0.35s ease;
+  animation: hide forwards infinite 10s 2s ease-in-out;
+}
+
+.eyeball {
+  animation: blink forwards infinite 10s 2s ease-in-out;
+  /* fill: red; */
+  transform: scale(1);
+  z-index: 100;
+}
+
+@keyframes blink {
+  0%,
+  2%,
+  60%,
+  62%,
+  100% {
+    fill: #fff;
+  }
+  1%,
+  61% {
+    fill: #edb98a;
+  }
+}
+
+@keyframes hide {
+  0%,
+  2%,
+  60%,
+  62%,
+  100% {
+    fill: #000;
+  }
+  1%,
+  61% {
+    fill: transparent;
+  }
+}
+`;
+
 
 const Avatar = ({ title, titleId, ...props }: AvatarProps) => {
   useEffect(() => {
@@ -45,7 +87,7 @@ const Avatar = ({ title, titleId, ...props }: AvatarProps) => {
   }, []);
 
   return (
-    <svg
+    <SvgStyled
       width={264}
       height={280}
       fill="none"
@@ -298,7 +340,7 @@ const Avatar = ({ title, titleId, ...props }: AvatarProps) => {
           <stop offset={1} stopColor="gray" stopOpacity={0.1} />
         </linearGradient>
       </defs>
-    </svg>
+    </SvgStyled>
   );
 };
 
