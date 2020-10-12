@@ -50,6 +50,8 @@ const SvgStyled = styled.svg`
 
 
 const Avatar = ({ title, titleId, ...props }: AvatarProps) => {
+  // TODO: coordinate seems based on screen cursor instead of avatar himself,
+  // TODO: issue based on loading position too
   useEffect(() => {
     let eyeBall = document.querySelector(".eyeball"),
       pupil = document.querySelector(".pupil") as HTMLElement;
