@@ -1,25 +1,17 @@
-import { createGlobalStyle } from "styled-components";
-import normalize from "./normalize";
-import reset from "./reset";
+import { createGlobalStyle } from 'styled-components';
+import { normalize, reset, vars } from './';
 
 const GlobalStyle = createGlobalStyle`
  ${normalize}
  ${reset}
 
 /* CUSTOM */
-  :root {
-    --clr-main: #20123A;
-    --clr-main-lighter: #361A68;
-    --clr-secondary: #88FFD1;
-    --clr-tertiary: #D6E6FF;
-    --clr-white: #FFFAFF;
-    --clr-grey: #332C41;
-    --radius: 8px;
-    --base: 1rem;
-  }
+    :root {
+      ${vars}
+    }
 
   body {
-    background-color: var(--clr-main);
+        background-color: var(--clr-main);
     color: var(--clr-white);
     margin: 0;
     font-family: 'Open sans';
@@ -39,6 +31,11 @@ const GlobalStyle = createGlobalStyle`
 
   h3 {
     font-size: 36px;
+  }
+
+  ::selection {
+    background: var(--clr-secondary);
+    color: var(--clr-white);
   }
 
   .tech {

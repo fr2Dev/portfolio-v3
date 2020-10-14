@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 interface AvatarProps {
@@ -8,53 +8,52 @@ interface AvatarProps {
 
 const SvgStyled = styled.svg`
   .pupil {
-  transition: transform 0.35s ease;
-  animation: hide forwards infinite 10s 2s ease-in-out;
-}
+    transition: transform 0.35s ease;
+    animation: hide forwards infinite 10s 2s ease-in-out;
+  }
 
-.eyeball {
-  animation: blink forwards infinite 10s 2s ease-in-out;
-  /* fill: red; */
-  transform: scale(1);
-  z-index: 100;
-}
+  .eyeball {
+    animation: blink forwards infinite 10s 2s ease-in-out;
+    /* fill: red; */
+    transform: scale(1);
+    z-index: 100;
+  }
 
-@keyframes blink {
-  0%,
-  2%,
-  60%,
-  62%,
-  100% {
-    fill: #fff;
+  @keyframes blink {
+    0%,
+    2%,
+    60%,
+    62%,
+    100% {
+      fill: #fff;
+    }
+    1%,
+    61% {
+      fill: #edb98a;
+    }
   }
-  1%,
-  61% {
-    fill: #edb98a;
-  }
-}
 
-@keyframes hide {
-  0%,
-  2%,
-  60%,
-  62%,
-  100% {
-    fill: #000;
+  @keyframes hide {
+    0%,
+    2%,
+    60%,
+    62%,
+    100% {
+      fill: #000;
+    }
+    1%,
+    61% {
+      fill: transparent;
+    }
   }
-  1%,
-  61% {
-    fill: transparent;
-  }
-}
 `;
-
 
 const Avatar = ({ title, titleId, ...props }: AvatarProps) => {
   // TODO: coordinate seems based on screen cursor instead of avatar himself,
   // TODO: issue based on loading position too
   useEffect(() => {
-    let eyeBall = document.querySelector(".eyeball"),
-      pupil = document.querySelector(".pupil") as HTMLElement;
+    let eyeBall = document.querySelector('.eyeball'),
+      pupil = document.querySelector('.pupil') as HTMLElement;
 
     if (eyeBall && pupil) {
       let eyeArea = eyeBall.getBoundingClientRect(),
@@ -75,36 +74,21 @@ const Avatar = ({ title, titleId, ...props }: AvatarProps) => {
         const X = getCapedCoordonate(x);
         const Y = getCapedCoordonate(y);
 
-        pupil.style.transform = `translate(${X + "px"}, ${Y + "px"})`;
+        pupil.style.transform = `translate(${X + 'px'}, ${Y + 'px'})`;
       };
 
-      document.addEventListener("mousemove", (e: MouseEvent) =>
-        handleEyesMovements(e)
-      );
+      document.addEventListener('mousemove', (e: MouseEvent) => handleEyesMovements(e));
 
       return () => {
-        document.removeEventListener("mousemove", handleEyesMovements);
+        document.removeEventListener('mousemove', handleEyesMovements);
       };
     }
   }, []);
 
   return (
-    <SvgStyled
-      width={264}
-      height={280}
-      fill="none"
-      aria-labelledby={titleId}
-      {...props}
-    >
+    <SvgStyled width={264} height={280} fill="none" aria-labelledby={titleId} {...props}>
       {title ? <title id={titleId}>{title}</title> : null}
-      <mask
-        id="prefix__a"
-        maskUnits="userSpaceOnUse"
-        x={12}
-        y={40}
-        width={240}
-        height={240}
-      >
+      <mask id="prefix__a" maskUnits="userSpaceOnUse" x={12} y={40} width={240} height={240}>
         <path
           d="M132 280c66.274 0 120-53.726 120-120S198.274 40 132 40 12 93.726 12 160s53.726 120 120 120z"
           fill="#fff"
@@ -117,28 +101,14 @@ const Avatar = ({ title, titleId, ...props }: AvatarProps) => {
         />
         <path d="M252 40H12v240h240V40z" fill="url(#prefix__paint1_linear)" />
       </g>
-      <mask
-        id="prefix__b"
-        maskUnits="userSpaceOnUse"
-        x={0}
-        y={0}
-        width={264}
-        height={280}
-      >
+      <mask id="prefix__b" maskUnits="userSpaceOnUse" x={0} y={0} width={264} height={280}>
         <path
           d="M12 160c0 66.274 53.726 120 120 120s120-53.726 120-120h12V0H0v160h12z"
           fill="#fff"
         />
       </mask>
       <g mask="url(#prefix__b)">
-        <mask
-          id="prefix__c"
-          maskUnits="userSpaceOnUse"
-          x={32}
-          y={36}
-          width={200}
-          height={244}
-        >
+        <mask id="prefix__c" maskUnits="userSpaceOnUse" x={32} y={36} width={200} height={244}>
           <path
             d="M156 180.611V199h4c39.764 0 72 32.236 72 72v9H32v-9c0-39.764 32.236-72 72-72h4v-18.389c-17.237-8.189-29.628-24.924-31.695-44.73C70.48 135.058 66 130.052 66 124v-14c0-5.946 4.325-10.882 10-11.834V92c0-30.928 25.072-56 56-56s56 25.072 56 56v6.166c5.675.952 10 5.888 10 11.834v14c0 6.052-4.48 11.058-10.305 11.881-2.067 19.806-14.458 36.541-31.695 44.73z"
             fill="#fff"
@@ -158,14 +128,7 @@ const Avatar = ({ title, titleId, ...props }: AvatarProps) => {
             fillOpacity={0.1}
           />
         </g>
-        <mask
-          id="prefix__d"
-          maskUnits="userSpaceOnUse"
-          x={32}
-          y={183}
-          width={200}
-          height={97}
-        >
+        <mask id="prefix__d" maskUnits="userSpaceOnUse" x={32} y={183} width={200} height={97}>
           <path
             fillRule="evenodd"
             clipRule="evenodd"
@@ -195,14 +158,7 @@ const Avatar = ({ title, titleId, ...props }: AvatarProps) => {
             fillOpacity={0.16}
           />
         </g>
-        <mask
-          id="prefix__e"
-          maskUnits="userSpaceOnUse"
-          x={113}
-          y={147}
-          width={38}
-          height={19}
-        >
+        <mask id="prefix__e" maskUnits="userSpaceOnUse" x={113} y={147} width={38} height={19}>
           <path
             fillRule="evenodd"
             clipRule="evenodd"
@@ -256,25 +212,11 @@ const Avatar = ({ title, titleId, ...props }: AvatarProps) => {
           fill="#000"
           fillOpacity={0.6}
         />
-        <mask
-          id="prefix__f"
-          maskUnits="userSpaceOnUse"
-          x={0}
-          y={0}
-          width={264}
-          height={280}
-        >
+        <mask id="prefix__f" maskUnits="userSpaceOnUse" x={0} y={0} width={264} height={280}>
           <path d="M264 0H0v280h264V0z" fill="#fff" />
         </mask>
         <g mask="url(#prefix__f)">
-          <mask
-            id="prefix__g"
-            maskUnits="userSpaceOnUse"
-            x={75}
-            y={98}
-            width={114}
-            height={89}
-          >
+          <mask id="prefix__g" maskUnits="userSpaceOnUse" x={75} y={98} width={114} height={89}>
             <path
               fillRule="evenodd"
               clipRule="evenodd"
@@ -290,14 +232,7 @@ const Avatar = ({ title, titleId, ...props }: AvatarProps) => {
             />
             <path d="M280 72H16v244h264V72z" />
           </g>
-          <mask
-            id="prefix__h"
-            maskUnits="userSpaceOnUse"
-            x={73}
-            y={17}
-            width={117}
-            height={82}
-          >
+          <mask id="prefix__h" maskUnits="userSpaceOnUse" x={73} y={17} width={117} height={82}>
             <path
               fillRule="evenodd"
               clipRule="evenodd"
