@@ -11,10 +11,11 @@ const GlobalStyle = createGlobalStyle`
     }
 
   body {
-        background-color: var(--clr-main);
+    background-color: var(--clr-main);
     color: var(--clr-white);
     margin: 0;
     font-family: 'Open sans';
+    font-size: 1.15rem;
   }
 
   h1,h2,h3,h4,h5,h6 {
@@ -31,6 +32,18 @@ const GlobalStyle = createGlobalStyle`
 
   h3 {
     font-size: 36px;
+  }
+
+  section {
+    padding: var(--p-section, 4rem) 0;
+
+    @media only screen and (min-width: 768px) {
+      --p-section: 5rem;
+    }
+
+    @media only screen and (min-width: 992px) {
+      --p-section: 6rem;
+    }
   }
 
   ::selection {

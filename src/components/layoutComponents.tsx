@@ -62,3 +62,22 @@ export const Row = styled.div<RowProps>`
 //   margin: ${(props) => (props.margin ? props.margin : "0")};
 //   width: ${(props) => (props.width ? props.width : "auto")};
 // `;
+
+export const Hero = styled.section`
+  min-height: 100vh;
+
+  & > * + * {
+    &:not(h1):not(h2) {
+      margin-top: 3rem;
+    }
+  }
+
+  h1 {
+    line-height: 1;
+    margin-top: 2rem;
+  }
+  h2 {
+    line-height: 1;
+    margin-top: 1rem;
+  }
+`;
