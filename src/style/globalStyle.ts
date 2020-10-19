@@ -31,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h3 {
-    font-size: 36px;
+    font-size: 40px;
   }
 
   section {

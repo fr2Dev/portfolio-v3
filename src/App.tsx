@@ -3,8 +3,8 @@ import { ThemeProvider } from 'styled-components';
 import Avatar from './components/avatar';
 import Card from './components/card';
 import { GlobalStyle, theme } from './style';
-import { MainWrapper, Container, Row, Hero } from './components/layouts';
-import { Nav, Button, ItemNav, TwitterLink, Highlight } from './components/styled';
+import { MainWrapper, Container, Row, Hero, About } from './components/layouts';
+import { Nav, Button, ItemNav, TwitterLink, Highlight, TechList } from './components/styled';
 import './style/fonts.css';
 
 function App() {
@@ -52,26 +52,28 @@ function App() {
             </Hero>
             <section>
               <h3>About me</h3>
-              <Card>
-                <p>
-                  Hi ! 👋 I am a self-taught developer, passionate about the web and love to create
-                  stuff. I eventually graduated in web development at{' '}
-                  <TwitterLink href="#">@OpenClassrooms</TwitterLink> and still look forward to
-                  learning new things every day. Currently at{' '}
-                  <TwitterLink href="#">@Filae</TwitterLink>, I work on a wide variety of
-                  interesting and meaningful projects on a daily basis.
-                </p>
-                <p>Here are a few technologies I've been working with recently:</p>
-                <ul>
-                  <li className="tech">React</li>
-                  <li className="tech">Typescript</li>
-                  <li className="tech">jQuery</li>
-                  <li className="tech">HTML & SCSS</li>
-                  <li className="tech">Wordpress</li>
-                  <li className="tech">Git</li>
-                </ul>
-              </Card>
-              <Avatar title="François Degrincourt" titleId="Avatar François Degrincourt" />
+              <About>
+                <Card>
+                  <p>
+                    Hi ! 👋 I am a self-taught developer, passionate about the web and love to
+                    create stuff. I eventually graduated in web development at{' '}
+                    <TwitterLink href="#">@OpenClassrooms</TwitterLink> and still look forward to
+                    learning new things every day. Currently at{' '}
+                    <TwitterLink href="#">@Filae</TwitterLink>, I work on a wide variety of
+                    interesting and meaningful projects on a daily basis.
+                  </p>
+                  <p>Here are a few technologies I've been working with recently:</p>
+                  <TechList as="ul" wrap="flex-wrap">
+                    <li className="tech">React</li>
+                    <li className="tech">Typescript</li>
+                    <li className="tech">jQuery</li>
+                    <li className="tech">HTML & SCSS</li>
+                    <li className="tech">Wordpress</li>
+                    <li className="tech">Git</li>
+                  </TechList>
+                </Card>
+                <Avatar title="François Degrincourt" titleId="Avatar François Degrincourt" />
+              </About>
             </section>
             <h3>Where I’ve worked</h3>
             <Card>
@@ -86,13 +88,13 @@ function App() {
                 <li>Front-end</li>
                 <li>Back-end</li>
               </ul>
-              <ul>
+              <TechList as="ul" wrap="flex-wrap">
                 <li className="tech">JS</li>
                 <li className="tech">jQuery</li>
                 <li className="tech">CSS</li>
                 <li className="tech">PHP</li>
                 <li className="tech">SQL</li>
-              </ul>
+              </TechList>
             </Card>
             <Card>
               <h4>
@@ -106,14 +108,14 @@ function App() {
                 <li>Newsletter & mailing</li>
                 <li>Visual creation</li>
               </ul>
-              <ul>
+              <TechList as="ul" wrap="flex-wrap">
                 <li className="tech">React</li>
                 <li className="tech">JS</li>
                 <li className="tech">jQuery</li>
                 <li className="tech">SCSS</li>
                 <li className="tech">Wordpress</li>
                 <li className="tech">Photoshop</li>
-              </ul>
+              </TechList>
             </Card>
             <h3>Some stuff I've made</h3>
             <h3>Get In Touch</h3>
