@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import Avatar from './components/avatar';
 import Card from './components/card';
 import { GlobalStyle, theme } from './style';
-import { MainWrapper, Container, Row, Hero } from './components/layoutComponents';
+import { MainWrapper, Container, Row, Hero } from './components/layouts';
 import { Nav, Button, ItemNav, TwitterLink, Highlight } from './components/styled';
 import './style/fonts.css';
 
@@ -50,8 +50,8 @@ function App() {
                 Get in touch
               </Button>
             </Hero>
-            <h3>About me</h3>
             <section>
+              <h3>About me</h3>
               <Card>
                 <p>
                   Hi ! 👋 I am a self-taught developer, passionate about the web and love to create
