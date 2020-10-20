@@ -10,6 +10,10 @@ const GlobalStyle = createGlobalStyle`
       ${vars}
     }
 
+    /* * {
+      outline: 2px dashed yellowgreen;
+    } */
+
   body {
     background-color: var(--clr-main);
     color: var(--clr-white);
@@ -24,6 +28,7 @@ const GlobalStyle = createGlobalStyle`
 
   h1,h2 {
     font-size: 72px;
+    font-size: clamp(2.5rem, calc(5vw + 1rem), 4.5rem);
   }
 
   h2,h3 {
@@ -32,16 +37,26 @@ const GlobalStyle = createGlobalStyle`
 
   h3 {
     font-size: 40px;
+    font-size: clamp(1.5rem, calc(3vw + 1rem), 2.5rem);
+
   }
 
   section {
-    padding: var(--p-section, 4rem) 0;
+    padding: var(--p-section, 1.5rem) 0;
+
+    @media only screen and (min-width: 576px) {
+      --p-section: 2rem;
+    }
 
     @media only screen and (min-width: 768px) {
-      --p-section: 5rem;
+      --p-section: 3rem;
     }
 
     @media only screen and (min-width: 992px) {
+      --p-section: 4.5rem;
+    }
+
+    @media only screen and (min-width: 1200px) {
       --p-section: 6rem;
     }
   }
@@ -54,6 +69,12 @@ const GlobalStyle = createGlobalStyle`
   .tech {
     color: var(--clr-secondary);
     font-family: 'Fira Code', 'monospace';
+  }
+
+  .flow {
+    & > * + * {
+      margin-top: 2rem;
+    }
   }
  
 `;

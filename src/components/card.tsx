@@ -13,7 +13,7 @@ const StyledCard = styled.div`
   background-color: var(--clr-grey);
   border-radius: var(--radius);
   box-shadow: 0 4px 4px rgba(3, 3, 3, 0.25);
-  padding: calc(var(--base) * 1);
+  padding: calc(var(--base) * 1.25);
 `;
 
 export default Card;

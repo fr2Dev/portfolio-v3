@@ -12,11 +12,23 @@ export const About = styled.div`
 
   & > * {
     &:first-child {
-      grid-column: span 8;
+      grid-column: span 12;
+      order: 2;
     }
     &:last-child {
-      grid-column: span 4;
-      margin-left: auto;
+      grid-column: span 12;
+      /* order: 1; */
+      margin: auto;
+    }
+
+    @media only screen and (min-width: 992px) {
+      &:first-child {
+        grid-column: span 6;
+        order: 0;
+      }
+      &:last-child {
+        grid-column: span 6;
+      }
     }
   }
 `;
