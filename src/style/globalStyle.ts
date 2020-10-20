@@ -38,11 +38,14 @@ const GlobalStyle = createGlobalStyle`
   h3 {
     font-size: 40px;
     font-size: clamp(1.5rem, calc(3vw + 1rem), 2.5rem);
-
   }
 
-  section {
-    padding: var(--p-section, 1.5rem) 0;
+  h4 {
+    font-size: clamp(1.15rem, calc(2vw + 1rem), 1.5rem);
+  }
+
+  section:not(:last-child) {
+    padding-bottom: var(--p-section, 1.5rem);
 
     @media only screen and (min-width: 576px) {
       --p-section: 2rem;
@@ -63,13 +66,9 @@ const GlobalStyle = createGlobalStyle`
 
   ::selection {
     background: var(--clr-secondary);
-    color: var(--clr-white);
+    color: #222;
   }
 
-  .tech {
-    color: var(--clr-secondary);
-    font-family: 'Fira Code', 'monospace';
-  }
 
   .flow {
     & > * + * {

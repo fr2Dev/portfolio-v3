@@ -6,6 +6,9 @@ export const TechList = styled(Row)`
 
   li {
     margin-top: 0.25rem;
+    color: var(--clr-secondary);
+    font-family: 'Fira Code', 'monospace';
+    font-size: 16px;
 
     &:not(:last-child) {
       margin-right: 1rem;

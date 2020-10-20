@@ -7,8 +7,13 @@ export const Experience = styled.div`
   grid-template-columns: repeat(12, 1fr);
 
   & > * {
+    border: 2px dashed ${({ theme }) => theme.colors.tertiary};
+    background-color: ${({ theme }) => theme.colors.main};
+
     &:first-child {
       grid-column: var(--size-first, span 12);
+      border: 2px solid ${({ theme }) => theme.colors.secondary};
+      background-color: ${({ theme }) => theme.colors.grey};
     }
     &:last-child {
       grid-column: var(--size-last, span 12);
