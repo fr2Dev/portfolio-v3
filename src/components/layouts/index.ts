@@ -4,3 +4,4 @@ export { Row } from './row';
 export { Hero } from './hero';
 export { About } from './about';
 export { Experience } from './experience';
+export { Contact } from './contact';

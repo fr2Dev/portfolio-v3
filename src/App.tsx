@@ -3,7 +3,15 @@ import { ThemeProvider } from 'styled-components';
 import Avatar from './components/avatar';
 import Card from './components/card';
 import { GlobalStyle, theme } from './style';
-import { MainWrapper, Container, Row, Hero, About, Experience } from './components/layouts';
+import {
+  MainWrapper,
+  Container,
+  Row,
+  Hero,
+  About,
+  Experience,
+  Contact,
+} from './components/layouts';
 import {
   Nav,
   Button,
@@ -50,12 +58,16 @@ function App() {
           </Header>
           <main>
             <Hero>
-              <p>👋 Hello, my name is</p>
+              <p>Hello, my name is</p>
               <h1>François Degrincourt</h1>
               <h2>I build stuff on the web</h2>
               <Introduction>
-                I'm a <Highlight>front-end developer</Highlight> based in Paris, France,
-                specializing in building (and occasionally designing) amazing websites.
+                I'm a{' '}
+                <Highlight>
+                  <span>Front-End Developer</span>
+                </Highlight>{' '}
+                based in Paris, France, specializing in building (and occasionally designing)
+                amazing websites.
               </Introduction>
               <Button as="a" href="#">
                 Get in touch
@@ -65,7 +77,7 @@ function App() {
               <h3>About me</h3>
               <About>
                 <div>
-                  <Card>
+                  <Card variant="browser">
                     <p style={{ marginBottom: '10px' }}>
                       Hi ! 👋 I am a self-taught developer, passionate about the web and love to
                       create stuff. I eventually graduated in web development at{' '}
@@ -91,12 +103,12 @@ function App() {
             <section className="flow">
               <h3>Where I’ve worked</h3>
               <Experience>
-                <Card experience>
+                <Card variant="experience">
                   <h4>
-                    Front End Developer <TwitterLink href="#">@Filae</TwitterLink>
+                    <span>Front End Developer</span> <TwitterLink href="#">@Filae</TwitterLink>
                   </h4>
                   <Comment>// Period: April 2019 - Present </Comment>
-                  <Comment>// Location: 75 - Paris</Comment>
+                  <Comment>// Place: 75 - Paris</Comment>
                   <Tasks>
                     <li>Integration</li>
                     <li>UI fix & update</li>
@@ -112,12 +124,12 @@ function App() {
                     <li>Photoshop</li>
                   </TechList>
                 </Card>
-                <Card experience>
+                <Card variant="experience">
                   <h4>
-                    IT Developer <TwitterLink href="#">@Jimenez_FVA</TwitterLink>
+                    <span>IT Developer</span> <TwitterLink href="#">@Jimenez_FVA</TwitterLink>
                   </h4>
                   <Comment>// Period: June - September 2018</Comment>
-                  <Comment>// Location: 31 - Villeneuve-lès-Bouloc</Comment>
+                  <Comment>// Place: 31 - Villeneuve-lès-Bouloc</Comment>
                   <Tasks>
                     <li>Creation of a management tool</li>
                     <li>Integration</li>
@@ -137,15 +149,15 @@ function App() {
             <section className="flow">
               <h3>Some stuff I've made</h3>
             </section>
-            <section className="flow">
+            <Contact className="flow">
               <h3>Get In Touch</h3>
-              <div>
-                Although I'm not currently looking for any new opportunities, my inbox is always
-                open. Whether you have a question or just want to say hello, I'll try my best to get
-                back to you!
-              </div>
+              <Card variant="message">
+                Although I'm not currently looking for any new opportunities,{' '}
+                <span className="highlight">my inbox is always open</span>. Whether you have a
+                question or just want to say hello, I'll try my best to get back to you!
+              </Card>
               <Button>Say Hi</Button>
-            </section>
+            </Contact>
           </main>
         </Container>
       </ThemeProvider>

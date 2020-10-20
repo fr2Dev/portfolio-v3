@@ -44,7 +44,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: clamp(1.15rem, calc(2vw + 1rem), 1.5rem);
   }
 
-  section:not(:last-child) {
+  section {
     padding-bottom: var(--p-section, 1.5rem);
 
     @media only screen and (min-width: 576px) {
@@ -67,6 +67,10 @@ const GlobalStyle = createGlobalStyle`
   ::selection {
     background: var(--clr-secondary);
     color: #222;
+  }
+
+  .highlight {
+    color: var(--clr-secondary);
   }
 
 
