@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Card, Avatar } from '../index';
 
 export const About = styled.div`
   display: grid;
@@ -17,7 +16,6 @@ export const About = styled.div`
     }
     &:last-child {
       grid-column: span 12;
-      /* order: 1; */
       margin: auto;
     }
 

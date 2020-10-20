@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import Avatar from './components/avatar';
 import Card from './components/card';
 import { GlobalStyle, theme } from './style';
-import { MainWrapper, Container, Row, Hero, About } from './components/layouts';
+import { MainWrapper, Container, Row, Hero, About, Experience } from './components/layouts';
 import {
   Nav,
   Button,
@@ -64,7 +64,7 @@ function App() {
               <About>
                 <div>
                   <Card>
-                    <p>
+                    <p style={{ marginBottom: '10px' }}>
                       Hi ! 👋 I am a self-taught developer, passionate about the web and love to
                       create stuff. I eventually graduated in web development at{' '}
                       <TwitterLink href="#">@OpenClassrooms</TwitterLink> and still look forward to
@@ -88,47 +88,49 @@ function App() {
             </section>
             <section className="flow">
               <h3>Where I’ve worked</h3>
-              <Card>
-                <h4>
-                  IT Developer <TwitterLink href="#">@Jimenez_FVA</TwitterLink>
-                </h4>
-                <p>// June - September 2018</p>
-                <p>// 31 - Villeneuve-lès-Bouloc</p>
-                <ul>
-                  <li>Creation of an activity management tool</li>
-                  <li>Integration</li>
-                  <li>Front-end</li>
-                  <li>Back-end</li>
-                </ul>
-                <TechList as="ul" wrap="wrap">
-                  <li className="tech">JS</li>
-                  <li className="tech">jQuery</li>
-                  <li className="tech">CSS</li>
-                  <li className="tech">PHP</li>
-                  <li className="tech">SQL</li>
-                </TechList>
-              </Card>
-              <Card>
-                <h4>
-                  Front End Developer <TwitterLink href="#">@Filae</TwitterLink>
-                </h4>
-                <p>/* April 2019 - Present </p>
-                <p>75 - Paris */</p>
-                <ul>
-                  <li>Integration</li>
-                  <li>UI fix & update</li>
-                  <li>Newsletter & mailing</li>
-                  <li>Visual creation</li>
-                </ul>
-                <TechList as="ul" wrap="wrap">
-                  <li className="tech">React</li>
-                  <li className="tech">JS</li>
-                  <li className="tech">jQuery</li>
-                  <li className="tech">SCSS</li>
-                  <li className="tech">Wordpress</li>
-                  <li className="tech">Photoshop</li>
-                </TechList>
-              </Card>
+              <Experience>
+                <Card>
+                  <h4>
+                    IT Developer <TwitterLink href="#">@Jimenez_FVA</TwitterLink>
+                  </h4>
+                  <p>// June - September 2018</p>
+                  <p>// 31 - Villeneuve-lès-Bouloc</p>
+                  <ul>
+                    <li>Creation of an activity management tool</li>
+                    <li>Integration</li>
+                    <li>Front-end</li>
+                    <li>Back-end</li>
+                  </ul>
+                  <TechList as="ul" wrap="wrap">
+                    <li className="tech">JS</li>
+                    <li className="tech">jQuery</li>
+                    <li className="tech">CSS</li>
+                    <li className="tech">PHP</li>
+                    <li className="tech">SQL</li>
+                  </TechList>
+                </Card>
+                <Card>
+                  <h4>
+                    Front End Developer <TwitterLink href="#">@Filae</TwitterLink>
+                  </h4>
+                  <p>/* April 2019 - Present </p>
+                  <p>75 - Paris */</p>
+                  <ul>
+                    <li>Integration</li>
+                    <li>UI fix & update</li>
+                    <li>Newsletter & mailing</li>
+                    <li>Visual creation</li>
+                  </ul>
+                  <TechList as="ul" wrap="wrap">
+                    <li className="tech">React</li>
+                    <li className="tech">JS</li>
+                    <li className="tech">jQuery</li>
+                    <li className="tech">SCSS</li>
+                    <li className="tech">Wordpress</li>
+                    <li className="tech">Photoshop</li>
+                  </TechList>
+                </Card>
+              </Experience>
             </section>
             <section className="flow">
               <h3>Some stuff I've made</h3>
