@@ -31,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: clamp(2.5rem, calc(5vw + 1rem), 4.5rem);
   }
 
-  h2,h3 {
+  h2,h3,h5 {
     color: var(--clr-tertiary);
   }
 
@@ -76,7 +76,7 @@ const GlobalStyle = createGlobalStyle`
 
   .flow {
     & > * + * {
-      margin-top: 2rem;
+      margin-top: var(--flow, 2rem);
     }
   }
  

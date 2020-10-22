@@ -11,6 +11,7 @@ import {
   About,
   Experience,
   Contact,
+  Preview,
 } from './components/layouts';
 import {
   Nav,
@@ -148,6 +149,44 @@ function App() {
             </section>
             <section className="flow">
               <h3>Some stuff I've made</h3>
+              <Preview>
+                <a href="#">
+                  <img src="https://francoisdpro.eu/assets/img/png/natours.png" alt="tst" />
+                </a>
+                <div>
+                  <Card variant="browser">
+                    <h5>Home page</h5>
+                    <p>
+                      A landing page where you get multiples informations like your todo list, time,
+                      weather or some quotes.
+                    </p>
+                    <TechList as="ul" wrap="wrap">
+                      <li>React</li>
+                      <li>Typescript</li>
+                      <li>Styled-Components</li>
+                    </TechList>
+                  </Card>
+                </div>
+              </Preview>
+              <Preview reversed>
+                <a href="#">
+                  <img src="https://francoisdpro.eu/assets/img/png/natours.png" alt="tst" />
+                </a>
+                <div>
+                  <Card variant="browser">
+                    <h5>Home page</h5>
+                    <p>
+                      A landing page where you get multiples informations like your todo list, time,
+                      weather or some quotes.
+                    </p>
+                    <TechList as="ul" wrap="wrap">
+                      <li>React</li>
+                      <li>Typescript</li>
+                      <li>Styled-Component</li>
+                    </TechList>
+                  </Card>
+                </div>
+              </Preview>
             </section>
             <Contact className="flow">
               <h3>Get In Touch</h3>
@@ -156,7 +195,7 @@ function App() {
                 <span className="highlight">my inbox is always open</span>. Whether you have a
                 question or just want to say hello, I'll try my best to get back to you!
               </Card>
-              <Button>Say Hi</Button>
+              <Button outlined>Say Hi</Button>
             </Contact>
           </main>
         </Container>

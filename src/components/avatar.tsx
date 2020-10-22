@@ -51,39 +51,39 @@ const SvgStyled = styled.svg`
 const Avatar = ({ title, titleId, ...props }: AvatarProps) => {
   // TODO: coordinate seems based on screen cursor instead of avatar himself,
   // TODO: issue based on loading position too
-  useEffect(() => {
-    let eyeBall = document.querySelector('.eyeball'),
-      pupil = document.querySelector('.pupil') as HTMLElement;
+  // useEffect(() => {
+  //   let eyeBall = document.querySelector('.eyeball'),
+  //     pupil = document.querySelector('.pupil') as HTMLElement;
 
-    if (eyeBall && pupil) {
-      let eyeArea = eyeBall.getBoundingClientRect(),
-        R = eyeArea.width / 2,
-        centerX = eyeArea.left + R,
-        centerY = eyeArea.top + R;
+  //   if (eyeBall && pupil) {
+  //     let eyeArea = eyeBall.getBoundingClientRect(),
+  //       R = eyeArea.width / 2,
+  //       centerX = eyeArea.left + R,
+  //       centerY = eyeArea.top + R;
 
-      const handleEyesMovements = (e: MouseEvent) => {
-        let x = e.clientX - centerX,
-          y = e.clientY - centerY;
+  //     const handleEyesMovements = (e: MouseEvent) => {
+  //       let x = e.clientX - centerX,
+  //         y = e.clientY - centerY;
 
-        const getCapedCoordonate = (x: number) => {
-          if (x > 3) return 3;
-          if (x < -3) return -3;
-          if (x < 3 || x > -3) return x;
-        };
+  //       const getCapedCoordonate = (x: number) => {
+  //         if (x > 3) return 3;
+  //         if (x < -3) return -3;
+  //         if (x < 3 || x > -3) return x;
+  //       };
 
-        const X = getCapedCoordonate(x);
-        const Y = getCapedCoordonate(y);
+  //       const X = getCapedCoordonate(x);
+  //       const Y = getCapedCoordonate(y);
 
-        pupil.style.transform = `translate(${X + 'px'}, ${Y + 'px'})`;
-      };
+  //       pupil.style.transform = `translate(${X + 'px'}, ${Y + 'px'})`;
+  //     };
 
-      document.addEventListener('mousemove', (e: MouseEvent) => handleEyesMovements(e));
+  //     document.addEventListener('mousemove', (e: MouseEvent) => handleEyesMovements(e));
 
-      return () => {
-        document.removeEventListener('mousemove', handleEyesMovements);
-      };
-    }
-  }, []);
+  //     return () => {
+  //       document.removeEventListener('mousemove', handleEyesMovements);
+  //     };
+  //   }
+  // }, []);
 
   return (
     <SvgStyled width={264} height={264} fill="none" aria-labelledby={titleId} {...props}>
