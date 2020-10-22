@@ -9,6 +9,10 @@ export const ItemNav = styled.li`
 export const Nav = styled.nav`
   margin-top: var(--base, 1rem);
 
+  li {
+    text-align: center;
+  }
+
   ${ItemNav} {
     padding: 0 var(--base, 1rem);
 

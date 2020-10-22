@@ -1,6 +1,7 @@
 import React from 'react';
+import useWindowSize from './hook/useMedia';
 import { ThemeProvider } from 'styled-components';
-import { Avatar, Card, Preview } from './components';
+import { Avatar, Card, ButtonMenu } from './components';
 import { GlobalStyle, theme } from './style';
 import {
   MainWrapper,
@@ -27,6 +28,23 @@ import {
 import './style/fonts.css';
 
 function App() {
+  const size = useWindowSize();
+  const { width, height } = size;
+  console.log(
+    '%c☘ %cheight%c:',
+    'font-weight:bold;color: #0F9D58;font-size:1.2em;',
+    'font-weight:bold;border-bottom:2px solid #0F9D58;',
+    'font-weight:bold;',
+    height
+  );
+  console.log(
+    '%c☘ %cwidth%c:',
+    'font-weight:bold;color: #0F9D58;font-size:1.2em;',
+    'font-weight:bold;border-bottom:2px solid #0F9D58;',
+    'font-weight:bold;',
+    width
+  );
+
   return (
     <MainWrapper>
       <GlobalStyle />
@@ -34,7 +52,8 @@ function App() {
         <Container className="App">
           <Header>
             <Row as={Nav}>
-              <div>logo</div>
+              <div style={{ display: 'none' }}>logo</div>
+              <ButtonMenu />
               <Row as="ul" mobile>
                 <ItemNav>
                   <a href="#">About</a>
@@ -147,47 +166,6 @@ function App() {
               </Experience>
             </section>
             <SectionProjects />
-            {/* <section className="flow">
-              <h3>Some stuff I've made</h3>
-              <Preview>
-                <a href="#">
-                  <img src="https://francoisdpro.eu/assets/img/png/natours.png" alt="tst" />
-                </a>
-                <div>
-                  <Card variant="browser">
-                    <h5>Home page</h5>
-                    <p>
-                      A landing page where you get multiples informations like your todo list, time,
-                      weather or some quotes.
-                    </p>
-                    <TechList as="ul" wrap="wrap">
-                      <li>React</li>
-                      <li>Typescript</li>
-                      <li>Styled-Components</li>
-                    </TechList>
-                  </Card>
-                </div>
-              </Preview>
-              <Preview reversed>
-                <a href="#">
-                  <img src="https://francoisdpro.eu/assets/img/png/natours.png" alt="tst" />
-                </a>
-                <div>
-                  <Card variant="browser">
-                    <h5>Home page</h5>
-                    <p>
-                      A landing page where you get multiples informations like your todo list, time,
-                      weather or some quotes.
-                    </p>
-                    <TechList as="ul" wrap="wrap">
-                      <li>React</li>
-                      <li>Typescript</li>
-                      <li>Styled-Component</li>
-                    </TechList>
-                  </Card>
-                </div>
-              </Preview>
-            </section> */}
             <Contact className="flow">
               <h3>Get In Touch</h3>
               <Card variant="message">

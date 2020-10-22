@@ -73,6 +73,17 @@ const GlobalStyle = createGlobalStyle`
     color: var(--clr-secondary);
   }
 
+  body.blur {
+    overflow: hidden;
+
+    main {
+    filter: blur(15px) brightness(0.7);
+    transition: var(--transition);
+    pointer-events: none;
+    user-select: none;
+  }
+  }
+
 
   .flow {
     & > * + * {

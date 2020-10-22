@@ -14,6 +14,7 @@ export const Preview = styled.div<PreviewProps>`
     height: 100%;
     object-fit: cover;
     width: 100%;
+    transition: transform var(--transition);
   }
 
   h5 {
@@ -22,11 +23,15 @@ export const Preview = styled.div<PreviewProps>`
 
   a {
     filter: grayscale(1);
-    transition: filter 0.15s ease-in-out;
+    transition: filter var(--transition);
 
     &:hover,
     &:focus {
       filter: none;
+
+      img {
+        transform: scale(1.025);
+      }
     }
   }
 

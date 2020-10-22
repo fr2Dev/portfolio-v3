@@ -13,6 +13,7 @@ const vars = css`
   --clr-grey: ${grey};
   --radius: ${radius};
   --base: ${base};
+  --transition: 0.15s cubic-bezier(0.65, 0.05, 0.36, 1);
 `;
 
 export default vars;

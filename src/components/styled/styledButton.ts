@@ -31,7 +31,7 @@ export const Button = styled.button<ButtonProps>`
   ${({ outlined }) =>
     outlined &&
     css`
-      --clr-bg: var(--clr-main);
+      --clr-bg: transparent;
       --clr-font: var(--clr-secondary);
       --clr-border: var(--clr-secondary);
     `};
