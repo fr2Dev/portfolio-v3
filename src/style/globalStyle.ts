@@ -40,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: clamp(1.5rem, calc(3vw + 1rem), 2.5rem);
   }
 
-  h4 {
+  h4, h5 {
     font-size: clamp(1.15rem, calc(2vw + 1rem), 1.5rem);
   }
 

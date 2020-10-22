@@ -195,7 +195,9 @@ function App() {
                 <span className="highlight">my inbox is always open</span>. Whether you have a
                 question or just want to say hello, I'll try my best to get back to you!
               </Card>
-              <Button outlined>Say Hi</Button>
+              <Button as="a" href="mailto:francois.degrincourt@gmail.com" outlined>
+                Say Hi
+              </Button>
             </Contact>
           </main>
         </Container>
