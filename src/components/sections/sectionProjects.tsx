@@ -29,7 +29,7 @@ const datas: Project[] = [
   {
     url: '#',
     img: {
-      src: 'https://francoisdpro.eu/assets/img/png/natours.png',
+      src: 'http://francoisdpro.eu/assets/img/png/DWJ-projet3-min.png',
       alt: 'project fr2dev',
     },
     title: 'Bike reservation',
