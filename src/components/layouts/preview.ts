@@ -12,7 +12,6 @@ export const Preview = styled.div<PreviewProps>`
 
   img {
     height: 100%;
-    margin: auto;
     object-fit: cover;
     width: 100%;
   }
@@ -33,6 +32,8 @@ export const Preview = styled.div<PreviewProps>`
       grid-column: var(--size-first, span 12);
       grid-row: var(--height-first, span 4);
       overflow: hidden;
+      margin: auto;
+      height: 100%;
       width: 80%;
     }
     &:last-child {

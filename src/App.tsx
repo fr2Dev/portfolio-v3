@@ -1,7 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import Avatar from './components/avatar';
-import Card from './components/card';
+import { Avatar, Card, Preview } from './components';
 import { GlobalStyle, theme } from './style';
 import {
   MainWrapper,
@@ -11,8 +10,8 @@ import {
   About,
   Experience,
   Contact,
-  Preview,
 } from './components/layouts';
+import { SectionProjects } from './components/sections';
 import {
   Nav,
   Button,
@@ -147,7 +146,8 @@ function App() {
                 </Card>
               </Experience>
             </section>
-            <section className="flow">
+            <SectionProjects />
+            {/* <section className="flow">
               <h3>Some stuff I've made</h3>
               <Preview>
                 <a href="#">
@@ -187,7 +187,7 @@ function App() {
                   </Card>
                 </div>
               </Preview>
-            </section>
+            </section> */}
             <Contact className="flow">
               <h3>Get In Touch</h3>
               <Card variant="message">
