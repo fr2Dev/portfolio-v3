@@ -1,6 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Header = styled.header`
+interface HeaderProps {
+  openMobile: boolean;
+}
+
+export const Header = styled.header<HeaderProps>`
   @media only screen and (max-width: 767px) {
     /* display: none; */
     background: ${({ theme }) => theme.colors.grey};
@@ -13,6 +17,17 @@ export const Header = styled.header`
     top: 0;
     place-items: center;
     width: min(50vw, 400px);
+    transition: transform var(--transition);
+    /* transform: translateX(0); */
     z-index: 4;
+
+    /* ${(props) =>
+      props.openMobile &&
+      css`
+        transition: transform var(--transition);
+        transform: translateX(100%);
+      `}; */
+
+    transform: translateX(${(props) => (props.openMobile ? 0 : '100%')});
   }
 `;

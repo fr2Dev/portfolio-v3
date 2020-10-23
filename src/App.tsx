@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useWindowSize from './hook/useMedia';
 import { ThemeProvider } from 'styled-components';
 import { Avatar, Card, ButtonMenu } from './components';
@@ -30,31 +30,28 @@ import './style/fonts.css';
 function App() {
   const size = useWindowSize();
   const { width, height } = size;
-  console.log(
-    '%c☘ %cheight%c:',
-    'font-weight:bold;color: #0F9D58;font-size:1.2em;',
-    'font-weight:bold;border-bottom:2px solid #0F9D58;',
-    'font-weight:bold;',
-    height
-  );
-  console.log(
-    '%c☘ %cwidth%c:',
-    'font-weight:bold;color: #0F9D58;font-size:1.2em;',
-    'font-weight:bold;border-bottom:2px solid #0F9D58;',
-    'font-weight:bold;',
-    width
-  );
+  const isMobile = width > 0 && width < 768;
+  const body = document.querySelector('body');
+
+  const [navOpen, setNavOpen] = useState(false);
+  const toggleNav = () => {
+    setNavOpen((prev) => !prev);
+    body?.classList.toggle('blur');
+  };
+  //TODO: Refactor logic
+  //TODO: Set open false when !isMobile
+  const openMobile = isMobile && navOpen;
 
   return (
     <MainWrapper>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Container className="App">
-          <Header>
+          <ButtonMenu onClick={() => toggleNav()} />
+          <Header openMobile={openMobile}>
             <Row as={Nav}>
               <div style={{ display: 'none' }}>logo</div>
-              <ButtonMenu />
-              <Row as="ul" mobile>
+              <Row as="ul" alignItems="center" mobile>
                 <ItemNav>
                   <a href="#">About</a>
                 </ItemNav>
