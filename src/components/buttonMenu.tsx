@@ -1,7 +1,11 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-const Button = styled.button`
+interface ButtonProps {
+  open?: boolean;
+}
+
+const Button = styled.button<ButtonProps>`
   margin: 1em;
   width: 32px;
   position: absolute;
@@ -21,32 +25,66 @@ const Button = styled.button`
     transition: all 0.2s ease-in-out;
   }
 
-  &:hover {
-    &:before {
-      transform: translateY(8px) rotate(135deg);
-    }
-
-    &:after {
-      transform: translateY(-8px) rotate(-135deg);
-    }
-
+  &:hover,
+  &:focus {
+    &:after,
+    &:before,
     & div {
-      transform: scale(0);
+      background-color: var(--clr-secondary);
     }
   }
 
+  ${(props) =>
+    props.open &&
+    css`
+       {
+        &:before {
+          transform: translateY(8px) rotate(135deg);
+          animation: enterBefore var(--transition) forwards;
+        }
+
+        &:after {
+          transform: translateY(-8px) rotate(-135deg);
+          animation: enterAfter var(--transition) forwards;
+        }
+
+        & div {
+          transform: scale(0);
+        }
+      }
+    `};
+
   @media only screen and (min-width: 768px) {
     display: none;
+  }
+
+  @keyframes enterBefore {
+    from {
+      transform: translateY(0) rotate(0);
+    }
+    to {
+      transform: translateY(8px) rotate(135deg);
+    }
+  }
+
+  @keyframes enterAfter {
+    from {
+      transform: translateY(0) rotate(0);
+    }
+    to {
+      transform: translateY(-8px) rotate(-135deg);
+    }
   }
 `;
 
 interface ButtonMenuProps {
   onClick: () => void;
+  open?: boolean;
 }
 
 const ButtonMenu = (props: ButtonMenuProps) => {
   return (
-    <Button onClick={props.onClick} className="nav-icon">
+    <Button onClick={props.onClick} open={props.open} className="nav-icon">
       <div></div>
     </Button>
   );

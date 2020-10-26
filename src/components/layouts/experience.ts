@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Experience = styled.div`
   --gap: 2rem;
   display: grid;
-  grid-gap: var(--gap);
+  grid-row-gap: var(--gap);
   grid-template-columns: repeat(12, 1fr);
 
   & > * {
@@ -35,5 +35,9 @@ export const Experience = styled.div`
         transform: translateX(var(--gap));
       }
     }
+  }
+
+  @media only screen and (min-width: 992px) {
+    grid-column-gap: var(--gap);
   }
 `;

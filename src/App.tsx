@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import useWindowSize from './hook/useMedia';
 import { ThemeProvider } from 'styled-components';
-import { Avatar, Card, ButtonMenu } from './components';
+import { Avatar, Card, MenuMobile } from './components';
 import { GlobalStyle, theme } from './style';
 import {
   MainWrapper,
@@ -20,7 +20,7 @@ import {
   TwitterLink,
   Highlight,
   TechList,
-  Header,
+  Menu,
   Introduction,
   Comment,
   Tasks,
@@ -29,29 +29,21 @@ import './style/fonts.css';
 
 function App() {
   const size = useWindowSize();
-  const { width, height } = size;
+  const { width } = size;
   const isMobile = width > 0 && width < 768;
-  const body = document.querySelector('body');
 
-  const [navOpen, setNavOpen] = useState(false);
-  const toggleNav = () => {
-    setNavOpen((prev) => !prev);
-    body?.classList.toggle('blur');
-  };
   //TODO: Refactor logic
   //TODO: Set open false when !isMobile
-  const openMobile = isMobile && navOpen;
 
   return (
     <MainWrapper>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Container className="App">
-          <ButtonMenu onClick={() => toggleNav()} />
-          <Header openMobile={openMobile}>
+          <header>
             <Row as={Nav}>
               <div style={{ display: 'none' }}>logo</div>
-              <Row as="ul" alignItems="center" mobile>
+              <Menu as="ul" alignItems="center">
                 <ItemNav>
                   <a href="#">About</a>
                 </ItemNav>
@@ -69,9 +61,10 @@ function App() {
                     Resume
                   </Button>
                 </li>
-              </Row>
+              </Menu>
+              {isMobile && <MenuMobile />}
             </Row>
-          </Header>
+          </header>
           <main>
             <Hero>
               <p>Hello, my name is</p>

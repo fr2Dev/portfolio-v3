@@ -13,11 +13,15 @@ const GlobalStyle = createGlobalStyle`
     /* * {
       outline: 2px dashed yellowgreen;
     } */
+    /* *:focus {
+      outline: 2px dashed yellowgreen !important;
+    } */
 
   body {
     background-color: var(--clr-main);
     color: var(--clr-white);
     margin: 0;
+    overflow-x: hidden;
     font-family: 'Open sans';
     font-size: 1.15rem;
   }
