@@ -30,16 +30,7 @@ const MenuMobile = () => {
     window.open(href, '_self');
   };
 
-  const handleClickOutside = () => {
-    if (open) {
-      console.log('open');
-    } else {
-      // close();
-      console.log('not open');
-    }
-  };
-
-  const ref = useClickOutsideListenerRef(handleClickOutside);
+  const ref = useClickOutsideListenerRef(close);
 
   return (
     <div ref={ref}>
