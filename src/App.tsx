@@ -1,5 +1,5 @@
 import React from 'react';
-import useWindowSize from './hook/useMedia';
+import useWindowSize from './hooks/useMedia';
 import { ThemeProvider } from 'styled-components';
 import { Avatar, Card, MenuMobile } from './components';
 import { GlobalStyle, theme } from './style';
@@ -33,7 +33,6 @@ function App() {
   const isMobile = width > 0 && width < 768;
 
   //TODO: Refactor logic
-  //TODO: Set open false when !isMobile
 
   return (
     <MainWrapper>
@@ -84,7 +83,7 @@ function App() {
             </Hero>
             <section className="flow">
               <h3>About me</h3>
-              <About>
+              <About id="about">
                 <div>
                   <Card variant="browser">
                     <p style={{ marginBottom: '10px' }}>
@@ -109,7 +108,7 @@ function App() {
                 <Avatar title="François Degrincourt" titleId="Avatar François Degrincourt" />
               </About>
             </section>
-            <section className="flow">
+            <section className="flow" id="experience">
               <h3>Where I’ve worked</h3>
               <Experience>
                 <Card variant="experience">
@@ -156,7 +155,7 @@ function App() {
               </Experience>
             </section>
             <SectionProjects />
-            <Contact className="flow">
+            <Contact className="flow" id="contact">
               <h3>Get In Touch</h3>
               <Card variant="message">
                 Although I'm not currently looking for any new opportunities,{' '}

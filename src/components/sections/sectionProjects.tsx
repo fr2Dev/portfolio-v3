@@ -4,7 +4,7 @@ import { Project } from '../../definitions/interfaces';
 
 const SectionProjects = () => {
   return (
-    <section className="flow">
+    <section className="flow" id="work">
       <h3>Some stuff I've made</h3>
       {datas.map((data: Project, i) => {
         const isOdd = i % 2 === 0;

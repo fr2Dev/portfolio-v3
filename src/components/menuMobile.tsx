@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import FocusTrap from 'focus-trap-react';
+import useClickOutsideListenerRef from '../hooks/useClickOutsideListenerRef';
 import { MenuMobile as Wrapper } from '../components/styled';
 import { ButtonMenu } from '../components';
 import { ItemNav, Button } from './styled';
@@ -8,25 +9,45 @@ const body = document.querySelector('body');
 const MenuMobile = () => {
   useEffect(() => {
     return () => {
-      body?.classList.remove('blur');
+      close();
     };
   }, []);
   const [open, setOpen] = useState(false);
+  const close = () => {
+    body?.classList.remove('blur');
+    setOpen(false);
+  };
   const toggleNav = () => {
     setOpen((prev) => !prev);
     body?.classList.toggle('blur');
   };
 
+  const handleLinks = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    event.preventDefault();
+    const link = event.target as HTMLAnchorElement;
+    const { href } = link;
+    close();
+    window.open(href, '_self');
+  };
+
+  const handleClickOutside = () => {
+    if (open) {
+      console.log('open');
+    } else {
+      // close();
+      console.log('not open');
+    }
+  };
+
+  const ref = useClickOutsideListenerRef(handleClickOutside);
+
   return (
-    <div>
+    <div ref={ref}>
       {!open && <ButtonMenu onClick={() => toggleNav()} />}
       {open && (
         <FocusTrap
           focusTrapOptions={{
-            onDeactivate: () => {
-              console.log('deactivate');
-              setOpen(false);
-            },
+            onDeactivate: () => close,
           }}
         >
           <div>
@@ -36,7 +57,9 @@ const MenuMobile = () => {
                 const { href, name } = link;
                 return (
                   <ItemNav key={i.toString()}>
-                    <a href={href}>{name}</a>
+                    <a href={href} onClick={(e) => handleLinks(e)}>
+                      {name}
+                    </a>
                   </ItemNav>
                 );
               })}
