@@ -1,7 +1,7 @@
 import React from 'react';
 import useWindowSize from './hooks/useMedia';
 import { ThemeProvider } from 'styled-components';
-import { Avatar, Card, MenuMobile } from './components';
+import { Avatar, Card, Menu, MenuMobile } from './components';
 import { GlobalStyle, theme } from './style';
 import {
   MainWrapper,
@@ -20,7 +20,6 @@ import {
   TwitterLink,
   Highlight,
   TechList,
-  Menu,
   Introduction,
   Comment,
   Tasks,
@@ -42,26 +41,7 @@ function App() {
           <header>
             <Row as={Nav}>
               <div style={{ display: 'none' }}>logo</div>
-              <Menu as="ul" alignItems="center">
-                <ItemNav>
-                  <a href="#">About</a>
-                </ItemNav>
-                <ItemNav>
-                  <a href="#">Experience</a>
-                </ItemNav>
-                <ItemNav>
-                  <a href="#">Work</a>
-                </ItemNav>
-                <ItemNav>
-                  <a href="#">Contact</a>
-                </ItemNav>
-                <li>
-                  <Button as="a" outlined href="#">
-                    Resume
-                  </Button>
-                </li>
-              </Menu>
-              {isMobile && <MenuMobile />}
+              {isMobile ? <MenuMobile /> : <Menu />}
             </Row>
           </header>
           <main>

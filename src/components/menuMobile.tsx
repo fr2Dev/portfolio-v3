@@ -3,6 +3,7 @@ import FocusTrap from 'focus-trap-react';
 import useClickOutsideListenerRef from '../hooks/useClickOutsideListenerRef';
 import { MenuMobile as Wrapper } from '../components/styled';
 import { ButtonMenu } from '../components';
+import { links } from '../content';
 import { ItemNav, Button } from './styled';
 
 const body = document.querySelector('body');
@@ -67,24 +68,5 @@ const MenuMobile = () => {
     </div>
   );
 };
-
-const links = [
-  {
-    href: '#about',
-    name: 'About',
-  },
-  {
-    href: '#experience',
-    name: 'Experience',
-  },
-  {
-    href: '#work',
-    name: 'Work',
-  },
-  {
-    href: '#contact',
-    name: 'Contact',
-  },
-];
 
 export default MenuMobile;
