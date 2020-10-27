@@ -3,6 +3,6 @@ export { MainWrapper } from './mainWrapper';
 export { Row } from './row';
 export { Hero } from './hero';
 export { About } from './about';
-export { Experience } from './experience';
+export { Experiences } from './experiences';
 export { Contact } from './contact';
 export { Preview } from './preview';

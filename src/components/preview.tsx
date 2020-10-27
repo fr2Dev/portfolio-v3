@@ -2,10 +2,10 @@ import React from 'react';
 import { Preview as Wrapper } from './layouts';
 import { Card } from './';
 import { TechList } from './styled';
-import { Project } from '../definitions/interfaces';
+import { IProject } from '../definitions/interfaces';
 
 interface PreviewProps {
-  data: Project;
+  data: IProject;
   reversed?: boolean;
 }
 

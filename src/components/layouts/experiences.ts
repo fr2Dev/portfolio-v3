@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Experience = styled.div`
+export const Experiences = styled.div`
   --gap: 2rem;
   display: grid;
   grid-row-gap: var(--gap);

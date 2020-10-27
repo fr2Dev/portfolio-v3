@@ -1,13 +1,18 @@
 import React from 'react';
-import { Experience } from '../../components/layouts';
-import { Card } from '../../components';
-import { TwitterLink, TechList, Comment, Tasks } from '../../components/styled';
+import { Experiences } from '../layouts';
+import { Experience } from '../';
+import { experiences } from '../../content';
+import { TwitterLink, TechList, Comment, Tasks } from '../styled';
+// TODO: refactor in a component for each cards with data exported from content
 const SectionExperience = () => {
   return (
     <section className="flow" id="experience">
       <h3>Where I’ve worked</h3>
-      <Experience>
-        <Card variant="experience">
+      <Experiences>
+        {experiences.map((exp, i) => (
+          <Experience content={exp} key={i.toString()} />
+        ))}
+        {/* <Card variant="experience">
           <h4>
             <span>Front End Developer</span> <TwitterLink href="#">@Filae</TwitterLink>
           </h4>
@@ -47,8 +52,8 @@ const SectionExperience = () => {
             <li>PHP</li>
             <li>SQL</li>
           </TechList>
-        </Card>
-      </Experience>
+        </Card> */}
+      </Experiences>
     </section>
   );
 };

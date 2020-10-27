@@ -8,7 +8,7 @@ import {
   SectionProjects,
   SectionHero,
   SectionAbout,
-  SectionExperience,
+  SectionExperiences,
   SectionContact,
 } from './components/sections';
 import { Nav } from './components/styled';
@@ -35,7 +35,7 @@ function App() {
           <main>
             <SectionHero />
             <SectionAbout />
-            <SectionExperience />
+            <SectionExperiences />
             <SectionProjects />
             <SectionContact />
           </main>

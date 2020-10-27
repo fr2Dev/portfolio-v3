@@ -1,4 +1,4 @@
-import { Project } from '..//definitions/interfaces';
+import { Project, Experience } from '../definitions/interfaces';
 
 export const links = [
   {
@@ -41,5 +41,30 @@ export const projects: Project[] = [
     content:
       'A bike reservation interface where you get multiples informations like your todo list, time, weather or some quotes.',
     techList: ['jQuery', 'API', 'Styled-Components'],
+  },
+];
+
+export const experiences: Experience[] = [
+  {
+    title: 'Front End Developer',
+    company: {
+      name: 'Filae',
+      twitter: '#',
+      period: 'April 2019 - Present',
+      location: '75 - Paris',
+    },
+    tasks: ['Integration', 'UI fix & update', 'Newsletter & mailing', 'Visual creation'],
+    techs: ['React', 'JS', 'jQuery', 'SCSS', 'Wordpress', 'Photoshop'],
+  },
+  {
+    title: 'IT Developer',
+    company: {
+      name: 'Jimenez_FVA',
+      twitter: '#',
+      period: 'June - September 2018',
+      location: '31 - Villeneuve-lès-Bouloc',
+    },
+    tasks: ['Creation of a management tool', 'Integration', 'Front-end', 'Back-end'],
+    techs: ['JS', 'jQuery', 'CSS', 'PHP', 'SQL'],
   },
 ];
