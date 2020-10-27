@@ -1,10 +1,10 @@
 import React from 'react';
 import useWindowSize from './hooks/useMedia';
 import { ThemeProvider } from 'styled-components';
-import { Avatar, Card, Menu, MenuMobile } from './components';
+import { Card, Menu, MenuMobile } from './components';
 import { GlobalStyle, theme } from './style';
-import { MainWrapper, Container, Row, About, Experience, Contact } from './components/layouts';
-import { SectionProjects, SectionHero } from './components/sections';
+import { MainWrapper, Container, Row, Experience, Contact } from './components/layouts';
+import { SectionProjects, SectionHero, SectionAbout } from './components/sections';
 import { Nav, Button, TwitterLink, TechList, Comment, Tasks } from './components/styled';
 import './style/fonts.css';
 
@@ -28,33 +28,7 @@ function App() {
           </header>
           <main>
             <SectionHero />
-            <section className="flow">
-              <h3>About me</h3>
-              <About id="about">
-                <div>
-                  <Card variant="browser">
-                    <p style={{ marginBottom: '10px' }}>
-                      Hi ! 👋 I am a self-taught developer, passionate about the web and love to
-                      create stuff. I eventually graduated in web development at{' '}
-                      <TwitterLink href="#">@OpenClassrooms</TwitterLink> and still look forward to
-                      learning new things every day. Currently at{' '}
-                      <TwitterLink href="#">@Filae</TwitterLink>, I work on a wide variety of
-                      interesting and meaningful projects on a daily basis.
-                    </p>
-                    <p>Here are a few technologies I've been working with recently:</p>
-                    <TechList as="ul" wrap="wrap">
-                      <li>React</li>
-                      <li>Typescript</li>
-                      <li>jQuery</li>
-                      <li>HTML & SCSS</li>
-                      <li>Wordpress</li>
-                      <li>Git</li>
-                    </TechList>
-                  </Card>
-                </div>
-                <Avatar title="François Degrincourt" titleId="Avatar François Degrincourt" />
-              </About>
-            </section>
+            <SectionAbout />
             <section className="flow" id="experience">
               <h3>Where I’ve worked</h3>
               <Experience>
