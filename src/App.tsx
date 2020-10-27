@@ -3,27 +3,9 @@ import useWindowSize from './hooks/useMedia';
 import { ThemeProvider } from 'styled-components';
 import { Avatar, Card, Menu, MenuMobile } from './components';
 import { GlobalStyle, theme } from './style';
-import {
-  MainWrapper,
-  Container,
-  Row,
-  Hero,
-  About,
-  Experience,
-  Contact,
-} from './components/layouts';
-import { SectionProjects } from './components/sections';
-import {
-  Nav,
-  Button,
-  ItemNav,
-  TwitterLink,
-  Highlight,
-  TechList,
-  Introduction,
-  Comment,
-  Tasks,
-} from './components/styled';
+import { MainWrapper, Container, Row, About, Experience, Contact } from './components/layouts';
+import { SectionProjects, SectionHero } from './components/sections';
+import { Nav, Button, TwitterLink, TechList, Comment, Tasks } from './components/styled';
 import './style/fonts.css';
 
 function App() {
@@ -45,22 +27,7 @@ function App() {
             </Row>
           </header>
           <main>
-            <Hero>
-              <p>Hello, my name is</p>
-              <h1>François Degrincourt</h1>
-              <h2>I build stuff on the web</h2>
-              <Introduction>
-                I'm a{' '}
-                <Highlight>
-                  <span>Front-End Developer</span>
-                </Highlight>{' '}
-                based in Paris, France, specializing in building (and occasionally designing)
-                amazing websites.
-              </Introduction>
-              <Button as="a" href="#">
-                Get in touch
-              </Button>
-            </Hero>
+            <SectionHero />
             <section className="flow">
               <h3>About me</h3>
               <About id="about">
