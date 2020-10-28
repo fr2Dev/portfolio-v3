@@ -2,6 +2,7 @@ import React from 'react';
 import { Preview } from '../';
 import { IProject } from '../../definitions/interfaces';
 import { projects } from '../../content';
+import { Animation } from '../../components';
 
 const SectionProjects = () => {
   return (
@@ -9,7 +10,11 @@ const SectionProjects = () => {
       <h3>Some stuff I've made</h3>
       {projects.map((data: IProject, i) => {
         const isOdd = i % 2 === 0;
-        return <Preview data={data} reversed={isOdd} key={i.toString()} />;
+        return (
+          <Animation key={i.toString()}>
+            <Preview data={data} reversed={isOdd} />
+          </Animation>
+        );
       })}
     </section>
   );

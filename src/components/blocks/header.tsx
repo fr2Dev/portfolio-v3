@@ -3,6 +3,7 @@ import useWindowSize from '../../hooks/useMedia';
 import { Menu, MenuMobile } from '../index';
 import { Row } from '../layouts';
 import { Nav } from '../styled';
+import logo from '../../images/logo.svg';
 
 const Header = () => {
   const size = useWindowSize();
@@ -12,7 +13,9 @@ const Header = () => {
   return (
     <header>
       <Row as={Nav}>
-        <div style={{ display: 'none' }}>logo</div>
+        <div>
+          <img src={logo} alt="logo" style={{ display: 'none' }} />
+        </div>
         {isMobile ? <MenuMobile /> : <Menu />}
       </Row>
     </header>

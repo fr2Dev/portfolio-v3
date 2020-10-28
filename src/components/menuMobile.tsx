@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import FocusTrap from 'focus-trap-react';
 import useClickOutsideListenerRef from '../hooks/useClickOutsideListenerRef';
 import { MenuMobile as Wrapper } from '../components/styled';

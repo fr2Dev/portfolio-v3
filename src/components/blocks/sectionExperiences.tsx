@@ -1,6 +1,6 @@
 import React from 'react';
 import { Experiences } from '../layouts';
-import { Experience } from '../';
+import { Experience, Animation } from '../';
 import { experiences } from '../../content';
 
 const SectionExperience = () => {
@@ -9,7 +9,9 @@ const SectionExperience = () => {
       <h3>Where I’ve worked</h3>
       <Experiences>
         {experiences.map((exp, i) => (
-          <Experience content={exp} key={i.toString()} />
+          <Animation key={i.toString()}>
+            <Experience content={exp} />
+          </Animation>
         ))}
       </Experiences>
     </section>
