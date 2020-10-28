@@ -81,13 +81,32 @@ const GlobalStyle = createGlobalStyle`
     overflow: hidden;
 
     main {
-    filter: blur(15px) brightness(0.7);
-    transition: var(--transition);
-    pointer-events: none;
-    user-select: none;
-  }
+      filter: blur(15px) brightness(0.7);
+      transition: var(--transition);
+      pointer-events: none;
+      user-select: none;
+    }
   }
 
+  button,
+  a {
+    /* Focusing the button with a keyboard will show a dashed black line. */
+    &:focus-visible {
+      outline: 3px dashed var(--clr-secondary);
+    }
+
+    /* Focusing the button with a mouse, touch, or stylus will show a subtle drop shadow. */
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    /* Currently only Chrome support focus-visible */
+    .not-chrome & {
+      &:focus {
+        outline: none;
+      }
+    }
+  }
 
   .flow {
     & > * + * {

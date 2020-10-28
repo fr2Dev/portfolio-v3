@@ -26,9 +26,9 @@ export const Nav = styled.nav`
       border-color: var(--clr-secondary);
     }
 
-    a:focus {
+    /* a:focus {
       outline: none;
-    }
+    } */
   }
 
   @media only screen and (min-width: 768px) {

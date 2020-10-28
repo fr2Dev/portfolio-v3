@@ -13,9 +13,12 @@ import {
 } from './components/blocks';
 import './style/fonts.css';
 
+const isChrome = /chrome/i.test(navigator.userAgent);
+const classBrowser = !isChrome ? 'not-chrome' : '';
+
 function App() {
   return (
-    <MainWrapper>
+    <MainWrapper className={classBrowser}>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Container className="App">

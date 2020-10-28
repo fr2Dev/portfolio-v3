@@ -25,7 +25,7 @@ export const Button = styled.button<ButtonProps>`
   }
 
   &:focus {
-    outline: none;
+    /* outline: none; */
   }
 
   ${({ outlined }) =>
