@@ -7,13 +7,19 @@ export const Experiences = styled.div`
   grid-template-columns: repeat(12, 1fr);
 
   & > * {
-    border: 2px dashed ${({ theme }) => theme.colors.tertiary};
-    background-color: ${({ theme }) => theme.colors.main};
+    & > * {
+      border: 2px dashed ${({ theme }) => theme.colors.tertiary};
+      background-color: ${({ theme }) => theme.colors.main};
+      height: 100%;
+    }
 
     &:first-child {
       grid-column: var(--size-first, span 12);
-      border: 2px solid ${({ theme }) => theme.colors.secondary};
-      background-color: ${({ theme }) => theme.colors.grey};
+
+      & > * {
+        border: 2px solid ${({ theme }) => theme.colors.secondary};
+        background-color: ${({ theme }) => theme.colors.grey};
+      }
     }
     &:last-child {
       grid-column: var(--size-last, span 12);
@@ -28,10 +34,10 @@ export const Experiences = styled.div`
       --size-first: 2 / span 5;
       --size-last: span 5 / -2;
 
-      &:first-child {
+      &:first-child > * {
         transform: translateX(calc(var(--gap) * -1));
       }
-      &:last-child {
+      &:last-child > * {
         transform: translateX(var(--gap));
       }
     }
