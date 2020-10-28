@@ -11,6 +11,12 @@ export const Nav = styled.nav`
 
   li {
     text-align: center;
+
+    @media only screen and (min-width: 768px) {
+      &:last-child {
+        margin-left: var(--base);
+      }
+    }
   }
 
   ${ItemNav} {
