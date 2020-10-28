@@ -21,7 +21,8 @@ const SectionAbout = () => {
               <li>React</li>
               <li>Typescript</li>
               <li>jQuery</li>
-              <li>HTML & SCSS</li>
+              <li>SCSS</li>
+              <li>HTML</li>
               <li>Wordpress</li>
               <li>Git</li>
             </TechList>

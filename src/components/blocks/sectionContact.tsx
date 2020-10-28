@@ -1,7 +1,7 @@
 import React from 'react';
 import { Contact } from '../../components/layouts';
 import { Card } from '../../components';
-import { Button } from '../../components/styled';
+import { Button, TechList } from '../../components/styled';
 const SectionContact = () => {
   return (
     <Contact className="flow" id="contact">

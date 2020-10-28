@@ -8,3 +8,4 @@ export { MenuMobile } from './styledMenuMobile';
 export { Introduction } from './styledIntroduction';
 export { Comment } from './styledComment';
 export { Tasks } from './styledTasks';
+export { Footer } from './styledFooter';

@@ -9,6 +9,7 @@ import {
   SectionAbout,
   SectionExperiences,
   SectionContact,
+  Footer,
 } from './components/blocks';
 import './style/fonts.css';
 
@@ -26,6 +27,7 @@ function App() {
             <SectionProjects />
             <SectionContact />
           </main>
+          <Footer />
         </Container>
       </ThemeProvider>
     </MainWrapper>
