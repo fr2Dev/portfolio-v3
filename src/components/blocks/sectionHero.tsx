@@ -1,12 +1,15 @@
 import React from 'react';
 import { Hero } from '../../components/layouts';
 import { Button, Highlight, Introduction } from '../../components/styled';
+import { AnimationOnScroll } from '../';
 const SectionHero = () => {
   return (
     <Hero>
       <p>Hello, my name is</p>
-      <h1>François Degrincourt</h1>
-      <h2>I build stuff on the web</h2>
+      <AnimationOnScroll from="left" noScroll>
+        <h1>François Degrincourt</h1>
+        <h2>I build stuff on the web</h2>
+      </AnimationOnScroll>
       <Introduction>
         I'm a{' '}
         <Highlight>

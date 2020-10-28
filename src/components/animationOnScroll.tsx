@@ -9,30 +9,27 @@ interface DivStyledProps {
 interface DivProps {
   children: React.ReactNode;
   from: origin;
+  noScroll?: boolean;
 }
 
 const getTransformValues = (origin: origin) => {
   const x = 2.5;
   const y = 5;
-  let axe;
+  const axe = origin === ('top' || 'bottom') ? 'Y' : 'X';
   let start;
   switch (origin) {
     case 'top':
-      axe = 'Y';
       start = `-${x}`;
       break;
 
     case 'right':
-      axe = 'X';
       start = `${y}`;
       break;
     case 'bottom':
-      axe = 'Y';
       start = `${x}`;
       break;
 
     case 'left':
-      axe = 'X';
       start = `-${y}`;
       break;
 
@@ -61,10 +58,10 @@ const Wrapper = styled.div<DivStyledProps>`
         `;
   }}
   transition: opacity var(--transition), transform var(--transition);
-  transition-duration: 1s;
+  transition-duration: 0.75s;
 `;
 
-const AnimationOnScroll = ({ children, from }: DivProps) => {
+const AnimationOnScroll = ({ children, from, noScroll }: DivProps) => {
   const [show, doShow] = useState(false);
   const ref = useRef(null);
 
@@ -81,7 +78,7 @@ const AnimationOnScroll = ({ children, from }: DivProps) => {
       }
     };
 
-    window.addEventListener('scroll', onScroll);
+    noScroll ? doShow(true) : window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
   return (
