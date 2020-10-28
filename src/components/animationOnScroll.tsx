@@ -5,11 +5,13 @@ type origin = 'top' | 'right' | 'left' | 'bottom';
 interface DivStyledProps {
   animate: boolean;
   from: origin;
+  delay?: number;
 }
 interface DivProps {
   children: React.ReactNode;
   from: origin;
   noScroll?: boolean;
+  delay?: number;
 }
 
 const getTransformValues = (origin: origin) => {
@@ -59,9 +61,10 @@ const Wrapper = styled.div<DivStyledProps>`
   }}
   transition: opacity var(--transition), transform var(--transition);
   transition-duration: 0.75s;
+  transition-delay: ${({ delay }) => `${delay}s`};
 `;
 
-const AnimationOnScroll = ({ children, from, noScroll }: DivProps) => {
+const AnimationOnScroll = ({ children, from, delay, noScroll }: DivProps) => {
   const [show, doShow] = useState(false);
   const ref = useRef(null);
 
@@ -83,7 +86,7 @@ const AnimationOnScroll = ({ children, from, noScroll }: DivProps) => {
   }, []);
   return (
     <>
-      <Wrapper animate={show} from={from} ref={ref}>
+      <Wrapper animate={show} from={from} delay={delay} ref={ref}>
         {children}
       </Wrapper>
     </>

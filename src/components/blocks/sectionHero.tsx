@@ -8,6 +8,8 @@ const SectionHero = () => {
       <p>Hello, my name is</p>
       <AnimationOnScroll from="left" noScroll>
         <h1>François Degrincourt</h1>
+      </AnimationOnScroll>
+      <AnimationOnScroll from="left" delay={1.25} noScroll>
         <h2>I build stuff on the web</h2>
       </AnimationOnScroll>
       <Introduction>
