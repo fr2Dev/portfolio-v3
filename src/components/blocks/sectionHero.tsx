@@ -15,7 +15,7 @@ const SectionHero = () => {
         based in Paris, France, specializing in building (and occasionally designing) amazing
         websites.
       </Introduction>
-      <Button as="a" href="#">
+      <Button as="a" href="#contact">
         Get in touch
       </Button>
     </Hero>

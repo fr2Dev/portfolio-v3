@@ -1,37 +1,24 @@
 import React from 'react';
-import useWindowSize from './hooks/useMedia';
 import { ThemeProvider } from 'styled-components';
-import { Card, Menu, MenuMobile } from './components';
 import { GlobalStyle, theme } from './style';
-import { MainWrapper, Container, Row, Contact } from './components/layouts';
+import { MainWrapper, Container } from './components/layouts';
 import {
+  Header,
   SectionProjects,
   SectionHero,
   SectionAbout,
   SectionExperiences,
   SectionContact,
-} from './components/sections';
-import { Nav } from './components/styled';
+} from './components/blocks';
 import './style/fonts.css';
 
 function App() {
-  const size = useWindowSize();
-  const { width } = size;
-  const isMobile = width > 0 && width < 768;
-
-  //TODO: Refactor logic
-
   return (
     <MainWrapper>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Container className="App">
-          <header>
-            <Row as={Nav}>
-              <div style={{ display: 'none' }}>logo</div>
-              {isMobile ? <MenuMobile /> : <Menu />}
-            </Row>
-          </header>
+          <Header />
           <main>
             <SectionHero />
             <SectionAbout />
