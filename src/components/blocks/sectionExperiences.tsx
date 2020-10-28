@@ -1,6 +1,6 @@
 import React from 'react';
 import { Experiences } from '../layouts';
-import { Experience, Animation } from '../';
+import { Experience, AnimationOnScroll } from '../';
 import { experiences } from '../../content';
 
 const SectionExperience = () => {
@@ -9,9 +9,9 @@ const SectionExperience = () => {
       <h3>Where I’ve worked</h3>
       <Experiences>
         {experiences.map((exp, i) => (
-          <Animation key={i.toString()}>
+          <AnimationOnScroll from="top" key={i.toString()}>
             <Experience content={exp} />
-          </Animation>
+          </AnimationOnScroll>
         ))}
       </Experiences>
     </section>

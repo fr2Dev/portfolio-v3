@@ -1,6 +1,6 @@
 import React from 'react';
 import { About } from '../../components/layouts';
-import { Card, Avatar, Animation } from '../../components';
+import { Card, Avatar, AnimationOnScroll } from '../../components';
 import { TwitterLink, TechList } from '../../components/styled';
 const SectionAbout = () => {
   return (
@@ -8,7 +8,7 @@ const SectionAbout = () => {
       <h3>About me</h3>
       <About>
         <div>
-          <Animation>
+          <AnimationOnScroll from="left">
             <Card variant="browser">
               <p style={{ marginBottom: '10px' }}>
                 Hi ! 👋 I am a self-taught developer, passionate about the web and love to create
@@ -29,7 +29,7 @@ const SectionAbout = () => {
                 <li>Git</li>
               </TechList>
             </Card>
-          </Animation>
+          </AnimationOnScroll>
         </div>
         <Avatar title="François Degrincourt" titleId="Avatar François Degrincourt" />
       </About>

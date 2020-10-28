@@ -7,4 +7,4 @@ export { default as MenuMobile } from './menuMobile';
 export { default as LinksMobile } from './linksMobile';
 export { default as Experience } from './experience';
 export { default as ScrollButton } from './scrollButton';
-export { default as Animation } from './animation';
+export { default as AnimationOnScroll } from './animationOnScroll';

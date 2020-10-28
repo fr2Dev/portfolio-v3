@@ -2,7 +2,7 @@ import React from 'react';
 import { Preview } from '../';
 import { IProject } from '../../definitions/interfaces';
 import { projects } from '../../content';
-import { Animation } from '../../components';
+import { AnimationOnScroll } from '../../components';
 
 const SectionProjects = () => {
   return (
@@ -11,9 +11,9 @@ const SectionProjects = () => {
       {projects.map((data: IProject, i) => {
         const isOdd = i % 2 === 0;
         return (
-          <Animation key={i.toString()}>
+          <AnimationOnScroll from={isOdd ? 'left' : 'right'} key={i.toString()}>
             <Preview data={data} reversed={isOdd} />
-          </Animation>
+          </AnimationOnScroll>
         );
       })}
     </section>
