@@ -1,4 +1,4 @@
-import { Project, Experience } from '../definitions/interfaces';
+import { IProject, IExperience } from '../definitions/interfaces';
 
 export const links = [
   {
@@ -19,7 +19,7 @@ export const links = [
   },
 ];
 
-export const projects: Project[] = [
+export const projects: IProject[] = [
   {
     url: '#',
     img: {
@@ -44,7 +44,7 @@ export const projects: Project[] = [
   },
 ];
 
-export const experiences: Experience[] = [
+export const experiences: IExperience[] = [
   {
     title: 'Front End Developer',
     company: {

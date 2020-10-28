@@ -4,8 +4,12 @@ import { Card } from './';
 import { TwitterLink, TechList, Comment, Tasks } from './styled';
 // TODO: refactor in a component for each cards with data exported from content
 
-const Experience = ({ content }: IExperience[]) => {
-  const { title, company, tasks, techs } = content;
+interface ExperienceProps {
+  content: IExperience;
+}
+
+const Experience = (props: ExperienceProps) => {
+  const { title, company, tasks, techs } = props.content;
   const { name, twitter, period, location } = company;
   return (
     <Card variant="experience">
