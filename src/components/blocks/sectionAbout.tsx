@@ -11,8 +11,12 @@ const SectionAbout = () => {
           <AnimationOnScroll from="left">
             <Card variant="browser">
               <p style={{ marginBottom: '10px' }}>
-                Hi ! 👋 I am a self-taught developer, passionate about the web and love to create
-                stuff. I eventually graduated in web development at{' '}
+                Hi !{' '}
+                <span role="img" aria-labelledby="waving hand">
+                  👋
+                </span>{' '}
+                I am a self-taught developer, passionate about the web and love to create stuff. I
+                eventually graduated in web development at{' '}
                 <TwitterLink href="#">@OpenClassrooms</TwitterLink> and still look forward to
                 learning new things every day. Currently at{' '}
                 <TwitterLink href="#">@Filae</TwitterLink>, I work on a wide variety of interesting
