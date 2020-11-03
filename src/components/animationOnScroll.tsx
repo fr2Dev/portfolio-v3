@@ -3,9 +3,9 @@ import styled, { css } from 'styled-components';
 
 type origin = 'top' | 'right' | 'left' | 'bottom';
 interface DivStyledProps {
-  animate: boolean;
-  from: origin;
-  delay?: number;
+  $animate: boolean;
+  $from: origin;
+  $delay?: number;
 }
 interface DivProps {
   children: React.ReactNode;
@@ -45,11 +45,11 @@ const getTransformValues = (origin: origin) => {
 };
 
 const Wrapper = styled.div<DivStyledProps>`
-  ${({ animate, from }) => {
-    const values = getTransformValues(from);
+  ${({ $animate, $from }) => {
+    const values = getTransformValues($from);
     const { start, end } = values;
 
-    return animate
+    return $animate
       ? css`
           opacity: 1;
           transform: ${end};
@@ -61,7 +61,7 @@ const Wrapper = styled.div<DivStyledProps>`
   }}
   transition: opacity var(--transition), transform var(--transition);
   transition-duration: 0.75s;
-  transition-delay: ${({ delay }) => `${delay}s`};
+  transition-delay: ${({ $delay }) => ($delay ? `${$delay}s` : '')};
 `;
 
 const AnimationOnScroll = ({ children, from, delay, noScroll }: DivProps) => {
@@ -85,11 +85,9 @@ const AnimationOnScroll = ({ children, from, delay, noScroll }: DivProps) => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
   return (
-    <>
-      <Wrapper animate={show} from={from} delay={delay} ref={ref}>
-        {children}
-      </Wrapper>
-    </>
+    <Wrapper $animate={show} $from={from} $delay={delay} ref={ref}>
+      {children}
+    </Wrapper>
   );
 };
 

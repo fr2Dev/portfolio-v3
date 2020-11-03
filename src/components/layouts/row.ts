@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 interface RowProps {
   flex?: string;
-  wrap?: string;
+  $wrap?: string;
   alignItems?: string;
   justifyContent?: string;
   mobile?: boolean;
@@ -12,7 +12,7 @@ export const Row = styled.div<RowProps>`
   display: flex;
   flex: ${(props) => (props.flex ? props.flex : 'initial')};
   flex-direction: row;
-  flex-wrap: ${(props) => (props.wrap ? props.wrap : 'initial')};
+  flex-wrap: ${(props) => (props.$wrap ? props.$wrap : 'initial')};
   align-items: ${(props) => (props.alignItems ? props.alignItems : 'initial')};
   justify-content: ${(props) => (props.justifyContent ? props.justifyContent : 'initial')};
   @media screen and (max-width: 768px) {

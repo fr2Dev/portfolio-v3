@@ -23,7 +23,7 @@ const SectionAbout = () => {
                 and meaningful projects on a daily basis.
               </p>
               <p>Here are a few technologies I've been working with recently:</p>
-              <TechList as="ul" wrap="wrap">
+              <TechList as="ul" $wrap="wrap">
                 <li>React</li>
                 <li>Typescript</li>
                 <li>jQuery</li>

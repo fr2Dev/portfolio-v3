@@ -23,7 +23,7 @@ const Experience = (props: ExperienceProps) => {
           <li key={i.toString()}>{task}</li>
         ))}
       </Tasks>
-      <TechList as="ul" wrap="wrap">
+      <TechList as="ul" $wrap="wrap">
         {techs.map((tech, i) => (
           <li key={i.toString()}>{tech}</li>
         ))}

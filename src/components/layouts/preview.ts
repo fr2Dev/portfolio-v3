@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface PreviewProps {
-  reversed?: boolean;
+  $reversed?: boolean;
 }
 
 export const Preview = styled.div<PreviewProps>`
@@ -56,7 +56,7 @@ export const Preview = styled.div<PreviewProps>`
     &:last-child {
       grid-column: var(--size-card, 1 / -1);
       grid-row: var(--height-card, 1 / -1);
-      order: ${({ reversed }) => reversed && -1};
+      order: ${({ $reversed }) => $reversed && -1};
       z-index: 3;
 
       display: grid;
@@ -64,29 +64,29 @@ export const Preview = styled.div<PreviewProps>`
     }
 
     @media only screen and (min-width: 768px) {
-      --size-link: ${({ reversed }) => (reversed ? '4 / 13' : '1 / 10')};
+      --size-link: ${({ $reversed }) => ($reversed ? '4 / 13' : '1 / 10')};
       --height-link: 1 / -1;
-      --size-card: ${({ reversed }) => (reversed ? '1 / 9' : '5 / 13')};
+      --size-card: ${({ $reversed }) => ($reversed ? '1 / 9' : '5 / 13')};
       --height-card: 2 / 6;
       --transform-link: none;
     }
 
     @media only screen and (min-width: 992px) {
-      --size-link: ${({ reversed }) => (reversed ? '5 / 12' : '2 / 9')};
+      --size-link: ${({ $reversed }) => ($reversed ? '5 / 12' : '2 / 9')};
       --height-link: 1 / -1;
-      --size-card: ${({ reversed }) => (reversed ? '1 / 7' : '7 / 13')};
+      --size-card: ${({ $reversed }) => ($reversed ? '1 / 7' : '7 / 13')};
       --height-card: 2 / 6;
     }
 
     @media only screen and (min-width: 1200px) {
-      --size-link: ${({ reversed }) => (reversed ? '5 / 13' : '1 / 9')};
-      --size-card: ${({ reversed }) => (reversed ? '1 / 7' : '7 / 13')};
+      --size-link: ${({ $reversed }) => ($reversed ? '5 / 13' : '1 / 9')};
+      --size-card: ${({ $reversed }) => ($reversed ? '1 / 7' : '7 / 13')};
       --width-link: 80%;
     }
 
     @media only screen and (min-width: 1440px) {
-      --size-link: ${({ reversed }) => (reversed ? '5 / 12' : '2 / 9')};
-      --size-card: ${({ reversed }) => (reversed ? '2 / 7' : '7 / 12')};
+      --size-link: ${({ $reversed }) => ($reversed ? '5 / 12' : '2 / 9')};
+      --size-card: ${({ $reversed }) => ($reversed ? '2 / 7' : '7 / 12')};
     }
   }
 

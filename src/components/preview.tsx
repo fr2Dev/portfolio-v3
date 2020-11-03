@@ -14,7 +14,7 @@ const Preview = ({ data, reversed }: PreviewProps) => {
   const { src, alt } = img;
 
   return (
-    <Wrapper reversed={reversed}>
+    <Wrapper $reversed={reversed}>
       <a href={url}>
         <img src={src} alt={alt} />
       </a>
@@ -22,7 +22,7 @@ const Preview = ({ data, reversed }: PreviewProps) => {
         <Card variant="browser">
           <h5>{title}</h5>
           <p>{content}</p>
-          <TechList as="ul" wrap="wrap">
+          <TechList as="ul" $wrap="wrap">
             {techList.map((tech, i) => (
               <li key={i.toString()}>{tech}</li>
             ))}
