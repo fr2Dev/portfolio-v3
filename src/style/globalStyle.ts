@@ -10,9 +10,9 @@ const GlobalStyle = createGlobalStyle`
       ${vars}
     }
 
-    * {
+    /* * {
       outline: 2px dashed yellowgreen;
-    }
+    } */
     /* *:focus {
       outline: 2px dashed yellowgreen !important;
     } */
@@ -75,12 +75,6 @@ const GlobalStyle = createGlobalStyle`
 
   .highlight {
     color: var(--clr-secondary);
-  }
-
-  .app {
-    @media only screen and (max-width: 767px) {
-      overflow-x: hidden;
-    }
   }
 
   body.blur {

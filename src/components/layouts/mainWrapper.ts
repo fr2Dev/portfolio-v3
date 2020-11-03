@@ -5,4 +5,9 @@ export const MainWrapper = styled.div`
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+
+  @media only screen and (max-width: 767px) {
+    overflow-x: hidden;
+    width: 100vw;
+  }
 `;
