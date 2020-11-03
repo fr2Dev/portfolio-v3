@@ -14,7 +14,6 @@ const SvgStyled = styled.svg`
 
   .eyeball {
     animation: blink forwards infinite 10s 2s ease-in-out;
-    /* fill: red; */
     transform: scale(1);
     z-index: 100;
   }
@@ -49,44 +48,48 @@ const SvgStyled = styled.svg`
 `;
 
 const Avatar = ({ title, titleId, ...props }: AvatarProps) => {
-  // TODO: coordinate seems based on screen cursor instead of avatar himself,
-  // TODO: issue based on loading position too
-  // useEffect(() => {
-  //   let eyeBall = document.querySelector('.eyeball'),
-  //     pupil = document.querySelector('.pupil') as HTMLElement;
+  useEffect(() => {
+    const handleScroll = () => {
+      const avatar = document.getElementById('avatar');
 
-  //   if (eyeBall && pupil) {
-  //     let eyeArea = eyeBall.getBoundingClientRect(),
-  //       R = eyeArea.width / 2,
-  //       centerX = eyeArea.left + R,
-  //       centerY = eyeArea.top + R;
+      if (avatar === null) return false;
+      const { top, height } = avatar.getBoundingClientRect();
+      const { innerHeight } = window;
+      const threshold = (innerHeight * 20) / 100;
+      const startLookUp = top < threshold;
+      const startLookDown = top + height > innerHeight - threshold;
 
-  //     const handleEyesMovements = (e: MouseEvent) => {
-  //       let x = e.clientX - centerX,
-  //         y = e.clientY - centerY;
+      let eyeBall = document.querySelector('.eyeball'),
+        pupil = document.querySelector('.pupil') as HTMLElement;
 
-  //       const getCapedCoordonate = (x: number) => {
-  //         if (x > 3) return 3;
-  //         if (x < -3) return -3;
-  //         if (x < 3 || x > -3) return x;
-  //       };
+      if (eyeBall && pupil) {
+        const getCapedCoordonate = () => {
+          if (!startLookUp && !startLookDown) return 0;
+          if (startLookUp) return -3;
+          if (startLookDown) return 3;
+        };
 
-  //       const X = getCapedCoordonate(x);
-  //       const Y = getCapedCoordonate(y);
+        const Y = getCapedCoordonate();
 
-  //       pupil.style.transform = `translate(${X + 'px'}, ${Y + 'px'})`;
-  //     };
+        pupil.style.transform = `translateY(${Y + 'px'})`;
+      }
+    };
+    document.addEventListener('scroll', handleScroll);
 
-  //     document.addEventListener('mousemove', (e: MouseEvent) => handleEyesMovements(e));
-
-  //     return () => {
-  //       document.removeEventListener('mousemove', handleEyesMovements);
-  //     };
-  //   }
-  // }, []);
+    return () => {
+      document.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <SvgStyled width={264} height={264} fill="none" aria-labelledby={titleId} {...props}>
+    <SvgStyled
+      width={264}
+      height={264}
+      fill="none"
+      id="avatar"
+      aria-labelledby={titleId}
+      {...props}
+    >
       {title ? <title id={titleId}>{title}</title> : null}
       <mask id="prefix__a" maskUnits="userSpaceOnUse" x={12} y={24} width={240} height={240}>
         <path
