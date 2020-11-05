@@ -1,10 +1,19 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Hero } from '../../components/layouts';
 import { Button, Highlight, Introduction } from '../../components/styled';
 import { AnimationOnScroll } from '../';
+
 const SectionHero = () => {
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (language: string) => {
+    i18n.changeLanguage(language);
+  };
   return (
     <Hero>
+      <button onClick={() => changeLanguage('en')}>EN</button>
+      <button onClick={() => changeLanguage('fr')}>FR</button>
+      <h1>{t('description.part1')}</h1>
       <p>Hello, my name is</p>
       <AnimationOnScroll from="left" noScroll>
         <h1>François Degrincourt</h1>
