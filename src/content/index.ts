@@ -1,34 +1,33 @@
 import { IProject, IExperience } from '../definitions/interfaces';
 
-export const links = [
+export const getLinks = (t: any) => [
   {
     href: '#about',
-    name: 'About',
+    name: t('Navigation.About'),
   },
   {
     href: '#experience',
-    name: 'Experience',
+    name: t('Navigation.Experience'),
   },
   {
     href: '#work',
-    name: 'Work',
+    name: t('Navigation.Work'),
   },
   {
     href: '#contact',
-    name: 'Contact',
+    name: t('Navigation.Contact'),
   },
 ];
 
-export const projects: IProject[] = [
+export const getProjects = (t: any): IProject[] => [
   {
     url: '#',
     img: {
       src: 'https://francoisdpro.eu/assets/img/png/natours.png',
       alt: 'project fr2dev',
     },
-    title: 'Home page',
-    content:
-      'A landing page where you get multiples informations like your todo list, time, weather or some quotes.',
+    title: t('Projects.project1.title'),
+    content: t('Projects.project1.description'),
     techList: ['React', 'Typescript', 'Styled-Components'],
   },
   {
@@ -37,23 +36,27 @@ export const projects: IProject[] = [
       src: 'http://francoisdpro.eu/assets/img/png/DWJ-projet3-min.png',
       alt: 'project fr2dev',
     },
-    title: 'Bike reservation',
-    content:
-      'A bike reservation interface where you get multiples informations like your todo list, time, weather or some quotes.',
+    title: t('Projects.project2.title'),
+    content: t('Projects.project2.description'),
     techList: ['jQuery', 'API', 'Styled-Components'],
   },
 ];
 
-export const experiences: IExperience[] = [
+export const getExperiences = (t: any): IExperience[] => [
   {
-    title: 'Front End Developer',
+    title: t('FrontEndDev'),
     company: {
       name: 'Filae',
       twitter: '#',
-      period: 'April 2019 - Present',
-      location: '75 - Paris',
+      period: t('Experiences.exp1.period'),
+      location: t('Experiences.exp1.place'),
     },
-    tasks: ['Integration', 'UI fix & update', 'Newsletter & mailing', 'Visual creation'],
+    tasks: [
+      t('Experiences.exp1.task1'),
+      t('Experiences.exp1.task2'),
+      t('Experiences.exp1.task3'),
+      t('Experiences.exp1.task4'),
+    ],
     techs: ['React', 'JS', 'jQuery', 'SCSS', 'Wordpress', 'Photoshop'],
   },
   {
@@ -61,10 +64,15 @@ export const experiences: IExperience[] = [
     company: {
       name: 'Jimenez_FVA',
       twitter: '#',
-      period: 'June - September 2018',
-      location: '31 - Villeneuve-lès-Bouloc',
+      period: t('Experiences.exp2.period'),
+      location: t('Experiences.exp2.place'),
     },
-    tasks: ['Creation of a management tool', 'Integration', 'Front-end', 'Back-end'],
+    tasks: [
+      t('Experiences.exp2.task1'),
+      t('Experiences.exp2.task2'),
+      t('Experiences.exp2.task3'),
+      t('Experiences.exp2.task4'),
+    ],
     techs: ['JS', 'jQuery', 'CSS', 'PHP', 'SQL'],
   },
 ];

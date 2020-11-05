@@ -9,28 +9,28 @@ const SectionHero = () => {
   const changeLanguage = (language: string) => {
     i18n.changeLanguage(language);
   };
+  const role = (
+    <Highlight>
+      <span>{t('FrontEndDev')}</span>
+    </Highlight>
+  );
+
   return (
     <Hero>
       <button onClick={() => changeLanguage('en')}>EN</button>
       <button onClick={() => changeLanguage('fr')}>FR</button>
-      <h1>{t('description.part1')}</h1>
-      <p>Hello, my name is</p>
+      <p>{t('Hero.HelloMyNameIs')}</p>
       <AnimationOnScroll from="left" noScroll>
         <h1>François Degrincourt</h1>
       </AnimationOnScroll>
       <AnimationOnScroll from="left" delay={1.25} noScroll>
-        <h2>I build stuff on the web</h2>
+        <h2>{t('Hero.IBuildStuff')}</h2>
       </AnimationOnScroll>
       <Introduction>
-        I'm a{' '}
-        <Highlight>
-          <span>Front-End Developer</span>
-        </Highlight>{' '}
-        based in Paris, France, specializing in building (and occasionally designing) amazing
-        websites.
+        {t('Hero.introduce.part1')} {role} {t('Hero.introduce.part2')}
       </Introduction>
       <Button as="a" href="#contact">
-        Get in touch
+        {t('GetInTouch')}
       </Button>
     </Hero>
   );

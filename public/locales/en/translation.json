@@ -1,7 +1,70 @@
 {
-  "title": "ENLGISH ENGLISH",
-  "description": {
-    "part1": "ENLGISH ENGLISH",
-    "part2": "ENLGISH ENGLISH"
-  }
+  "Navigation": {
+    "About": "About",
+    "Experience": "Experience",
+    "Work": "Work",
+    "Contact": "Contact",
+    "Resume": "Resume"
+  },
+  "Hero": {
+    "HelloMyNameIs": "Hello, my name is",
+    "IBuildStuff": "I build stuff on the web",
+    "introduce": {
+      "part1": "I'm a ",
+      "part2": "based in Paris, France, specializing in building (and occasionally designing) amazing websites."
+    }
+  },
+  "About": {
+    "title": "About me",
+    "introduce": {
+      "part1": "Hi!",
+      "part2": "I am a self-taught developer, passionate about the web and love to create stuff. I eventually graduated in web development at",
+      "part3": "and still look forward to learning new things every day. Currently at",
+      "part4": ", I work on a wide variety of interesting and meaningful projects on a daily basis."
+    },
+    "IVBeenWorkingWith": "Here are a few technologies I've been working with recently:"
+  },
+  "Experiences": {
+    "title": "Where I’ve worked",
+    "exp1": {
+      "period": "Period: April 2019 - Present",
+      "place": "Place: 75 - Paris",
+      "task1": "Integration",
+      "task2": "UI fix & update",
+      "task3": "Newsletter & mailing",
+      "task4": "Visual creation"
+    },
+    "exp2": {
+      "role":"IT Developer",
+      "period": "Period: June - September 2018",
+      "place": "Place: 31 - Villeneuve-lès-Bouloc",
+      "task1": "Creation of a management tool",
+      "task2": "Integration",
+      "task3": "Front-end",
+      "task4": "Back-end"
+    }
+  },
+  "Projects": {
+    "title": "Some stuff I've made",
+    "project1": {
+      "title": "Home page",
+      "description": "A landing page where you get multiples informations like your todo list, time, weather or some quotes."
+    },
+    "project2": {
+      "title": "Bike reservation",
+      "description": "A bike reservation interface where you get multiples informations like your todo list, time, weather or some quotes."
+    }
+  },
+  "Contact": {
+      "title": "Get In Touch",
+      "content": {
+        "part1": "Although I'm not currently looking for any new opportunities,",
+        "part2": "my inbox is always open",
+        "part3": ". Whether you have a question or just want to say hello, I'll try my best to get back to you!"
+      }
+  },
+  "FrontEndDev": "Front End Developer",
+  "GetInTouch":"Get in touch",
+  "SayHi":"Say Hi",
+  "Resume":"Resume"
 }

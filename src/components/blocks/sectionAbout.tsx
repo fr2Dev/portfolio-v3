@@ -1,28 +1,28 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { About } from '../../components/layouts';
 import { Card, Avatar, AnimationOnScroll } from '../../components';
 import { TwitterLink, TechList } from '../../components/styled';
 const SectionAbout = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="flow" id="about">
-      <h3>About me</h3>
+      <h3>{t('About.title')}</h3>
       <About>
         <div>
           <AnimationOnScroll from="left">
             <Card variant="browser">
               <p style={{ marginBottom: '10px' }}>
-                Hi !{' '}
+                {t('About.introduce.part1')}{' '}
                 <span role="img" aria-labelledby="waving hand">
                   👋
                 </span>{' '}
-                I am a self-taught developer, passionate about the web and love to create stuff. I
-                eventually graduated in web development at{' '}
-                <TwitterLink href="#">@OpenClassrooms</TwitterLink> and still look forward to
-                learning new things every day. Currently at{' '}
-                <TwitterLink href="#">@Filae</TwitterLink>, I work on a wide variety of interesting
-                and meaningful projects on a daily basis.
+                {t('About.introduce.part2')} <TwitterLink href="#">@OpenClassrooms</TwitterLink>{' '}
+                {t('About.introduce.part3')} <TwitterLink href="#">@Filae</TwitterLink>
+                {t('About.introduce.part4')}
               </p>
-              <p>Here are a few technologies I've been working with recently:</p>
+              <p>{t('About.IVBeenWorkingWith')}</p>
               <TechList as="ul" $wrap="wrap">
                 <li>React</li>
                 <li>Typescript</li>

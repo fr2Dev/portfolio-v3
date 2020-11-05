@@ -1,20 +1,23 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Contact } from '../../components/layouts';
 import { Card, AnimationOnScroll } from '../../components';
 import { Button } from '../../components/styled';
 const SectionContact = () => {
+  const { t } = useTranslation();
+
   return (
     <Contact className="flow" id="contact">
-      <h3>Get In Touch</h3>
+      <h3 style={{ textTransform: 'capitalize' }}>{t('GetInTouch')}</h3>
       <AnimationOnScroll from="top">
         <Card variant="message">
-          Although I'm not currently looking for any new opportunities,{' '}
-          <span className="highlight">my inbox is always open</span>. Whether you have a question or
-          just want to say hello, I'll try my best to get back to you!
+          {t('Contact.content.part1')}{' '}
+          <span className="highlight">{t('Contact.content.part2')}</span>
+          {t('Contact.content.part3')}
         </Card>
       </AnimationOnScroll>
       <Button as="a" href="mailto:francois.degrincourt@gmail.com" outlined>
-        Say Hi
+        {t('SayHi')}
       </Button>
     </Contact>
   );

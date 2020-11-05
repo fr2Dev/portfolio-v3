@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import FocusTrap from 'focus-trap-react';
 import useClickOutsideListenerRef from '../hooks/useClickOutsideListenerRef';
 import { MenuMobile as Wrapper } from '../components/styled';
 import { ButtonMenu } from '../components';
-import { links } from '../content';
+import { getLinks } from '../content';
 import { ItemNav, Button } from './styled';
 
 const body = document.querySelector('body');
@@ -13,6 +14,9 @@ const MenuMobile = () => {
       close();
     };
   }, []);
+  const { t } = useTranslation();
+  const links = getLinks(t);
+
   const [open, setOpen] = useState(false);
   const close = () => {
     body?.classList.remove('blur');
@@ -58,7 +62,7 @@ const MenuMobile = () => {
 
               <li>
                 <Button as="a" outlined href="#">
-                  Resume
+                  {t('Resume')}
                 </Button>
               </li>
             </Wrapper>
