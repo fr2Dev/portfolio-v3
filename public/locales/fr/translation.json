@@ -66,5 +66,7 @@
   "FrontEndDev": "Developpeur Front-end",
   "GetInTouch":"Me contacter",
   "SayHi":"Me contacter",
-  "Resume":"CV"
+  "Resume":"CV",
+  "FranceFlag":"Drapeau Français",
+  "UnitedKingdomFlag":"Drapeau Royaume-Uni"
 }

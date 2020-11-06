@@ -5,10 +5,8 @@ import { Button, Highlight, Introduction } from '../../components/styled';
 import { AnimationOnScroll } from '../';
 
 const SectionHero = () => {
-  const { t, i18n } = useTranslation();
-  const changeLanguage = (language: string) => {
-    i18n.changeLanguage(language);
-  };
+  const { t } = useTranslation();
+
   const role = (
     <Highlight>
       <span>{t('FrontEndDev')}</span>
@@ -17,8 +15,6 @@ const SectionHero = () => {
 
   return (
     <Hero>
-      <button onClick={() => changeLanguage('en')}>EN</button>
-      <button onClick={() => changeLanguage('fr')}>FR</button>
       <p>{t('Hero.HelloMyNameIs')}</p>
       <AnimationOnScroll from="left" noScroll>
         <h1>François Degrincourt</h1>
