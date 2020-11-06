@@ -14,10 +14,13 @@ const Experience = (props: ExperienceProps) => {
   return (
     <Card variant="experience">
       <h4>
-        <span>{title}</span> <TwitterLink href={twitter}>@{name}</TwitterLink>
+        <span>{title}</span>{' '}
+        <TwitterLink href={twitter} target="_blank">
+          @{name}
+        </TwitterLink>
       </h4>
-      <Comment>{`// Period: ${period}`}</Comment>
-      <Comment>{`// Place: ${location}`}</Comment>
+      <Comment>{`// ${period}`}</Comment>
+      <Comment>{`// ${location}`}</Comment>
       <Tasks>
         {tasks.map((task, i) => (
           <li key={i.toString()}>{task}</li>

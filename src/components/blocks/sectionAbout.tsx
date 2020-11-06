@@ -18,8 +18,14 @@ const SectionAbout = () => {
                 <span role="img" aria-labelledby="waving hand">
                   👋
                 </span>{' '}
-                {t('About.introduce.part2')} <TwitterLink href="#">@OpenClassrooms</TwitterLink>{' '}
-                {t('About.introduce.part3')} <TwitterLink href="#">@Filae</TwitterLink>
+                {t('About.introduce.part2')}{' '}
+                <TwitterLink href="https://twitter.com/openclassrooms" target="_blank">
+                  @OpenClassrooms
+                </TwitterLink>{' '}
+                {t('About.introduce.part3')}{' '}
+                <TwitterLink href="https://twitter.com/filaecom" target="_blank">
+                  @Filae
+                </TwitterLink>
                 {t('About.introduce.part4')}
               </p>
               <p>{t('About.IVBeenWorkingWith')}</p>

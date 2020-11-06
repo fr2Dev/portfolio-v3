@@ -47,7 +47,7 @@ export const getExperiences = (t: any): IExperience[] => [
     title: t('FrontEndDev'),
     company: {
       name: 'Filae',
-      twitter: '#',
+      twitter: 'https://twitter.com/filaecom',
       period: t('Experiences.exp1.period'),
       location: t('Experiences.exp1.place'),
     },
@@ -63,7 +63,7 @@ export const getExperiences = (t: any): IExperience[] => [
     title: 'IT Developer',
     company: {
       name: 'Jimenez_FVA',
-      twitter: '#',
+      twitter: 'https://twitter.com/jimenez_fva',
       period: t('Experiences.exp2.period'),
       location: t('Experiences.exp2.place'),
     },

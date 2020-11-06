@@ -8,7 +8,7 @@ const SectionContact = () => {
 
   return (
     <Contact className="flow" id="contact">
-      <h3 style={{ textTransform: 'capitalize' }}>{t('GetInTouch')}</h3>
+      <h3 style={{ textTransform: 'capitalize' }}>{t('Contact.title')}</h3>
       <AnimationOnScroll from="top">
         <Card variant="message">
           {t('Contact.content.part1')}{' '}

@@ -1,70 +1,70 @@
 {
   "Navigation": {
-    "About": "About",
-    "Experience": "Experience",
-    "Work": "Work",
+    "About": "Présentation",
+    "Experience": "Expérience",
+    "Work": "Projets",
     "Contact": "Contact",
-    "Resume": "Resume"
+    "Resume": "CV"
   },
   "Hero": {
-    "HelloMyNameIs": "Hello, my name is",
-    "IBuildStuff": "I build stuff on the web",
+    "HelloMyNameIs": "Bonjour, je m'appelle",
+    "IBuildStuff": "Je créer des sites web",
     "introduce": {
-      "part1": "I'm a ",
-      "part2": "based in Paris, France, specializing in building (and occasionally designing) amazing websites."
+      "part1": "Je suis un ",
+      "part2": "basé à Paris, spécialisé dans la création (et parfois la conception) de super sites web."
     }
   },
   "About": {
-    "title": "About me",
+    "title": "Qui suis-je ?",
     "introduce": {
-      "part1": "Hi!",
-      "part2": "I am a self-taught developer, passionate about the web and love to create stuff. I eventually graduated in web development at",
-      "part3": "and still look forward to learning new things every day. Currently at",
-      "part4": ", I work on a wide variety of interesting and meaningful projects on a daily basis."
+      "part1": "Salut !",
+      "part2": "Je suis un développeur autodidacte, passionné par le web et qui adore créer des trucs funs. J'ai finalement obtenu mon diplôme en développement web avec ",
+      "part3": "et j'ai toujours l'envie d'apprendre de nouvelles choses chaque jour. Actuellement chez",
+      "part4": ", je travaille quotidiennement sur une grande variété de projets intéressants et enrichissants."
     },
-    "IVBeenWorkingWith": "Here are a few technologies I've been working with recently:"
+    "IVBeenWorkingWith": "Voici quelques technologies avec lesquelles j'ai récemment travaillé :"
   },
   "Experiences": {
-    "title": "Ou j'ai bossé",
+    "title": "Où j'ai bossé",
     "exp1": {
-      "period": "Period: April 2019 - Present",
-      "place": "Place: 75 - Paris",
-      "task1": "Integration",
-      "task2": "UI fix & update",
+      "period": "Période : Avril 2019 - Présent",
+      "place": "Localisation : 75 - Paris",
+      "task1": "Intégration",
+      "task2": "Correction et mise à jour d'UI",
       "task3": "Newsletter & mailing",
-      "task4": "Visual creation"
+      "task4": "Création de visuels"
     },
     "exp2": {
-      "role":"IT Developer",
-      "period": "Period: June - September 2018",
-      "place": "Place: 31 - Villeneuve-lès-Bouloc",
-      "task1": "Creation of a management tool",
-      "task2": "Integration",
+      "role":"Développeur informatique",
+      "period": "Période : juin - septembre 2018",
+      "place": "Localisation : 31 - Villeneuve-lès-Bouloc",
+      "task1": "Création d'un outil de gestion",
+      "task2": "Intégration",
       "task3": "Front-end",
       "task4": "Back-end"
     }
   },
   "Projects": {
-    "title": "Some stuff I've made",
+    "title": "Quelques uns de mes projets",
     "project1": {
       "title": "Home page",
-      "description": "A landing page where you get multiples informations like your todo list, time, weather or some quotes."
+      "description": "Une page d'accueil où vous retrouvez de multiples informations comme votre liste de tâches, l'heure, la météo ou encore des citations."
     },
     "project2": {
-      "title": "Bike reservation",
-      "description": "A bike reservation interface where you get multiples informations like your todo list, time, weather or some quotes."
+      "title": "Réservation de vélo",
+      "description": "Une interface de réservation de vélos où vous pouvez voir en temps réel dans la ville de Toulouse, le nombre de vélos disponible à chaque station ainsi que réserver l'un d'entre eux"
     }
   },
   "Contact": {
-      "title": "Get In Touch",
+      "title": "En savoir plus",
       "content": {
-        "part1": "Although I'm not currently looking for any new opportunities,",
-        "part2": "my inbox is always open",
-        "part3": ". Whether you have a question or just want to say hello, I'll try my best to get back to you!"
+        "part1": "Bien que je ne sois pas actuellement en recherche de nouvelles opportunités,",
+        "part2": "ma boîte mail est toujours ouverte",
+        "part3": ". Que vous ayez une question ou que vous vouliez simplement dire bonjour, je ferai de mon mieux pour vous répondre !"
       }
   },
-  "FrontEndDev": "Front End Developer",
-  "GetInTouch":"Get in touch",
-  "SayHi":"Say Hi",
-  "Resume":"Resume"
+  "FrontEndDev": "Developpeur Front-end",
+  "GetInTouch":"Me contacter",
+  "SayHi":"Me contacter",
+  "Resume":"CV"
 }
