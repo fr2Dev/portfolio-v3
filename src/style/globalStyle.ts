@@ -79,6 +79,8 @@ const GlobalStyle = createGlobalStyle`
 
   body.blur {
     overflow: hidden;
+    max-height: 100vh;
+    max-width: 100vw;
 
     main {
       filter: blur(15px) brightness(0.7);

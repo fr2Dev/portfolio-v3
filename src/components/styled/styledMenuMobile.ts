@@ -16,6 +16,7 @@ export const MenuMobile = styled(Row)<MenuMobileProps>`
     justify-content: space-evenly;
     place-items: center;
     position: absolute;
+    pointer-events: none;
     right: 0;
     top: 0;
     transition: transform var(--transition), visibility var(--transition);
@@ -23,6 +24,10 @@ export const MenuMobile = styled(Row)<MenuMobileProps>`
     visibility: ${(props) => (props.open ? 'visible' : 'hidden')};
     width: 100%;
     z-index: 4;
+
+    li {
+      pointer-events: initial;
+    }
   }
 
   @media only screen and (min-width: 768px) {
