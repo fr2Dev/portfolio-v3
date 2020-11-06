@@ -22,11 +22,14 @@ const Header = () => {
           <img src={logo} alt="logo" style={{ display: 'none' }} />
 
           <button onClick={() => changeLanguage('en')}>
-            <Flag $currentLang={i18n.language === 'en'} src={unitedKingdom} alt="country flag" />
+            <Flag
+              $currentLang={i18n.language === 'en'}
+              src={unitedKingdom}
+              alt={t('UnitedKingdomFlag')}
+            />
           </button>
-
           <button onClick={() => changeLanguage('fr')}>
-            <Flag $currentLang={i18n.language === 'fr'} src={france} alt="country flag" />
+            <Flag $currentLang={i18n.language === 'fr'} src={france} alt={t('FranceFlag')} />
           </button>
         </FlagWrapper>
         {isMobile ? <MenuMobile /> : <Menu />}

@@ -19,7 +19,8 @@ const Menu = () => {
         );
       })}
       <li>
-        <Button as="a" outlined href="#">
+        {/* window.location.href = "https://yoursite.com/src/assets/​files/exampleDoc.pdf"  */}
+        <Button as="a" outlined href="./assets/CvFD.pdf" target="_blank">
           {t('Resume')}
         </Button>
       </li>

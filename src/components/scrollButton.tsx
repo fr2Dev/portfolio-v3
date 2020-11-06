@@ -18,7 +18,9 @@ const ScrollButton = () => {
 
   return (
     <Wrapper onClick={scrollTop} style={{ display: showScroll ? 'flex' : 'none' }}>
-      🚀
+      <span role="img" aria-labelledby="rocket">
+        🚀
+      </span>
     </Wrapper>
   );
 };

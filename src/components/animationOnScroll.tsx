@@ -83,7 +83,7 @@ const AnimationOnScroll = ({ children, from, delay, noScroll }: DivProps) => {
 
     noScroll ? doShow(true) : window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  }, [noScroll]);
   return (
     <Wrapper $animate={show} $from={from} $delay={delay} ref={ref}>
       {children}
