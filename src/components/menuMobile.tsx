@@ -61,7 +61,7 @@ const MenuMobile = () => {
               })}
 
               <li>
-                <Button as="a" outlined href="#">
+                <Button as="a" outlined href="./assets/CvFD.pdf" target="_blank">
                   {t('Resume')}
                 </Button>
               </li>
