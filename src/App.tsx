@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './style';
-import { defaultTheme, secondaryTheme } from './style/theme';
+import { useTheme } from './hooks';
 import { MainWrapper, Container } from './components/layouts';
 import {
   Header,
@@ -12,15 +12,14 @@ import {
   SectionContact,
   Footer,
 } from './components/blocks';
+import { ThemePicker } from './components';
 import './style/fonts.css';
 
 const isChrome = /chrome/i.test(navigator.userAgent);
 const classBrowser = !isChrome ? 'not-chrome' : '';
 
 const App = () => {
-  const [theme, setTheme] = React.useState(defaultTheme);
-  const resetTheme = () => setTheme(defaultTheme);
-  const updateTheme = () => setTheme(secondaryTheme);
+  const { theme, updateTheme } = useTheme();
   const { borderRadius, base, palette } = theme;
 
   return (
@@ -30,8 +29,7 @@ const App = () => {
         <Container className="App">
           <Header />
           <main>
-            <button onClick={resetTheme}>Default</button>
-            <button onClick={updateTheme}>Second</button>
+            <ThemePicker updateTheme={updateTheme} />
             <SectionHero />
             <SectionAbout />
             <SectionExperiences />

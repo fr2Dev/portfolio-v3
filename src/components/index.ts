@@ -8,3 +8,4 @@ export { default as Experience } from './experience';
 export { default as ScrollButton } from './scrollButton';
 export { default as AnimationOnScroll } from './animationOnScroll';
 export { default as SuspenseLoader } from './suspenseLoader';
+export { default as ThemePicker } from './themePicker';

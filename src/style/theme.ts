@@ -25,7 +25,7 @@ export const defaultTheme: DefaultTheme = {
   },
 };
 
-export const secondaryTheme: DefaultTheme = {
+export const darkTheme: DefaultTheme = {
   ...defaultTheme,
   palette: {
     ...defaultTheme.palette,
@@ -40,6 +40,26 @@ export const secondaryTheme: DefaultTheme = {
     },
     tertiary: {
       main: '#f25f4c',
+      contrastText: '#0d0d0d',
+    },
+  },
+};
+
+export const lightTheme: DefaultTheme = {
+  ...defaultTheme,
+  palette: {
+    ...defaultTheme.palette,
+    primary: {
+      main: '#eff0f3',
+      lighter: '#a7a9be',
+      contrastText: '#0d0d0d',
+    },
+    secondary: {
+      main: '#ff8e3c',
+      contrastText: '#0d0d0d',
+    },
+    tertiary: {
+      main: '#d9376e',
       contrastText: '#0d0d0d',
     },
   },
