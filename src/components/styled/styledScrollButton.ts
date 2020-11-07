@@ -5,7 +5,7 @@ export const ScrollButton = styled.button`
   align-items: center;
   animation: fadeIn 0.3s;
   bottom: 20px;
-  background-color: ${({ theme }) => theme.palette.primary.lighter};
+  background-color: ${({ theme }) => theme.palette.primary.light};
   border-radius: 50%;
   cursor: pointer;
   display: flex;

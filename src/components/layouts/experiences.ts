@@ -8,7 +8,7 @@ export const Experiences = styled.div`
 
   & > * {
     & > * {
-      border: 2px dashed ${({ theme }) => theme.palette.tertiary.main};
+      border: 2px dashed ${({ theme }) => theme.palette.discret};
       background-color: ${({ theme }) => theme.palette.primary.main};
       height: 100%;
     }

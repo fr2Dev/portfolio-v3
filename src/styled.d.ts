@@ -3,7 +3,13 @@ import 'styled-components';
 interface IPalette {
   main: string;
   contrastText: string;
-  lighter?: string;
+  light?: string;
+}
+
+interface ICard {
+  bar: string;
+  background: string;
+  comments: string;
 }
 
 export interface DefaultTheme {
@@ -13,11 +19,16 @@ export interface DefaultTheme {
     common: {
       black: string;
       white: string;
-      grey: string;
+      grey: {
+        main: string;
+        light?: string;
+      };
     };
     primary: IPalette;
     secondary: IPalette;
     tertiary: IPalette;
+    card: ICard;
+    discret: string;
   };
 }
 
@@ -29,11 +40,16 @@ declare module 'styled-components' {
       common: {
         black: string;
         white: string;
-        grey: string;
+        grey: {
+          main: string;
+          light?: string;
+        };
       };
       primary: IPalette;
       secondary: IPalette;
       tertiary: IPalette;
+      card: ICard;
+      discret: string;
     };
   }
 }

@@ -7,7 +7,7 @@ interface StyledCardrops {
 export const StyledCard = styled.div`
   --padding: calc(var(--base) * 1.25);
 
-  background-color: var(--clr-grey);
+  background-color: ${({ theme }) => theme.palette.card.background};
   border-radius: var(--radius);
   box-shadow: 0 4px 4px rgba(3, 3, 3, 0.25);
   padding: var(--padding);
@@ -42,7 +42,7 @@ export const StyledCard = styled.div`
 
 export const BrowserNav = styled.div`
   align-items: center;
-  background: var(--clr-tertiary);
+  background: ${({ theme }) => theme.palette.card.bar};
   border-radius: var(--radius) var(--radius) 0 0;
   display: flex;
   height: 1.75rem;

@@ -7,11 +7,14 @@ export const defaultTheme: DefaultTheme = {
     common: {
       black: '#222831',
       white: '#FFFAFF',
-      grey: '#332C41',
+      grey: {
+        main: '#332C41',
+        light: '#D6E6FF',
+      },
     },
     primary: {
       main: '#20123A',
-      lighter: '#361A68',
+      light: '#361A68',
       contrastText: '#FFFAFF',
     },
     secondary: {
@@ -22,6 +25,12 @@ export const defaultTheme: DefaultTheme = {
       main: '#D6E6FF',
       contrastText: '#20123A',
     },
+    card: {
+      bar: '#D6E6FF',
+      background: '#332C41',
+      comments: 'lightslategray',
+    },
+    discret: '#D6E6FF',
   },
 };
 
@@ -30,8 +39,8 @@ export const darkTheme: DefaultTheme = {
   palette: {
     ...defaultTheme.palette,
     primary: {
-      main: '#0f0e17',
-      lighter: '#a7a9be',
+      main: '#161a1c',
+      light: '#a7a9be',
       contrastText: '#fffffe',
     },
     secondary: {
@@ -42,6 +51,11 @@ export const darkTheme: DefaultTheme = {
       main: '#f25f4c',
       contrastText: '#0d0d0d',
     },
+    card: {
+      bar: '#0f0e17',
+      background: '#23232a',
+      comments: 'lightslategray',
+    },
   },
 };
 
@@ -51,17 +65,23 @@ export const lightTheme: DefaultTheme = {
     ...defaultTheme.palette,
     primary: {
       main: '#eff0f3',
-      lighter: '#a7a9be',
+      light: '#a7a9be',
       contrastText: '#0d0d0d',
     },
     secondary: {
-      main: '#ff8e3c',
-      contrastText: '#0d0d0d',
+      main: '#592990',
+      contrastText: '#FFFAFF',
     },
     tertiary: {
       main: '#d9376e',
       contrastText: '#0d0d0d',
     },
+    card: {
+      bar: '#353535',
+      background: '#f9f9f9',
+      comments: '#5f6d7b',
+    },
+    discret: '#6f6f6f',
   },
 };
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Footer = styled.footer`
-  color: ${({ theme }) => theme.palette.tertiary.main};
+  color: ${({ theme }) => theme.palette.primary.contrastText};
   font-size: 1rem;
   margin-bottom: 2rem;
   text-align: center;

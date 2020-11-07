@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const WrapperSuspense = styled.div`
-  background-color: var(--clr-main, #20123a);
+  background-color: var(--clr-primary, #20123a);
   display: grid;
   height: 100vh;
   place-items: center;

@@ -7,7 +7,7 @@ interface ButtonProps {
 
 export const Button = styled.button<ButtonProps>`
   --clr-bg: var(--clr-secondary);
-  --clr-font: var(--clr-main);
+  --clr-font: var(--clr-primary);
   --clr-border: transparent;
 
   background-color: var(--clr-bg);

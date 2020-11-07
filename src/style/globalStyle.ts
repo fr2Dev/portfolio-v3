@@ -20,8 +20,8 @@ const GlobalStyle = createGlobalStyle<DefaultTheme>`
     } */
 
   body {
-    background-color: var(--clr-main);
-    color: var(--clr-white);
+    background-color: ${({ theme }) => theme.palette.primary.main};
+    color: ${({ theme }) => theme.palette.primary.contrastText};
     margin: 0;
     overflow-x: hidden;
     font-family: 'Open sans';
@@ -71,8 +71,8 @@ const GlobalStyle = createGlobalStyle<DefaultTheme>`
   }
 
   ::selection {
-    background: var(--clr-secondary);
-    color: #222;
+    background: ${({ theme }) => theme.palette.secondary.main};
+    color: ${({ theme }) => theme.palette.secondary.contrastText};
   }
 
   .highlight {
