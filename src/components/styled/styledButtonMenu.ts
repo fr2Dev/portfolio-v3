@@ -15,7 +15,7 @@ export const ButtonHamburger = styled.button<ButtonProps>`
   &:after,
   &:before,
   & div {
-    background-color: #fff;
+    background-color: ${({ theme }) => theme.palette.primary.contrastText};
     border-radius: 3px;
     content: '';
     display: block;

@@ -63,6 +63,13 @@ export const lightTheme: DefaultTheme = {
   ...defaultTheme,
   palette: {
     ...defaultTheme.palette,
+    common: {
+      ...defaultTheme.palette.common,
+      grey: {
+        main: '#FFFAFF',
+        light: '#D6E6FF',
+      },
+    },
     primary: {
       main: '#eff0f3',
       light: '#a7a9be',

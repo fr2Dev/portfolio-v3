@@ -9,7 +9,7 @@ export const MenuMobile = styled(Row)<MenuMobileProps>`
   @media only screen and (max-width: 767px) {
     animation: enter var(--transition);
     align-items: center;
-    background: ${({ theme }) => theme.palette.common.grey};
+    background: ${({ theme }) => theme.palette.common.grey.main};
     bottom: 0;
     display: flex;
     font-size: clamp(1.25rem, calc(2vw + 1rem), 3rem);
