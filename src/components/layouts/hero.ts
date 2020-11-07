@@ -28,17 +28,6 @@ export const Hero = styled.section`
 
   @media only screen and (min-width: 1440px) {
     background: url('${devices}');
-    /* background: linear-gradient(to right, red, green 70%), url('${devices}'); */
-    /* background: linear-gradient(
-      to right,
-      ${({ theme }) => `${rgba(theme.colors.main, 0.75)}, ${rgba(theme.colors.main, 1)} 75%`}
-    ),
-    url('${devices}'); */
-    /* background: linear-gradient(
-        to right,
-        ${({ theme }) => `${rgba(theme.colors.main, 0.95)}, ${rgba(theme.colors.main, 0.95)}`}
-      ),
-      url('${devices}'); */
     background-repeat: no-repeat;
     background-position: 100% 40%;
     background-size: 40%;

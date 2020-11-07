@@ -1,13 +1,15 @@
 import { createGlobalStyle } from 'styled-components';
-import { normalize, reset, vars } from './';
+import { normalize, reset, getCssVars } from './';
+import { DefaultTheme } from '../styled';
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle<DefaultTheme>`
  ${normalize}
  ${reset}
 
 /* CUSTOM */
     :root {
-      ${vars}
+      ${({ theme }) => getCssVars(theme)};
+      /* ${getCssVars} */
     }
 
     /* * {

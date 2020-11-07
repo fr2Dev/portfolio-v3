@@ -7,7 +7,7 @@ interface FlagProps {
 export const Flag = styled.img<FlagProps>`
   --flagSize: 1.5rem;
   border: 2px solid
-    ${({ theme, $currentLang }) => ($currentLang ? theme.colors.secondary : 'transparent')};
+    ${({ theme, $currentLang }) => ($currentLang ? theme.palette.secondary.main : 'transparent')};
   border-radius: 50%;
   filter: ${({ $currentLang }) => !$currentLang && 'grayscale(1)'};
   height: var(--flagSize);

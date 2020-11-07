@@ -19,7 +19,7 @@ export const Tasks = styled.ul`
       border: 0 solid transparent;
       border-bottom-width: var(--markerSize);
       border-top-width: var(--markerSize);
-      border-left: var(--markerSize) solid ${({ theme }) => theme.colors.secondary};
+      border-left: var(--markerSize) solid ${({ theme }) => theme.palette.secondary.main};
       transform: translateX(calc(var(--gap) * -1));
     }
 

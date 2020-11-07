@@ -9,7 +9,7 @@ export const MenuMobile = styled(Row)<MenuMobileProps>`
   @media only screen and (max-width: 767px) {
     animation: enter var(--transition);
     align-items: center;
-    background: ${({ theme }) => theme.colors.grey};
+    background: ${({ theme }) => theme.palette.common.grey};
     bottom: 0;
     display: flex;
     font-size: clamp(1.25rem, calc(2vw + 1rem), 3rem);
@@ -35,7 +35,7 @@ export const MenuMobile = styled(Row)<MenuMobileProps>`
   }
 
   @media only screen and (min-width: 576px) and (max-width: 767px) {
-    border-left: 2px solid ${({ theme }) => theme.colors.secondary};
+    border-left: 2px solid ${({ theme }) => theme.palette.secondary.main};
     width: min(50vw, 400px);
   }
 

@@ -42,7 +42,7 @@ export const Preview = styled.div<PreviewProps>`
   & > * {
     /* link */
     &:first-child {
-      background-color: ${({ theme }) => theme.colors.mainLighter};
+      background-color: ${({ theme }) => theme.palette.primary.lighter};
       border-radius: var(--radius);
       grid-column: var(--size-link, 1 / -1);
       grid-row: var(--height-link, 1 / -1);

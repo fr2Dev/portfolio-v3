@@ -8,8 +8,8 @@ export const Experiences = styled.div`
 
   & > * {
     & > * {
-      border: 2px dashed ${({ theme }) => theme.colors.tertiary};
-      background-color: ${({ theme }) => theme.colors.main};
+      border: 2px dashed ${({ theme }) => theme.palette.tertiary.main};
+      background-color: ${({ theme }) => theme.palette.primary.main};
       height: 100%;
     }
 
@@ -17,8 +17,8 @@ export const Experiences = styled.div`
       grid-column: var(--size-first, span 12);
 
       & > * {
-        border: 2px solid ${({ theme }) => theme.colors.secondary};
-        background-color: ${({ theme }) => theme.colors.grey};
+        border: 2px solid ${({ theme }) => theme.palette.secondary.main};
+        background-color: ${({ theme }) => theme.palette.common.grey};
       }
     }
     &:last-child {

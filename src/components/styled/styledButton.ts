@@ -21,7 +21,9 @@ export const Button = styled.button<ButtonProps>`
   &:hover,
   &:focus {
     background-color: ${({ theme, outlined }) =>
-      outlined ? rgba(theme.colors.secondary, 0.075) : darken(0.1, theme.colors.secondary)};
+      outlined
+        ? rgba(theme.palette.secondary.main, 0.075)
+        : darken(0.1, theme.palette.secondary.main)};
   }
 
   &:focus {
