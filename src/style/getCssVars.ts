@@ -16,6 +16,7 @@ const getCssVars = (theme: DefaultTheme) => {
     --radius: ${borderRadius};
     --base: ${base};
     --transition: 0.15s cubic-bezier(0.65, 0.05, 0.36, 1);
+    --shadow: 0 4px 4px rgba(3, 3, 3, 0.25);
   `;
 };
 

@@ -9,7 +9,7 @@ export const StyledCard = styled.div`
 
   background-color: ${({ theme }) => theme.palette.card.background};
   border-radius: var(--radius);
-  box-shadow: 0 4px 4px rgba(3, 3, 3, 0.25);
+  box-shadow: var(--shadow);
   padding: var(--padding);
 
   ${(props: StyledCardrops) =>

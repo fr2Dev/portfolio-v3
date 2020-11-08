@@ -25,12 +25,13 @@ export const FlagWrapper = styled.div`
 export const ButtonSettings = styled.button<OpenProps>`
   --sizeButton: 2.5rem;
   border-radius: 50%;
-  /* background-color: ${({ theme }) => theme.palette.secondary.main}; */
-  background-color: red;
+  background-color: ${({ theme, $open }) =>
+    $open ? theme.palette.card.background : theme.palette.primary.main};
   display: grid;
   height: var(--sizeButton);
   place-items: center;
   padding: 0.5rem;
+  transition: background-color var(--transition);
   width: var(--sizeButton);
 
   svg {
@@ -43,7 +44,8 @@ export const ButtonSettings = styled.button<OpenProps>`
 `;
 
 export const SettingsList = styled.ul<OpenProps>`
-  background-color: red;
+  background-color: ${({ theme }) => theme.palette.card.background};
+  box-shadow: var(--shadow);
   padding: calc(var(--base) / 2) 0;
   border-radius: var(--radius);
   display: ${({ $open }) => ($open ? 'flex' : 'none')};
@@ -56,6 +58,9 @@ export const SettingsList = styled.ul<OpenProps>`
 `;
 
 export const Setting = styled.li`
+  align-items: center;
+  display: flex;
+  font-size: 0.95rem;
   padding: calc(var(--base) / 2) var(--base);
 `;
 
