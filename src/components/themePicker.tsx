@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ISettings } from '../definitions/interfaces';
 import { Theme } from '../definitions/types';
+import { RadioButton } from './';
 import { Setting } from './styled';
 
 const ThemePicker = (props: ISettings) => {
@@ -20,37 +21,31 @@ const ThemePicker = (props: ISettings) => {
   return (
     <>
       <Setting>
-        <input
-          type="radio"
-          id="default"
-          name="theme"
-          onChange={handleChange}
+        <RadioButton
           value="default"
+          name="theme"
+          label={t('Default')}
+          onChange={handleChange}
           checked={activeTheme === 'default'}
         />
-        <label htmlFor="default">{t('Default')}</label>
       </Setting>
       <Setting>
-        <input
-          type="radio"
-          id="dark"
-          name="theme"
-          onChange={handleChange}
+        <RadioButton
           value="dark"
+          name="theme"
+          label={t('Dark')}
+          onChange={handleChange}
           checked={activeTheme === 'dark'}
         />
-        <label htmlFor="dark">{t('Dark')}</label>
       </Setting>
       <Setting>
-        <input
-          type="radio"
-          id="light"
-          name="theme"
-          onChange={handleChange}
+        <RadioButton
           value="light"
+          name="theme"
+          label={t('Light')}
+          onChange={handleChange}
           checked={activeTheme === 'light'}
         />
-        <label htmlFor="light">{t('Light')}</label>
       </Setting>
     </>
   );
