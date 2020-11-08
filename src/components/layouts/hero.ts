@@ -5,7 +5,7 @@ export const Hero = styled.section`
   display: grid;
   place-content: center start;
   /* nav height + nav margin-top */
-  height: calc(100vh - 40px - 1rem);
+  min-height: calc(100vh - 40px - 1rem);
 
   & > * + * {
     &:not(h1):not(h2) {
@@ -46,7 +46,7 @@ export const Hero = styled.section`
 
   @media only screen and (min-width: 768px) {
     /* nav height + nav margin-top */
-    height: calc(100vh - 48px - 1rem);
+    min-height: calc(100vh - 48px - 1rem);
   }
 
   @media only screen and (min-width: 1440px) {
