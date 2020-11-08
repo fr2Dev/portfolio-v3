@@ -16,8 +16,9 @@ i18n
     debug: true,
     //Detects and caches a cookie from the language provided
     detection: {
-      order: ['queryString', 'cookie'],
-      cache: ['cookie'],
+      order: ['localStorage'],
+      lookupLocalStorage: 'i18nextLng',
+      cache: ['localStorage'],
     },
     interpolation: {
       escapeValue: false,

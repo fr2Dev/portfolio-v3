@@ -11,6 +11,7 @@ const Header = () => {
   const changeLanguage = (language: string) => {
     i18n.changeLanguage(language);
   };
+
   const size = useWindowSize();
   const { width } = size;
   const isMobile = width > 0 && width < 768;
