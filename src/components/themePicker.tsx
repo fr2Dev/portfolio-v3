@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ISettings } from '../definitions/interfaces';
 import { Theme } from '../definitions/types';
 import { Setting } from './styled';
 
 const ThemePicker = (props: ISettings) => {
+  const { t } = useTranslation();
   const { updateTheme } = props;
   const initialTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'default';
 
@@ -26,7 +28,7 @@ const ThemePicker = (props: ISettings) => {
           value="default"
           checked={activeTheme === 'default'}
         />
-        <label htmlFor="default">Default</label>
+        <label htmlFor="default">{t('Default')}</label>
       </Setting>
       <Setting>
         <input
@@ -37,7 +39,7 @@ const ThemePicker = (props: ISettings) => {
           value="dark"
           checked={activeTheme === 'dark'}
         />
-        <label htmlFor="dark">Dark</label>
+        <label htmlFor="dark">{t('Dark')}</label>
       </Setting>
       <Setting>
         <input
@@ -48,7 +50,7 @@ const ThemePicker = (props: ISettings) => {
           value="light"
           checked={activeTheme === 'light'}
         />
-        <label htmlFor="light">Light</label>
+        <label htmlFor="light">{t('Light')}</label>
       </Setting>
     </>
   );

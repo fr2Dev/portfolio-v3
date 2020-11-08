@@ -68,5 +68,10 @@
   "SayHi":"Me contacter",
   "Resume":"CV",
   "FranceFlag":"Drapeau Français",
-  "UnitedKingdomFlag":"Drapeau Royaume-Uni"
+  "UnitedKingdomFlag":"Drapeau Royaume-Uni",
+  "Language":"Langue",
+  "Theme":"Thème",
+  "Default":"Défaut",
+  "Dark":"Sombre",
+  "Light":"Clair"
 }

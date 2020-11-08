@@ -68,5 +68,9 @@
   "SayHi":"Say Hi",
   "Resume":"Resume",
   "FranceFlag":"France flag",
-  "UnitedKingdomFlag":"United Kingdom flag"
+  "Language":"Language",
+  "Theme":"Theme",
+  "Default":"Default",
+  "Dark":"Dark",
+  "Light":"Light"
 }
