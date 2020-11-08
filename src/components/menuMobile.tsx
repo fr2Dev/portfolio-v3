@@ -35,10 +35,11 @@ const MenuMobile = () => {
     window.open(href, '_self');
   };
 
-  const ref = useClickOutsideListenerRef(close);
+  // const ref = useClickOutsideListenerRef(open, close);
 
   return (
-    <div ref={ref}>
+    // <div ref={ref}>
+    <div>
       {!open && <ButtonMenu onClick={() => toggleNav()} />}
       {open && (
         <FocusTrap

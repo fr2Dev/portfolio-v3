@@ -10,22 +10,29 @@ const useClickOutsideListenerRef = (onClose: () => void) => {
     },
     [onClose]
   );
-  // const clickListener = useCallback(
-  //   (e: MouseEvent) => {
-  //     if (!(ref.current! as any).contains(e.target)) {
-  //       onClose?.();
-  //     }
-  //   },
-  //   [ref.current]
-  // );
+  const clickListener = useCallback(
+    (e: MouseEvent) => {
+      // console.log(
+      //   '%c☘ %cdontcontain%c:',
+      //   'font-weight:bold;color: #00f;font-size:1.2em;',
+      //   'font-weight:bold;border-bottom:2px solid #00f;',
+      //   'font-weight:bold;',
+      //   !(ref.current! as any).contains(e.target)
+      // );
+      if (!(ref.current! as any).contains(e.target)) {
+        onClose?.();
+      }
+    },
+    [ref.current]
+  );
   useEffect(() => {
-    // document.addEventListener('click', clickListener);
+    document.addEventListener('click', clickListener);
     document.addEventListener('keyup', escapeListener);
     return () => {
-      // document.removeEventListener('click', clickListener);
+      document.removeEventListener('click', clickListener);
       document.removeEventListener('keyup', escapeListener);
     };
-  }, [escapeListener]);
+  }, [escapeListener, clickListener]);
   return ref;
 };
 

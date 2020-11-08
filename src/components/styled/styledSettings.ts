@@ -48,6 +48,7 @@ export const SettingsList = styled.ul<OpenProps>`
   border-radius: var(--radius);
   display: ${({ $open }) => ($open ? 'flex' : 'none')};
   flex-direction: column;
+  min-width: 200px;
   position: absolute;
   top: calc(100% - 0.5rem);
   left: 0;

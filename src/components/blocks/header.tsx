@@ -5,7 +5,6 @@ import { Menu, MenuMobile } from '../index';
 import { Row } from '../layouts';
 import { Settings } from '../';
 import { Nav } from '../styled';
-// import Settings from '../settings';
 
 const Header = ({ updateTheme }: ISettings) => {
   const size = useWindowSize();
