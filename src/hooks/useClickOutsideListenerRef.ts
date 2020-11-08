@@ -23,7 +23,7 @@ const useClickOutsideListenerRef = (onClose: () => void) => {
         onClose?.();
       }
     },
-    [ref.current]
+    [onClose]
   );
   useEffect(() => {
     document.addEventListener('click', clickListener);
@@ -32,7 +32,7 @@ const useClickOutsideListenerRef = (onClose: () => void) => {
       document.removeEventListener('click', clickListener);
       document.removeEventListener('keyup', escapeListener);
     };
-  }, [escapeListener, clickListener]);
+  }, [onClose, escapeListener, clickListener]);
   return ref;
 };
 

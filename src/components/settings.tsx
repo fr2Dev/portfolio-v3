@@ -19,12 +19,12 @@ const Settings = ({ updateTheme }: ISettings) => {
       </ButtonSettings>
       <SettingsList $open={open}>
         <Setting>
-          <div>{t('Language')}</div>
+          <div className="bold">{t('Language')}</div>
           <Divider />
         </Setting>
         <LangPicker />
         <Setting>
-          <div>{t('Theme')}</div>
+          <div className="bold">{t('Theme')}</div>
           <Divider />
         </Setting>
         <ThemePicker updateTheme={updateTheme} />

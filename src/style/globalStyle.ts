@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle<DefaultTheme>`
     overflow-x: hidden;
     font-family: 'Open sans';
     font-size: 1.15rem;
+    transition: background-color var(--transition);
   }
 
   h1,h2,h3,h4,h5,h6 {
@@ -116,6 +117,10 @@ const GlobalStyle = createGlobalStyle<DefaultTheme>`
     & > * + * {
       margin-top: var(--flow, 2rem);
     }
+  }
+
+  .bold {
+    font-weight: 700;
   }
  
 `;

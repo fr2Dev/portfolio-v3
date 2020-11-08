@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ISettings } from '../definitions/interfaces';
 import { Theme } from '../definitions/types';
+import { capitalize } from '../helpers/utilities';
 import { RadioButton } from './';
 import { Setting } from './styled';
+
+const themes = ['default', 'dark', 'light'];
 
 const ThemePicker = (props: ISettings) => {
   const { t } = useTranslation();
@@ -20,33 +23,17 @@ const ThemePicker = (props: ISettings) => {
 
   return (
     <>
-      <Setting>
-        <RadioButton
-          value="default"
-          name="theme"
-          label={t('Default')}
-          onChange={handleChange}
-          checked={activeTheme === 'default'}
-        />
-      </Setting>
-      <Setting>
-        <RadioButton
-          value="dark"
-          name="theme"
-          label={t('Dark')}
-          onChange={handleChange}
-          checked={activeTheme === 'dark'}
-        />
-      </Setting>
-      <Setting>
-        <RadioButton
-          value="light"
-          name="theme"
-          label={t('Light')}
-          onChange={handleChange}
-          checked={activeTheme === 'light'}
-        />
-      </Setting>
+      {themes.map((theme, i) => (
+        <Setting $nested key={i.toString()}>
+          <RadioButton
+            value={theme}
+            name="theme"
+            label={t(capitalize(theme))}
+            onChange={handleChange}
+            checked={activeTheme === theme}
+          />
+        </Setting>
+      ))}
     </>
   );
 };

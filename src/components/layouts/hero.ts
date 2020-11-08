@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { rgba } from 'polished';
 import devices from '../../images/devices.svg';
 
 export const Hero = styled.section`

@@ -1,11 +1,5 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useClickOutsideListenerRef } from '../hooks';
-import { ISettings } from '../definitions/interfaces';
-import { ThemePicker, LangPicker } from './';
-import { SettingsList, ButtonSettings, Setting } from './styled';
-import Cogwheel from './images/Cogwheel';
-
+import React from 'react';
+import { Radio } from './styled';
 interface RadioButtonProps {
   value: string;
   name: string;
@@ -16,7 +10,7 @@ interface RadioButtonProps {
 
 const RadioButton = ({ value, name, label, onChange, checked }: RadioButtonProps) => {
   return (
-    <label htmlFor={value} className="radio radio-before">
+    <Radio htmlFor={value} className="radio radio-before">
       <span className="radio__input">
         <input
           type="radio"
@@ -29,7 +23,7 @@ const RadioButton = ({ value, name, label, onChange, checked }: RadioButtonProps
         <span className="radio__control"></span>
       </span>
       <span className="radio__label">{label}</span>
-    </label>
+    </Radio>
   );
 };
 

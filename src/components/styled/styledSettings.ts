@@ -1,27 +1,5 @@
 import styled from 'styled-components';
 
-interface FlagProps {
-  $currentLang: boolean;
-}
-
-export const Flag = styled.img<FlagProps>`
-  --flagSize: 1.5rem;
-  border: 2px solid
-    ${({ theme, $currentLang }) => ($currentLang ? theme.palette.secondary.main : 'transparent')};
-  border-radius: 50%;
-  filter: ${({ $currentLang }) => !$currentLang && 'grayscale(1)'};
-  height: var(--flagSize);
-  width: var(--flagSize);
-`;
-
-export const FlagWrapper = styled.div`
-  display: flex;
-
-  & > * + * {
-    margin-left: 0.5rem;
-  }
-`;
-
 export const ButtonSettings = styled.button<OpenProps>`
   --sizeButton: 2.5rem;
   border-radius: 50%;
@@ -55,20 +33,20 @@ export const SettingsList = styled.ul<OpenProps>`
   top: calc(100% - 0.5rem);
   left: 0;
   z-index: 1;
+`;
 
-  .radio {
-    display: grid;
-    grid-template-columns: min-content auto;
-    grid-gap: 0.5em;
-    font-size: 2.25rem;
-    font-size: 1rem;
-    color: ${({ theme }) => theme.palette.primary.contrastText};
+export const Radio = styled.label`
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: 0.5em;
+  font-size: 2.25rem;
+  font-size: 1rem;
+  color: ${({ theme }) => theme.palette.primary.contrastText};
 
-    &:focus-within {
-      .radio__label {
-        transform: scale(1.05);
-        opacity: 1;
-      }
+  &:focus-within {
+    .radio__label {
+      transform: scale(1.05);
+      opacity: 1;
     }
   }
 
@@ -85,6 +63,8 @@ export const SettingsList = styled.ul<OpenProps>`
       opacity: 0;
       width: 0;
       height: 0;
+      position: absolute;
+      left: --9999px;
 
       &:focus + .radio__control {
         box-shadow: 0 0 0 0.05em ${({ theme }) => theme.palette.primary.contrastText},
@@ -93,36 +73,23 @@ export const SettingsList = styled.ul<OpenProps>`
     }
   }
 
-  .radio-gradient input:checked + .radio__control {
-    background: radial-gradient(
-      ${({ theme }) => theme.palette.secondary.main} 50%,
-      rgba(255, 0, 0, 0) 51%
-    );
+  input + .radio__control::before {
+    content: '';
+    width: 0.5em;
+    height: 0.5em;
+    box-shadow: inset 0.5em 0.5em ${({ theme }) => theme.palette.secondary.main};
+    border-radius: 50%;
+    transition: 180ms transform ease-in-out;
+    transform: scale(0);
   }
 
-  .radio-before {
-    .radio__control {
-      display: grid;
-      place-items: center;
-    }
-
-    input + .radio__control::before {
-      content: '';
-      width: 0.5em;
-      height: 0.5em;
-      box-shadow: inset 0.5em 0.5em ${({ theme }) => theme.palette.secondary.main};
-      border-radius: 50%;
-      transition: 180ms transform ease-in-out;
-      transform: scale(0);
-    }
-
-    input:checked + .radio__control::before {
-      transform: scale(1);
-    }
+  input:checked + .radio__control::before {
+    transform: scale(1);
   }
 
   .radio__control {
-    display: block;
+    display: grid;
+    place-items: center;
     width: 1em;
     height: 1em;
     border-radius: 50%;
@@ -131,11 +98,12 @@ export const SettingsList = styled.ul<OpenProps>`
   }
 `;
 
-export const Setting = styled.li`
+export const Setting = styled.li<SettingProps>`
   align-items: center;
   display: flex;
   font-size: 0.95rem;
   padding: calc(var(--base) / 2) var(--base);
+  padding-left: ${({ $nested }) => $nested && '1.5rem'};
 `;
 
 export const Divider = styled.span`
@@ -144,10 +112,14 @@ export const Divider = styled.span`
   height: 1px;
   margin-top: 2px;
   margin-left: 0.5rem;
-  opacity: 0.2;
+  opacity: 0.1;
   width: 100%;
 `;
 
 interface OpenProps {
   $open: boolean;
+}
+
+interface SettingProps {
+  $nested?: boolean;
 }
