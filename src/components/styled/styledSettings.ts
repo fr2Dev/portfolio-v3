@@ -35,6 +35,12 @@ export const SettingsList = styled.ul<OpenProps>`
   z-index: 1;
 `;
 
+export const Wrapper = styled.div`
+  align-items: center;
+  display: flex;
+  position: relative;
+`;
+
 export const Radio = styled.label`
   display: grid;
   grid-template-columns: min-content auto;

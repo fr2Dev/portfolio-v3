@@ -4,7 +4,8 @@ import devices from '../../images/devices.svg';
 export const Hero = styled.section`
   display: grid;
   place-content: center start;
-  min-height: 100vh;
+  /* nav height + nav margin-top */
+  height: calc(100vh - 40px - 1rem);
 
   & > * + * {
     &:not(h1):not(h2) {
@@ -23,6 +24,11 @@ export const Hero = styled.section`
 
   a {
     place-self: start;
+  }
+
+  @media only screen and (min-width: 768px) {
+    /* nav height + nav margin-top */
+    height: calc(100vh - 48px - 1rem);
   }
 
   @media only screen and (min-width: 1440px) {

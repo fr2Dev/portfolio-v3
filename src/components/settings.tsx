@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useClickOutsideListenerRef } from '../hooks';
 import { ISettings } from '../definitions/interfaces';
 import { ThemePicker, LangPicker } from './';
-import { SettingsList, ButtonSettings, Setting, Divider } from './styled';
+import { SettingsList, ButtonSettings, Setting, Divider, Wrapper } from './styled';
 import Cogwheel from './images/Cogwheel';
 
 const Settings = ({ updateTheme }: ISettings) => {
@@ -13,7 +13,7 @@ const Settings = ({ updateTheme }: ISettings) => {
   const ref = useClickOutsideListenerRef(onClose);
 
   return (
-    <div style={{ position: 'relative' }} ref={ref}>
+    <Wrapper ref={ref}>
       <ButtonSettings $open={open} onClick={() => setOpen(!open)}>
         <Cogwheel title="settings" />
       </ButtonSettings>
@@ -29,7 +29,7 @@ const Settings = ({ updateTheme }: ISettings) => {
         </Setting>
         <ThemePicker updateTheme={updateTheme} />
       </SettingsList>
-    </div>
+    </Wrapper>
   );
 };
 

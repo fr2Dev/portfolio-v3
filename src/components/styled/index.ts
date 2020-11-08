@@ -12,5 +12,5 @@ export { Footer } from './styledFooter';
 export { ScrollButton } from './styledScrollButton';
 export { ButtonHamburger } from './styledButtonMenu';
 export { StyledCard, BrowserNav } from './styledCard';
-export { ButtonSettings, SettingsList, Setting, Divider, Radio } from './styledSettings';
+export { ButtonSettings, SettingsList, Setting, Divider, Radio, Wrapper } from './styledSettings';
 export { WrapperSuspense, Loader } from './styledSuspenseLoader';
