@@ -9,3 +9,5 @@ export { default as ScrollButton } from './scrollButton';
 export { default as AnimationOnScroll } from './animationOnScroll';
 export { default as SuspenseLoader } from './suspenseLoader';
 export { default as ThemePicker } from './themePicker';
+export { default as LangPicker } from './langPicker';
+export { default as Settings } from './settings';

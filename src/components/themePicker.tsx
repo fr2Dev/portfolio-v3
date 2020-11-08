@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
+import { ISettings } from '../definitions/interfaces';
 import { Theme } from '../definitions/types';
+import { Setting } from './styled';
 
-interface ThemePickerProps {
-  updateTheme: (value: Theme) => void;
-}
-
-const ThemePicker = (props: ThemePickerProps) => {
+const ThemePicker = (props: ISettings) => {
   const { updateTheme } = props;
   const initialTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'default';
 
@@ -18,8 +16,8 @@ const ThemePicker = (props: ThemePickerProps) => {
   };
 
   return (
-    <div>
-      <div>
+    <>
+      <Setting>
         <input
           type="radio"
           id="default"
@@ -29,9 +27,8 @@ const ThemePicker = (props: ThemePickerProps) => {
           checked={activeTheme === 'default'}
         />
         <label htmlFor="default">Default</label>
-      </div>
-
-      <div>
+      </Setting>
+      <Setting>
         <input
           type="radio"
           id="dark"
@@ -41,9 +38,8 @@ const ThemePicker = (props: ThemePickerProps) => {
           checked={activeTheme === 'dark'}
         />
         <label htmlFor="dark">Dark</label>
-      </div>
-
-      <div>
+      </Setting>
+      <Setting>
         <input
           type="radio"
           id="light"
@@ -53,8 +49,8 @@ const ThemePicker = (props: ThemePickerProps) => {
           checked={activeTheme === 'light'}
         />
         <label htmlFor="light">Light</label>
-      </div>
-    </div>
+      </Setting>
+    </>
   );
 };
 

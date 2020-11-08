@@ -9,12 +9,14 @@ export const ItemNav = styled.li`
 export const Nav = styled.nav`
   margin-top: var(--base, 1rem);
 
-  li {
-    text-align: center;
+  & > *:last-child {
+    li {
+      text-align: center;
 
-    @media only screen and (min-width: 768px) {
-      &:last-child {
-        margin-left: var(--base);
+      @media only screen and (min-width: 768px) {
+        &:last-child {
+          margin-left: var(--base);
+        }
       }
     }
   }

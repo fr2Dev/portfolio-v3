@@ -1,3 +1,5 @@
+import { Theme } from './types';
+
 export interface IProject {
   url: string;
   img: {
@@ -19,4 +21,8 @@ export interface IExperience {
   };
   tasks: string[];
   techs: string[];
+}
+
+export interface ISettings {
+  updateTheme: (value: Theme) => void;
 }

@@ -12,7 +12,6 @@ import {
   SectionContact,
   Footer,
 } from './components/blocks';
-import { ThemePicker } from './components';
 import './style/fonts.css';
 
 const isChrome = /chrome/i.test(navigator.userAgent);
@@ -27,9 +26,8 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyle borderRadius={borderRadius} base={base} palette={palette} />
         <Container className="App">
-          <Header />
+          <Header updateTheme={updateTheme} />
           <main>
-            <ThemePicker updateTheme={updateTheme} />
             <SectionHero />
             <SectionAbout />
             <SectionExperiences />
