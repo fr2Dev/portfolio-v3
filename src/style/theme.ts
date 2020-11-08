@@ -76,11 +76,11 @@ export const lightTheme: DefaultTheme = {
       contrastText: '#0d0d0d',
     },
     secondary: {
-      main: '#592990',
+      main: '#cb1c57',
       contrastText: '#FFFAFF',
     },
     tertiary: {
-      main: '#d9376e',
+      main: '#592990',
       contrastText: '#0d0d0d',
     },
     card: {

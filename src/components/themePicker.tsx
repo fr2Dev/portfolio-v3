@@ -7,12 +7,16 @@ interface ThemePickerProps {
 
 const ThemePicker = (props: ThemePickerProps) => {
   const { updateTheme } = props;
-  const [activeTheme, setActiveTheme] = useState('default');
+  const initialTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'default';
+
+  const [activeTheme, setActiveTheme] = useState(initialTheme);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.currentTarget.value as Theme;
     setActiveTheme(value);
     updateTheme(value);
   };
+
   return (
     <div>
       <div>
