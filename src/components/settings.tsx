@@ -7,7 +7,7 @@ import { SettingsList, ButtonSettings, Setting, Divider } from './styled';
 import Cogwheel from './images/Cogwheel';
 
 const Settings = ({ updateTheme }: ISettings) => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const onClose = () => setOpen(false);
   const { t } = useTranslation();
   const ref = useClickOutsideListenerRef(onClose);
