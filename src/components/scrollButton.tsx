@@ -12,6 +12,7 @@ const ScrollButton = () => {
       setShowScroll(true);
     } else if (showScroll && window.pageYOffset <= 400) {
       setShowScroll(false);
+      if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
     }
   };
 
