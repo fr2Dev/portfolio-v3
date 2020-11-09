@@ -24,8 +24,8 @@ const Avatar = ({ title, titleId, ...props }: AvatarProps) => {
       if (eyeBall && pupil) {
         const getCapedCoordonate = () => {
           if (!startLookUp && !startLookDown) return 0;
-          if (startLookUp) return -3;
-          if (startLookDown) return 3;
+          if (startLookUp) return 3;
+          if (startLookDown) return -3;
         };
 
         const Y = getCapedCoordonate();
