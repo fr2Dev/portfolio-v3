@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ScrollButton as Wrapper } from './styled';
 
 const ScrollButton = () => {
+  const { t } = useTranslation();
   const [showScroll, setShowScroll] = useState(false);
 
   const checkScrollTop = () => {
@@ -17,7 +19,11 @@ const ScrollButton = () => {
   window.addEventListener('scroll', checkScrollTop);
 
   return (
-    <Wrapper onClick={scrollTop} style={{ display: showScroll ? 'flex' : 'none' }}>
+    <Wrapper
+      onClick={scrollTop}
+      style={{ display: showScroll ? 'flex' : 'none' }}
+      title={t('BackToTop')}
+    >
       <span role="img" aria-labelledby="rocket">
         🚀
       </span>

@@ -52,7 +52,7 @@
     },
     "project2": {
       "title": "Réservation de vélo",
-      "description": "Une interface de réservation de vélos où vous pouvez voir en temps réel dans la ville de Toulouse, le nombre de vélos disponible à chaque station ainsi que réserver l'un d'entre eux"
+      "description": "Une interface de réservation de vélos où vous pouvez voir en temps réel dans la ville de Toulouse, le nombre de vélos disponible à chaque station ainsi que réserver l'un d'entre eux."
     }
   },
   "Contact": {
@@ -74,5 +74,6 @@
   "Default":"Défaut",
   "Dark":"Sombre",
   "Light":"Clair",
-  "SmartphoneTabletLaptop":"Smartphone, tablette et pc portable"
+  "SmartphoneTabletLaptop":"Smartphone, tablette et pc portable",
+  "BackToTop":"Retourner au début"
 }

@@ -1,10 +1,13 @@
 import styled from 'styled-components';
-import { darken, desaturate } from 'polished';
+import { desaturate } from 'polished';
 
 export const SvgStyled = styled.svg`
+  --clr-pupil: #250606;
+
   .pupil {
     transition: transform 0.35s ease;
     animation: hide forwards infinite 10s 2s ease-in-out;
+    fill: var(--clr-pupil);
   }
 
   .eyeball {
@@ -37,7 +40,7 @@ export const SvgStyled = styled.svg`
     60%,
     62%,
     100% {
-      fill: #000;
+      fill: var(--clr-pupil);
     }
     1%,
     61% {

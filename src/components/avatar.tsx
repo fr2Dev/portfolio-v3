@@ -163,7 +163,7 @@ const Avatar = ({ title, titleId, ...props }: AvatarProps) => {
         />
         <path
           d="M106 102a6 6 0 100-12 6 6 0 000 12zm52 0a6 6 0 100-12 6 6 0 000 12z"
-          fill="#000"
+          // fill="#000"
           fillOpacity={0.7}
           className="pupil"
         />

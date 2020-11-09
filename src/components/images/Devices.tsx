@@ -70,7 +70,7 @@ const SvgComponent = ({ title, ...props }: SvgComponentProps) => {
       <path
         d="M105 217a5 5 0 11-9 0 5 5 0 019 0z"
         fill="#20123A"
-        className="fill--primary stroke--secondary"
+        className="fill--primary stroke--tertiary circle-tablet"
         stroke="#88FFD1"
       />
       <path
@@ -99,9 +99,10 @@ const SvgComponent = ({ title, ...props }: SvgComponentProps) => {
       <path
         d="M41 235a4 4 0 01-4 4 4 4 0 01-3-4 4 4 0 013-3 4 4 0 014 3z"
         fill="#20123A"
-        className="fill--primary stroke--secondary"
+        className="fill--primary stroke--tertiary"
         stroke="#88FFD1"
       />
+      <path d="M178 191h78.5l-1 1h-76.653l-.847-1z" className="fill--tertiary" />
       <defs>
         <linearGradient
           id="prefix__paint0_linear"
@@ -190,8 +191,14 @@ const SvgStyled = styled.svg`
   width: 35rem;
   height: auto;
 
-  .fill--primary {
-    fill: ${({ theme }) => theme.palette.primary.main};
+  .fill {
+    &--primary {
+      fill: ${({ theme }) => theme.palette.primary.main};
+    }
+
+    &--tertiary {
+      fill: ${({ theme }) => theme.palette.tertiary.main};
+    }
   }
 
   .stroke {
@@ -201,6 +208,10 @@ const SvgStyled = styled.svg`
     &--tertiary {
       stroke: ${({ theme }) => theme.palette.tertiary.main};
     }
+  }
+
+  .circle-tablet {
+    transform: translateY(-2px);
   }
 
   @media only screen and (min-width: 1440px) {
