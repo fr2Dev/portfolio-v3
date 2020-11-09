@@ -63,7 +63,7 @@
         "part3": ". Que vous ayez une question ou que vous vouliez simplement dire bonjour, je ferai de mon mieux pour vous répondre !"
       }
   },
-  "FrontEndDev": "Developpeur Front-end",
+  "FrontEndDev": "Développeur Front-end",
   "GetInTouch":"Me contacter",
   "SayHi":"Me contacter",
   "Resume":"CV",
@@ -73,5 +73,6 @@
   "Theme":"Thème",
   "Default":"Défaut",
   "Dark":"Sombre",
-  "Light":"Clair"
+  "Light":"Clair",
+  "SmartphoneTabletLaptop":"Smartphone, tablette et pc portable"
 }

@@ -4,11 +4,12 @@ import devices from '../../images/devices.svg';
 export const Hero = styled.section`
   display: grid;
   place-content: center start;
+  position: relative;
   /* nav height + nav margin-top */
   min-height: calc(100vh - 40px - 1rem);
 
   & > * + * {
-    &:not(h1):not(h2) {
+    &:not(h1):not(h2):not(svg) {
       margin-top: 2rem;
 
       @media only screen and (min-width: 768px) {
@@ -47,12 +48,5 @@ export const Hero = styled.section`
   @media only screen and (min-width: 768px) {
     /* nav height + nav margin-top */
     min-height: calc(100vh - 48px - 1rem);
-  }
-
-  @media only screen and (min-width: 1440px) {
-    background: url('${devices}');
-    background-repeat: no-repeat;
-    background-position: 100% 40%;
-    background-size: 40%;
   }
 `;

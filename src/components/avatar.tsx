@@ -1,51 +1,10 @@
 import React, { useEffect } from 'react';
-import styled from 'styled-components';
+import { SvgStyled } from './styled';
 
 interface AvatarProps {
   title: string;
   titleId: string;
 }
-
-const SvgStyled = styled.svg`
-  .pupil {
-    transition: transform 0.35s ease;
-    animation: hide forwards infinite 10s 2s ease-in-out;
-  }
-
-  .eyeball {
-    animation: blink forwards infinite 10s 2s ease-in-out;
-    transform: scale(1);
-    z-index: 100;
-  }
-
-  @keyframes blink {
-    0%,
-    2%,
-    60%,
-    62%,
-    100% {
-      fill: #fff;
-    }
-    1%,
-    61% {
-      fill: #edb98a;
-    }
-  }
-
-  @keyframes hide {
-    0%,
-    2%,
-    60%,
-    62%,
-    100% {
-      fill: #000;
-    }
-    1%,
-    61% {
-      fill: transparent;
-    }
-  }
-`;
 
 const Avatar = ({ title, titleId, ...props }: AvatarProps) => {
   useEffect(() => {
@@ -146,7 +105,7 @@ const Avatar = ({ title, titleId, ...props }: AvatarProps) => {
             d="M108 167.071c-17.919 2.005-31.72 7.481-31.996 21.574C50.146 199.568 32 225.165 32 254.999V264h200v-9.001c0-29.834-18.146-55.431-44.004-66.354-.276-14.093-14.077-19.569-31.996-21.574V186c0 13.255-10.745 24-24 24s-24-10.745-24-24v-18.929z"
             fill="#B7C1DB"
           />
-          <path d="M264 154H0v110h264V154z" fill="#3C4F5C" />
+          <path d="M264 154H0v110h264V154z" className="sweat" />
           <path
             fillRule="evenodd"
             clipRule="evenodd"

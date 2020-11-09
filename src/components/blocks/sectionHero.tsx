@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Hero } from '../../components/layouts';
 import { Button, Highlight, Introduction } from '../../components/styled';
+import { Devices } from '../images';
 import { AnimationOnScroll } from '../';
 
 const SectionHero = () => {
@@ -28,6 +29,7 @@ const SectionHero = () => {
       <Button as="a" href="#contact">
         {t('GetInTouch')}
       </Button>
+      <Devices title={t('SmartphoneTabletLaptop')} />
     </Hero>
   );
 };

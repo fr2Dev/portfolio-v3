@@ -29,12 +29,11 @@ const SectionAbout = () => {
                 {t('About.introduce.part4')}
               </p>
               <p>{t('About.IVBeenWorkingWith')}</p>
-              <TechList as="ul" $wrap="wrap">
+              <TechList as="ul" $wrap="wrap" $multiline>
                 <li>React</li>
                 <li>Typescript</li>
                 <li>jQuery</li>
                 <li>SCSS</li>
-                <li>HTML</li>
                 <li>Wordpress</li>
                 <li>Git</li>
               </TechList>
