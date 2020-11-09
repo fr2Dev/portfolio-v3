@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Rocket } from './images';
 import { ScrollButton as Wrapper } from './styled';
 
 const ScrollButton = () => {
@@ -24,8 +25,8 @@ const ScrollButton = () => {
       style={{ display: showScroll ? 'flex' : 'none' }}
       title={t('BackToTop')}
     >
-      <span role="img" aria-labelledby="rocket">
-        🚀
+      <span>
+        <Rocket />
       </span>
     </Wrapper>
   );

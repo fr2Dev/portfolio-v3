@@ -40,7 +40,7 @@ export const darkTheme: DefaultTheme = {
     ...defaultTheme.palette,
     primary: {
       main: '#161a1c',
-      light: '#a7a9be',
+      light: '#23232a',
       contrastText: '#fffffe',
     },
     secondary: {
@@ -72,7 +72,7 @@ export const lightTheme: DefaultTheme = {
     },
     primary: {
       main: '#eff0f3',
-      light: '#a7a9be',
+      light: '#f9f9f9',
       contrastText: '#0d0d0d',
     },
     secondary: {
