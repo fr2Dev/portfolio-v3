@@ -3,6 +3,7 @@ import { defaultTheme, lightTheme, darkTheme } from '../style/theme';
 import { Theme } from '../definitions/types';
 
 const useTheme = () => {
+  const prefDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   const [theme, setTheme] = useState(defaultTheme);
 
   useEffect(() => {
@@ -10,7 +11,7 @@ const useTheme = () => {
       const localTheme = localStorage.getItem('theme');
       updateTheme(localTheme as Theme);
     } else {
-      updateTheme('default');
+      updateTheme(prefDark ? 'dark' : 'default');
     }
   }, []);
 
