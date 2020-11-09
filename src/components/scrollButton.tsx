@@ -12,11 +12,15 @@ const ScrollButton = () => {
       setShowScroll(true);
     } else if (showScroll && window.pageYOffset <= 400) {
       setShowScroll(false);
-      if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
     }
   };
 
-  const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(() => {
+      if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
+    }, 750);
+  };
 
   window.addEventListener('scroll', checkScrollTop);
 
