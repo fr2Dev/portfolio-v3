@@ -15,7 +15,7 @@ const Experience = (props: ExperienceProps) => {
     <Card variant="experience">
       <h4>
         <span>{title}</span>{' '}
-        <TwitterLink href={twitter} target="_blank">
+        <TwitterLink $tertiary href={twitter} target="_blank">
           @{name}
         </TwitterLink>
       </h4>
