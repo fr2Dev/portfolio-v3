@@ -23,7 +23,6 @@ const ScrollButton = () => {
   };
 
   window.addEventListener('scroll', checkScrollTop);
-
   return (
     <Wrapper
       onClick={scrollTop}

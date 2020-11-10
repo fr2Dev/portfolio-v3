@@ -39,38 +39,37 @@ const MenuMobile = () => {
 
   return (
     // <div ref={ref}>
-    <div>
-      {!open && <ButtonMenu onClick={() => toggleNav()} />}
-      {open && (
-        <FocusTrap
-          focusTrapOptions={{
-            onDeactivate: () => close,
-          }}
-        >
-          <div>
-            <ButtonMenu open={open} onClick={() => toggleNav()} />
-            <Wrapper as="ul" alignItems="center" open={open} mobile aria-hidden={!open}>
-              {links.map((link, i) => {
-                const { href, name } = link;
-                return (
-                  <ItemNav key={i.toString()}>
-                    <a href={href} onClick={(e) => handleLinks(e)}>
-                      {name}
-                    </a>
-                  </ItemNav>
-                );
-              })}
+    <aside>
+      {/* {!open && <ButtonMenu onClick={() => toggleNav()} />} */}
 
-              <li>
-                <Button as="a" outlined href="./assets/CvFD.pdf" target="_blank">
-                  {t('Resume')}
-                </Button>
-              </li>
-            </Wrapper>
-          </div>
-        </FocusTrap>
-      )}
-    </div>
+      <FocusTrap
+        focusTrapOptions={{
+          onDeactivate: () => close,
+        }}
+      >
+        <nav>
+          <ButtonMenu open={open} onClick={() => toggleNav()} />
+          <Wrapper as="ul" alignItems="center" open={open} mobile aria-hidden={!open}>
+            {links.map((link, i) => {
+              const { href, name } = link;
+              return (
+                <ItemNav key={i.toString()}>
+                  <a href={href} onClick={(e) => handleLinks(e)}>
+                    {name}
+                  </a>
+                </ItemNav>
+              );
+            })}
+
+            <li>
+              <Button as="a" outlined href="./assets/CvFD.pdf" target="_blank">
+                {t('Resume')}
+              </Button>
+            </li>
+          </Wrapper>
+        </nav>
+      </FocusTrap>
+    </aside>
   );
 };
 

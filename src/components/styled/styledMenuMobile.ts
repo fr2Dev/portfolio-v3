@@ -15,7 +15,7 @@ export const MenuMobile = styled(Row)<MenuMobileProps>`
     font-size: clamp(1.25rem, calc(2vw + 1rem), 3rem);
     justify-content: space-evenly;
     place-items: center;
-    position: absolute;
+    position: fixed;
     pointer-events: none;
     right: 0;
     top: 0;
