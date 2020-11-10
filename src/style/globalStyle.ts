@@ -95,6 +95,9 @@ const GlobalStyle = createGlobalStyle<DefaultTheme>`
 
   button,
   a {
+    /* Remove blue hightlight on touch screen */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
     /* Focusing the button with a keyboard will show a dashed black line. */
     &:focus-visible {
       outline: 3px dashed var(--clr-secondary);
