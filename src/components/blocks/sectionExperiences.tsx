@@ -13,7 +13,7 @@ const SectionExperience = () => {
       <h3>{t('Experiences.title')}</h3>
       <Experiences>
         {experiences.map((exp, i) => (
-          <AnimationOnScroll from="top" key={i.toString()}>
+          <AnimationOnScroll from="bottom" key={i.toString()}>
             <Experience content={exp} />
           </AnimationOnScroll>
         ))}
