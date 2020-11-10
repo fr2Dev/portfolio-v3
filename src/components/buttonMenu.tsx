@@ -4,11 +4,12 @@ import { ButtonHamburger } from './styled';
 interface ButtonMenuProps {
   onClick: () => void;
   open?: boolean;
+  id?: string;
 }
 
-const ButtonMenu = (props: ButtonMenuProps) => {
+const ButtonMenu = ({ onClick, open, ...rest }: ButtonMenuProps) => {
   return (
-    <ButtonHamburger onClick={props.onClick} open={props.open} className="nav-icon">
+    <ButtonHamburger onClick={onClick} $open={open} className="nav-icon" {...rest}>
       <div></div>
     </ButtonHamburger>
   );

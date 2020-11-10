@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import FocusTrap from 'focus-trap-react';
 import useClickOutsideListenerRef from '../hooks/useClickOutsideListenerRef';
-import withFocusTrap from '../hoc/withFocusTrap';
 import { MenuMobile as Wrapper } from '../components/styled';
 import { ButtonMenu } from '../components';
 import { getLinks } from '../content';
@@ -19,13 +18,18 @@ const MenuMobile = () => {
   const links = getLinks(t);
 
   const [open, setOpen] = useState(false);
+  const [activeTrap, setActiveTrap] = useState(false);
   const close = () => {
     body?.classList.remove('blur');
     setOpen(false);
+    setTimeout(() => {
+      setActiveTrap(false);
+    }, 150);
   };
   const toggleNav = () => {
     setOpen((prev) => !prev);
     body?.classList.toggle('blur');
+    setActiveTrap(true);
   };
 
   const handleLinks = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -36,10 +40,12 @@ const MenuMobile = () => {
     window.open(href, '_self');
   };
 
+  const ref = useClickOutsideListenerRef(close, { click: false });
+
   const children = (
     <nav>
-      <ButtonMenu open={open} onClick={() => toggleNav()} />
-      <Wrapper as="ul" alignItems="center" open={open} mobile aria-hidden={!open}>
+      <ButtonMenu id="toggle" open={open} onClick={() => (open ? close() : toggleNav())} />
+      <Wrapper as="ul" alignItems="center" $open={open} mobile aria-hidden={!open}>
         {links.map((link, i) => {
           const { href, name } = link;
           return (
@@ -61,11 +67,12 @@ const MenuMobile = () => {
   );
 
   return (
-    <aside>
-      {open ? (
+    <aside ref={ref}>
+      {activeTrap ? (
         <FocusTrap
           focusTrapOptions={{
             onDeactivate: () => close,
+            preventScroll: true,
           }}
         >
           {children}
@@ -78,4 +85,3 @@ const MenuMobile = () => {
 };
 
 export default MenuMobile;
-// export default withFocusTrap(MenuMobile)(open);

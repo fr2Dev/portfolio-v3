@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Row } from '../layouts';
 
 interface MenuMobileProps {
-  open: boolean;
+  $open: boolean;
 }
 
 export const MenuMobile = styled(Row)<MenuMobileProps>`
@@ -16,18 +16,13 @@ export const MenuMobile = styled(Row)<MenuMobileProps>`
     justify-content: space-evenly;
     place-items: center;
     position: fixed;
-    pointer-events: none;
     right: 0;
     top: 0;
     transition: transform var(--transition), visibility var(--transition);
-    transform: translateX(${(props) => (props.open ? 0 : '100%')});
-    visibility: ${(props) => (props.open ? 'visible' : 'hidden')};
+    transform: translateX(${({ $open }) => ($open ? 0 : '100%')});
+    visibility: ${({ $open }) => ($open ? 'visible' : 'hidden')};
     width: 100%;
     z-index: 4;
-
-    li {
-      pointer-events: initial;
-    }
   }
 
   @media only screen and (min-width: 768px) {

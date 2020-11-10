@@ -19,6 +19,10 @@ export const ButtonSettings = styled.button<OpenProps>`
     transform: rotate(${({ $open }) => ($open ? '40deg' : '0deg')});
     transition: transform var(--transition);
   }
+
+  .blur & {
+    filter: blur(5px);
+  }
 `;
 
 export const SettingsList = styled.ul<OpenProps>`

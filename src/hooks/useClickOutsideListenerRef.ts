@@ -1,7 +1,19 @@
 import { useCallback, useEffect, useRef } from 'react';
 
-const useClickOutsideListenerRef = (onClose: () => void) => {
+interface IOptions {
+  click?: boolean;
+  keyboard?: boolean;
+}
+
+const useClickOutsideListenerRef = (
+  onClose: () => void,
+  options: IOptions = {
+    click: true,
+    keyboard: true,
+  }
+) => {
   const ref = useRef(null);
+  const enableOnClick = options.click;
   const escapeListener = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -12,13 +24,6 @@ const useClickOutsideListenerRef = (onClose: () => void) => {
   );
   const clickListener = useCallback(
     (e: MouseEvent) => {
-      // console.log(
-      //   '%c☘ %cdontcontain%c:',
-      //   'font-weight:bold;color: #00f;font-size:1.2em;',
-      //   'font-weight:bold;border-bottom:2px solid #00f;',
-      //   'font-weight:bold;',
-      //   !(ref.current! as any).contains(e.target)
-      // );
       if (!(ref.current! as any).contains(e.target)) {
         onClose?.();
       }
@@ -26,10 +31,10 @@ const useClickOutsideListenerRef = (onClose: () => void) => {
     [onClose]
   );
   useEffect(() => {
-    document.addEventListener('click', clickListener);
+    enableOnClick && document.addEventListener('click', clickListener);
     document.addEventListener('keyup', escapeListener);
     return () => {
-      document.removeEventListener('click', clickListener);
+      enableOnClick && document.removeEventListener('click', clickListener);
       document.removeEventListener('keyup', escapeListener);
     };
   }, [onClose, escapeListener, clickListener]);

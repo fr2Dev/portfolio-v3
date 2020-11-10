@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 interface ButtonProps {
-  open?: boolean;
+  $open?: boolean;
 }
 
 export const ButtonHamburger = styled.button<ButtonProps>`
@@ -34,7 +34,7 @@ export const ButtonHamburger = styled.button<ButtonProps>`
   }
 
   ${(props) =>
-    props.open &&
+    props.$open &&
     css`
        {
         &:before {
