@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import FocusTrap from 'focus-trap-react';
 import useClickOutsideListenerRef from '../hooks/useClickOutsideListenerRef';
+import withFocusTrap from '../hoc/withFocusTrap';
 import { MenuMobile as Wrapper } from '../components/styled';
 import { ButtonMenu } from '../components';
 import { getLinks } from '../content';
@@ -35,42 +36,46 @@ const MenuMobile = () => {
     window.open(href, '_self');
   };
 
-  // const ref = useClickOutsideListenerRef(open, close);
+  const children = (
+    <nav>
+      <ButtonMenu open={open} onClick={() => toggleNav()} />
+      <Wrapper as="ul" alignItems="center" open={open} mobile aria-hidden={!open}>
+        {links.map((link, i) => {
+          const { href, name } = link;
+          return (
+            <ItemNav key={i.toString()}>
+              <a href={href} onClick={(e) => handleLinks(e)}>
+                {name}
+              </a>
+            </ItemNav>
+          );
+        })}
+
+        <li>
+          <Button as="a" outlined href="./assets/CvFD.pdf" target="_blank">
+            {t('Resume')}
+          </Button>
+        </li>
+      </Wrapper>
+    </nav>
+  );
 
   return (
-    // <div ref={ref}>
     <aside>
-      {/* {!open && <ButtonMenu onClick={() => toggleNav()} />} */}
-
-      <FocusTrap
-        focusTrapOptions={{
-          onDeactivate: () => close,
-        }}
-      >
-        <nav>
-          <ButtonMenu open={open} onClick={() => toggleNav()} />
-          <Wrapper as="ul" alignItems="center" open={open} mobile aria-hidden={!open}>
-            {links.map((link, i) => {
-              const { href, name } = link;
-              return (
-                <ItemNav key={i.toString()}>
-                  <a href={href} onClick={(e) => handleLinks(e)}>
-                    {name}
-                  </a>
-                </ItemNav>
-              );
-            })}
-
-            <li>
-              <Button as="a" outlined href="./assets/CvFD.pdf" target="_blank">
-                {t('Resume')}
-              </Button>
-            </li>
-          </Wrapper>
-        </nav>
-      </FocusTrap>
+      {open ? (
+        <FocusTrap
+          focusTrapOptions={{
+            onDeactivate: () => close,
+          }}
+        >
+          {children}
+        </FocusTrap>
+      ) : (
+        <div>{children}</div>
+      )}
     </aside>
   );
 };
 
 export default MenuMobile;
+// export default withFocusTrap(MenuMobile)(open);
