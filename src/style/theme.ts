@@ -31,6 +31,7 @@ export const defaultTheme: DefaultTheme = {
       comments: 'lightslategray',
     },
     discret: '#D6E6FF',
+    newWindow: '#444',
   },
 };
 
@@ -56,6 +57,7 @@ export const darkTheme: DefaultTheme = {
       background: '#23232a',
       comments: 'lightslategray',
     },
+    newWindow: '#f9f9f9',
   },
 };
 
@@ -89,6 +91,7 @@ export const lightTheme: DefaultTheme = {
       comments: '#5f6d7b',
     },
     discret: '#6f6f6f',
+    newWindow: '#f9f9f9',
   },
 };
 

@@ -21,7 +21,7 @@ export const Preview = styled.div<PreviewProps>`
     margin-bottom: 1rem;
   }
 
-  a {
+  & > a {
     filter: grayscale(1);
     transition: filter var(--transition);
 

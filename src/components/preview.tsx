@@ -19,7 +19,7 @@ const Preview = ({ data, reversed }: PreviewProps) => {
         <img src={src} alt={alt} />
       </a>
       <div>
-        <Card variant="browser">
+        <Card variant="browser" externalLink={url}>
           <h5>{title}</h5>
           <p>{content}</p>
           <TechList as="ul" $wrap="wrap">

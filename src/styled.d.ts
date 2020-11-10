@@ -12,7 +12,7 @@ interface ICard {
   comments: string;
 }
 
-export interface DefaultTheme {
+export interface DefaultThemeBase {
   borderRadius: string;
   base: string;
   palette: {
@@ -29,27 +29,12 @@ export interface DefaultTheme {
     tertiary: IPalette;
     card: ICard;
     discret: string;
+    newWindow: string;
   };
 }
 
+export interface DefaultTheme extends DefaultThemeBase {}
+
 declare module 'styled-components' {
-  export interface DefaultTheme {
-    borderRadius: string;
-    base: string;
-    palette: {
-      common: {
-        black: string;
-        white: string;
-        grey: {
-          main: string;
-          light?: string;
-        };
-      };
-      primary: IPalette;
-      secondary: IPalette;
-      tertiary: IPalette;
-      card: ICard;
-      discret: string;
-    };
-  }
+  export interface DefaultTheme extends DefaultThemeBase {}
 }

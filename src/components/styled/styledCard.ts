@@ -78,4 +78,8 @@ export const BrowserNav = styled.div`
     transform: translateX(3rem);
     background-color: #2fca40;
   }
+
+  a {
+    margin-left: auto;
+  }
 `;
