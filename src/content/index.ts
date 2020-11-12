@@ -28,7 +28,7 @@ export const getProjects = (t: any): IProject[] => [
     },
     title: t('Projects.project1.title'),
     content: t('Projects.project1.description'),
-    techList: ['React', 'Typescript', 'Styled-Components'],
+    techList: ['React', 'Typescript', 'Styled-Components', 'Weather API'],
   },
   {
     url: '#',
@@ -38,7 +38,7 @@ export const getProjects = (t: any): IProject[] => [
     },
     title: t('Projects.project2.title'),
     content: t('Projects.project2.description'),
-    techList: ['jQuery', 'API', 'Styled-Components'],
+    techList: ['jQuery', 'API', 'SCSS'],
   },
 ];
 

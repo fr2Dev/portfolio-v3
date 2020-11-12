@@ -52,7 +52,7 @@
     },
     "project2": {
       "title": "Bike reservation",
-      "description": "A bike reservation interface where you get multiples informations like your todo list, time, weather or some quotes."
+      "description": "A bike reservation interface where you get multiples informations like your todo list, time, weather or some daily quotes."
     }
   },
   "Contact": {
