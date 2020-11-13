@@ -53,6 +53,34 @@
     "project2": {
       "title": "Réservation de vélo",
       "description": "Une interface de réservation de vélos où vous pouvez voir en temps réel dans la ville de Toulouse, le nombre de vélos disponible à chaque station ainsi que réserver l'un d'entre eux."
+    },
+    "project3": {
+      "title": "Natours",
+      "description": "Une landing page pour un site de voyage."
+    },
+    "project4": {
+      "title": "Portfolio v2",
+      "description": "La précédente version de mon site portfolio."
+    },
+    "project5": {
+      "title": "Yams",
+      "description": "Reproduction du jeux de yams pour une version solo."
+    },
+    "project6": {
+      "title": "Hairdresser",
+      "description": "Une landing page pour un site de coiffure."
+    },
+    "project7": {
+      "title": "Rick & Morty",
+      "description": "Une interface pour consulter et rechercher tout les épisodes de la série Rick & Morty."
+    },
+    "project8": {
+      "title": "Sweat Café",
+      "description": "Une landing page pour un site de café."
+    },
+    "project9": {
+      "title": "Portfolio v1",
+      "description": "La première version de mon site portfolio."
     }
   },
   "Contact": {
@@ -75,5 +103,6 @@
   "Dark":"Sombre",
   "Light":"Clair",
   "SmartphoneTabletLaptop":"Smartphone, tablette et pc portable",
-  "BackToTop":"Retourner au début"
+  "BackToTop":"Retourner au début",
+  "ShowMore":"Voir plus"
 }

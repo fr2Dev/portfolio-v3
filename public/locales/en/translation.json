@@ -48,11 +48,39 @@
     "title": "Some stuff I've made",
     "project1": {
       "title": "Home page",
-      "description": "A landing page where you get multiples informations like your todo list, time, weather or some quotes."
+      "description": "A landing page where you get multiples informations like your todo list, time, weather or some  daily quotes."
     },
     "project2": {
       "title": "Bike reservation",
-      "description": "A bike reservation interface where you get multiples informations like your todo list, time, weather or some daily quotes."
+      "description": "A bike reservation interface where you can see in real time in the city of Toulouse, the number of bikes available at each station as well as book one of them."
+    },
+    "project3": {
+      "title": "Natours",
+      "description": "A landing page for a travel site."
+    },
+    "project4": {
+      "title": "Portfolio v2",
+      "description": "The previous version of my portfolio site."
+    },
+    "project5": {
+      "title": "Yams",
+      "description": "Reproduction of the yams game for a solo version."
+    },
+    "project6": {
+      "title": "Hairdresser",
+      "description": "A landing page for a hairdressing site."
+    },
+    "project7": {
+      "title": "Rick & Morty",
+      "description": "An interface to consult and search all the episodes of the Rick & Morty series."
+    },
+    "project8": {
+      "title": "Sweat Café",
+      "description": "A landing page for a coffee site."
+    },
+    "project9": {
+      "title": "Portfolio v1",
+      "description": "The first version of my portfolio site."
     }
   },
   "Contact": {
@@ -75,5 +103,6 @@
   "Dark":"Dark",
   "Light":"Light",
   "SmartphoneTabletLaptop":"Smartphone, tablet and laptop",
-  "BackToTop":"Back to top"
+  "BackToTop":"Back to top",
+  "ShowMore":"Show more"
 }

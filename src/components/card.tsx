@@ -11,7 +11,7 @@ interface CardProps {
 const Card = ({ children, variant, externalLink }: CardProps) => {
   if (variant === 'browser') {
     return (
-      <div>
+      <div style={{ width: '100%' }}>
         <BrowserNav>
           <span className="circles"></span>
           {externalLink && (

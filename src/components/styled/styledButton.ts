@@ -3,6 +3,7 @@ import { darken, rgba } from 'polished';
 
 interface ButtonProps {
   outlined?: boolean;
+  center?: boolean;
 }
 
 export const Button = styled.button<ButtonProps>`
@@ -36,5 +37,13 @@ export const Button = styled.button<ButtonProps>`
       --clr-bg: transparent;
       --clr-font: var(--clr-secondary);
       --clr-border: var(--clr-secondary);
+    `};
+
+  ${({ center }) =>
+    center &&
+    css`
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
     `};
 `;

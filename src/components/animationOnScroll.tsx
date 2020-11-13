@@ -18,27 +18,6 @@ const getTransformValues = (origin: origin) => {
   const x = 5;
   const y = 2.5;
   const axe = origin === 'top' || origin === 'bottom' ? 'Y' : 'X';
-  console.log(
-    '%c☘ %ccondition%c:',
-    'font-weight:bold;color: #0F9D58;font-size:1.2em;',
-    'font-weight:bold;border-bottom:2px solid #0F9D58;',
-    'font-weight:bold;',
-    origin == ('top' || 'bottom')
-  );
-  console.log(
-    '%c☘ %corigin%c:',
-    'font-weight:bold;color: #f00;font-size:1.2em;',
-    'font-weight:bold;border-bottom:2px solid #f00;',
-    'font-weight:bold;',
-    origin
-  );
-  console.log(
-    '%c☘ %caxe%c:',
-    'font-weight:bold;color: #0F9D58;font-size:1.2em;',
-    'font-weight:bold;border-bottom:2px solid #0F9D58;',
-    'font-weight:bold;',
-    axe
-  );
   let start;
   switch (origin) {
     case 'top':
@@ -59,13 +38,7 @@ const getTransformValues = (origin: origin) => {
     default:
       break;
   }
-  console.log(
-    '%c☘ %cstart%c:',
-    'font-weight:bold;color: #0F9D58;font-size:1.2em;',
-    'font-weight:bold;border-bottom:2px solid #0F9D58;',
-    'font-weight:bold;',
-    start
-  );
+
   return {
     start: `translate${axe}(${start}rem);`,
     end: `translate${axe}(0);`,
