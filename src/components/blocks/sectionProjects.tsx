@@ -32,8 +32,9 @@ const SectionProjects = () => {
         <>
           {moreProjects.map((data: IProject, i) => {
             const isOdd = i % 2 === 0;
+            const extraProp = i < 2 ? { noScroll: true } : {};
             return (
-              <AnimationOnScroll from={isOdd ? 'left' : 'right'} key={i.toString()}>
+              <AnimationOnScroll from={isOdd ? 'left' : 'right'} {...extraProp} key={i.toString()}>
                 <Preview data={data} reversed={isOdd} />
               </AnimationOnScroll>
             );
