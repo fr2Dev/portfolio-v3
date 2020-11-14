@@ -4,7 +4,7 @@ export const ButtonSettings = styled.button<OpenProps>`
   --sizeButton: 2.5rem;
   border-radius: 50%;
   background-color: ${({ theme, $open }) =>
-    $open ? theme.palette.card.background : theme.palette.primary.main};
+    $open ? theme.palette.card.background.main : theme.palette.primary.main};
   display: grid;
   height: var(--sizeButton);
   place-items: center;
@@ -26,7 +26,7 @@ export const ButtonSettings = styled.button<OpenProps>`
 `;
 
 export const SettingsList = styled.ul<OpenProps>`
-  background-color: ${({ theme }) => theme.palette.card.background};
+  background-color: ${({ theme }) => theme.palette.card.background.main};
   box-shadow: var(--shadow);
   padding: calc(var(--base) / 2) 0;
   border-radius: var(--radius);

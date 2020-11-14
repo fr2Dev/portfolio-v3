@@ -1,4 +1,5 @@
 import { DefaultTheme } from 'styled-components';
+import { rgba } from 'polished';
 
 export const defaultTheme: DefaultTheme = {
   borderRadius: '8px',
@@ -27,7 +28,10 @@ export const defaultTheme: DefaultTheme = {
     },
     card: {
       bar: '#D6E6FF',
-      background: '#332C41',
+      background: {
+        main: '#332C41',
+        reversed: '#221e2c',
+      },
       comments: 'lightslategray',
     },
     discret: '#D6E6FF',
@@ -54,7 +58,10 @@ export const darkTheme: DefaultTheme = {
     },
     card: {
       bar: '#0f0e17',
-      background: '#23232a',
+      background: {
+        main: '#23232a',
+        reversed: '#33333d',
+      },
       comments: 'lightslategray',
     },
     newWindow: '#f9f9f9',
@@ -87,7 +94,10 @@ export const lightTheme: DefaultTheme = {
     },
     card: {
       bar: '#353535',
-      background: '#f9f9f9',
+      background: {
+        main: '#f9f9f9',
+        reversed: rgba('#cb1c57', 0.025),
+      },
       comments: '#5f6d7b',
     },
     discret: '#6f6f6f',

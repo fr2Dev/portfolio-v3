@@ -7,7 +7,7 @@ interface StyledCardrops {
 export const StyledCard = styled.div`
   --padding: calc(var(--base) * 1.25);
 
-  background-color: ${({ theme }) => theme.palette.card.background};
+  background-color: ${({ theme }) => theme.palette.card.background.main};
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: var(--padding);

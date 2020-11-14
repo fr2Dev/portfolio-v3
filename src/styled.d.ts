@@ -8,7 +8,10 @@ interface IPalette {
 
 interface ICard {
   bar: string;
-  background: string;
+  background: {
+    main: string;
+    reversed: string;
+  };
   comments: string;
 }
 

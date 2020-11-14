@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { StyledCard } from '../styled';
 
 interface PreviewProps {
   $reversed?: boolean;
@@ -92,6 +93,17 @@ export const Preview = styled.div<PreviewProps>`
       --size-link: ${({ $reversed }) => ($reversed ? '5 / 12' : '2 / 9')};
       --size-card: ${({ $reversed }) => ($reversed ? '2 / 7' : '7 / 12')};
     }
+  }
+
+  @media only screen and (max-width: 767px) {
+    ${({ $reversed, theme }) =>
+      !$reversed &&
+      css`
+        ${StyledCard} {
+          background-color: ${theme.palette.card.background.reversed};
+          /* background-color: red; */
+        }
+      `};
   }
 
   @media only screen and (min-width: 768px) {
