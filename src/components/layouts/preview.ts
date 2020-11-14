@@ -51,6 +51,10 @@ export const Preview = styled.div<PreviewProps>`
       height: 100%;
       width: var(--width-link, 100%);
       transform: var(--transform-link, scale(0.9));
+
+      @media only screen and (max-width: 767px) {
+        display: none;
+      }
     }
     /* Card */
     &:last-child {
