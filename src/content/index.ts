@@ -31,12 +31,13 @@ export const getLinks = (t: any) => [
 //     - [ ]  Sweat Café (Html, Scss) gh
 //     - [ ]  Webfirst ?  (Html, jquery, CSS)
 //     - [ ]  Portfolio v1  (Html, CSS)
+const getUrl = (name: string) => `./assets/images/thumbnails/${name}-min.png`;
 
 export const getProjects = (t: any): IProject[] => [
   {
     url: '#',
     img: {
-      src: 'https://francoisdpro.eu/assets/img/png/natours.png',
+      src: getUrl('home'),
       alt: 'project fr2dev',
     },
     title: t('Projects.project1.title'),
@@ -46,7 +47,7 @@ export const getProjects = (t: any): IProject[] => [
   {
     url: '#',
     img: {
-      src: 'http://francoisdpro.eu/assets/img/png/DWJ-projet3-min.png',
+      src: getUrl('bike'),
       alt: 'project fr2dev',
     },
     title: t('Projects.project2.title'),
@@ -56,7 +57,7 @@ export const getProjects = (t: any): IProject[] => [
   {
     url: '#',
     img: {
-      src: 'http://francoisdpro.eu/assets/img/png/natours.png',
+      src: getUrl('natours'),
       alt: 'project fr2dev',
     },
     title: t('Projects.project3.title'),
@@ -66,7 +67,7 @@ export const getProjects = (t: any): IProject[] => [
   {
     url: '#',
     img: {
-      src: 'http://francoisdpro.eu/assets/img/png/DWJ-projet3-min.png',
+      src: getUrl('portfolio-v2'),
       alt: 'project fr2dev',
     },
     title: t('Projects.project4.title'),
@@ -76,7 +77,7 @@ export const getProjects = (t: any): IProject[] => [
   {
     url: '#',
     img: {
-      src: 'http://francoisdpro.eu/assets/img/png/DWJ-projet3-min.png',
+      src: getUrl('yams'),
       alt: 'project fr2dev',
     },
     title: t('Projects.project5.title'),
@@ -86,7 +87,7 @@ export const getProjects = (t: any): IProject[] => [
   {
     url: '#',
     img: {
-      src: 'http://francoisdpro.eu/assets/img/png/DWJ-projet3-min.png',
+      src: getUrl('hairdresser'),
       alt: 'project fr2dev',
     },
     title: t('Projects.project6.title'),
@@ -96,7 +97,7 @@ export const getProjects = (t: any): IProject[] => [
   {
     url: '#',
     img: {
-      src: 'http://francoisdpro.eu/assets/img/png/DWJ-projet3-min.png',
+      src: getUrl('rickandmorty'),
       alt: 'project fr2dev',
     },
     title: t('Projects.project7.title'),
@@ -106,7 +107,7 @@ export const getProjects = (t: any): IProject[] => [
   {
     url: '#',
     img: {
-      src: 'http://francoisdpro.eu/assets/img/png/DWJ-projet3-min.png',
+      src: getUrl('coffee'),
       alt: 'project fr2dev',
     },
     title: t('Projects.project8.title'),
@@ -116,7 +117,7 @@ export const getProjects = (t: any): IProject[] => [
   {
     url: '#',
     img: {
-      src: 'http://francoisdpro.eu/assets/img/png/DWJ-projet3-min.png',
+      src: getUrl('portftolio-v1'),
       alt: 'project fr2dev',
     },
     title: t('Projects.project9.title'),
