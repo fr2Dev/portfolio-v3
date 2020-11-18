@@ -32,7 +32,10 @@ export interface DefaultThemeBase {
     tertiary: IPalette;
     card: ICard;
     discret: string;
-    newWindow: string;
+    browserNavLink: {
+      main: string;
+      active: string;
+    };
   };
 }
 

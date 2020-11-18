@@ -1,10 +1,7 @@
 import * as React from 'react';
+import { ISvg } from '../../definitions/interfaces';
 
-interface SvgComponentProps {
-  title: string;
-}
-
-const SvgComponent = ({ title, ...props }: SvgComponentProps) => {
+const SvgComponent = ({ title, ...props }: ISvg) => {
   return (
     <svg width={1706.7} height={1706.7} viewBox="0 0 1280 1280" aria-labelledby={title} {...props}>
       {title ? <title>{title}</title> : null}

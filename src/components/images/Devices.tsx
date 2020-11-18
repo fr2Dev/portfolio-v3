@@ -1,13 +1,10 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import { SvgDevices } from './styled';
+import { ISvg } from '../../definitions/interfaces';
 
-interface SvgComponentProps {
-  title: string;
-}
-
-const SvgComponent = ({ title, ...props }: SvgComponentProps) => {
+const SvgComponent = ({ title, ...props }: ISvg) => {
   return (
-    <SvgStyled
+    <SvgDevices
       width={413}
       height={244}
       viewBox="0 0 413 244"
@@ -177,46 +174,8 @@ const SvgComponent = ({ title, ...props }: SvgComponentProps) => {
           <stop offset={1} stopColor="gray" stopOpacity={0.1} />
         </linearGradient>
       </defs>
-    </SvgStyled>
+    </SvgDevices>
   );
 };
-
-const SvgStyled = styled.svg`
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  top: calc(50% - 3rem);
-  transform: translateY(-50%);
-  width: 35rem;
-  height: auto;
-
-  .fill {
-    &--primary {
-      fill: ${({ theme }) => theme.palette.primary.main};
-    }
-
-    &--tertiary {
-      fill: ${({ theme }) => theme.palette.tertiary.main};
-    }
-  }
-
-  .stroke {
-    &--secondary {
-      stroke: ${({ theme }) => theme.palette.secondary.main};
-    }
-    &--tertiary {
-      stroke: ${({ theme }) => theme.palette.tertiary.main};
-    }
-  }
-
-  .circle-tablet {
-    transform: translateY(-2px);
-  }
-
-  @media only screen and (min-width: 1440px) {
-    display: block;
-  }
-`;
 
 export default SvgComponent;

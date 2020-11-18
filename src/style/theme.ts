@@ -35,7 +35,10 @@ export const defaultTheme: DefaultTheme = {
       comments: 'lightslategray',
     },
     discret: '#D6E6FF',
-    newWindow: '#444',
+    browserNavLink: {
+      main: '#444',
+      active: '#000',
+    },
   },
 };
 
@@ -64,7 +67,10 @@ export const darkTheme: DefaultTheme = {
       },
       comments: 'lightslategray',
     },
-    newWindow: '#f9f9f9',
+    browserNavLink: {
+      main: '#f9f9f9',
+      active: '#ff8906',
+    },
   },
 };
 
@@ -101,7 +107,10 @@ export const lightTheme: DefaultTheme = {
       comments: '#5f6d7b',
     },
     discret: '#6f6f6f',
-    newWindow: '#f9f9f9',
+    browserNavLink: {
+      main: '#f9f9f9',
+      active: '#cb1c57',
+    },
   },
 };
 

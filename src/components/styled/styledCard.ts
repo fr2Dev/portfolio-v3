@@ -80,6 +80,12 @@ export const BrowserNav = styled.div`
   }
 
   a {
-    margin-left: auto;
+    &:first-of-type {
+      margin-left: auto;
+    }
+
+    & + a {
+      margin-left: 0.5rem;
+    }
   }
 `;

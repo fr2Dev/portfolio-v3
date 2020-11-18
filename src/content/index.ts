@@ -43,6 +43,7 @@ export const getProjects = (t: any): IProject[] => [
     title: t('Projects.project1.title'),
     content: t('Projects.project1.description'),
     techList: ['React', 'Typescript', 'Styled-Components', 'Weather API'],
+    github: 'https://github.com/fr2Dev/home-page',
   },
   {
     url: '#',
@@ -73,6 +74,7 @@ export const getProjects = (t: any): IProject[] => [
     title: t('Projects.project4.title'),
     content: t('Projects.project4.description'),
     techList: ['Javascript', 'SCSS', 'HTML'],
+    github: 'https://github.com/fr2Dev/portfolio2.0',
   },
   {
     url: '#',
@@ -83,6 +85,7 @@ export const getProjects = (t: any): IProject[] => [
     title: t('Projects.project5.title'),
     content: t('Projects.project5.description'),
     techList: ['React', 'Typescript', 'TVmaze API'],
+    github: 'https://github.com/fr2Dev/yams',
   },
   {
     url: '#',
@@ -103,6 +106,7 @@ export const getProjects = (t: any): IProject[] => [
     title: t('Projects.project7.title'),
     content: t('Projects.project7.description'),
     techList: ['Javascript', 'SCSS', 'HTML'],
+    github: 'https://github.com/fr2Dev/rick-and-morty',
   },
   {
     url: '#',

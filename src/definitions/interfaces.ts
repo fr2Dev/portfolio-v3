@@ -9,6 +9,7 @@ export interface IProject {
   title: string;
   content: string;
   techList: string[];
+  github?: string;
 }
 
 export interface IExperience {
@@ -25,4 +26,8 @@ export interface IExperience {
 
 export interface ISettings {
   updateTheme: (value: Theme) => void;
+}
+
+export interface ISvg {
+  title?: string;
 }

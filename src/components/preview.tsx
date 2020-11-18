@@ -10,7 +10,7 @@ interface PreviewProps {
 }
 
 const Preview = ({ data, reversed }: PreviewProps) => {
-  const { url, img, title, content, techList } = data;
+  const { url, img, title, content, techList, github } = data;
   const { src, alt } = img;
 
   return (
@@ -19,7 +19,7 @@ const Preview = ({ data, reversed }: PreviewProps) => {
         <img src={src} alt={alt} />
       </a>
       <div>
-        <Card variant="browser" externalLink={url}>
+        <Card variant="browser" externalLink={url} github={github}>
           <h5>{title}</h5>
           <p>{content}</p>
           <TechList as="ul" $wrap="wrap">
