@@ -94,9 +94,7 @@
   "Links": {
     "GotoSite": "Aller sur le site",
     "GotoGithub": "Aller sur la page",
-    "github": "mon profil github",
-    "linkedIn": "mon profil linkedIn",
-    "twitter": "mon profil twitter"
+    "myProfile": "mon profil {{name}}"
   },
   "FrontEndDev": "Développeur Front-end",
   "GetInTouch":"Me contacter",

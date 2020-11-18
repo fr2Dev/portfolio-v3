@@ -1,30 +1,9 @@
-import React from 'react';
-import { IProject, IExperience, INetwork } from '../definitions/interfaces';
-import { Github, Twitter, LinkedIn } from '../components/images';
-
-export const getLinks = (t: any) => [
-  {
-    href: '#about',
-    name: t('Navigation.About'),
-  },
-  {
-    href: '#experience',
-    name: t('Navigation.Experience'),
-  },
-  {
-    href: '#work',
-    name: t('Navigation.Work'),
-  },
-  {
-    href: '#contact',
-    name: t('Navigation.Contact'),
-  },
-];
+import { IProject } from '../definitions/interfaces';
 
 const getUrl = (name: string) => `./assets/images/thumbnails/${name}-min.png`;
 const geGithub = (repoName: string) => `https://github.com/fr2Dev/${repoName}`;
 
-export const getProjects = (t: any): IProject[] => [
+const getProjects = (t: any): IProject[] => [
   {
     url: '#',
     img: {
@@ -121,55 +100,4 @@ export const getProjects = (t: any): IProject[] => [
   },
 ];
 
-export const getExperiences = (t: any): IExperience[] => [
-  {
-    title: t('FrontEndDev'),
-    company: {
-      name: 'Filae',
-      twitter: 'https://twitter.com/filaecom',
-      period: t('Experiences.exp1.period'),
-      location: t('Experiences.exp1.place'),
-    },
-    tasks: [
-      t('Experiences.exp1.task1'),
-      t('Experiences.exp1.task2'),
-      t('Experiences.exp1.task3'),
-      t('Experiences.exp1.task4'),
-    ],
-    techs: ['React', 'JS', 'jQuery', 'SCSS', 'Wordpress', 'Photoshop'],
-  },
-  {
-    title: 'IT Developer',
-    company: {
-      name: 'Jimenez_FVA',
-      twitter: 'https://twitter.com/jimenez_fva',
-      period: t('Experiences.exp2.period'),
-      location: t('Experiences.exp2.place'),
-    },
-    tasks: [
-      t('Experiences.exp2.task1'),
-      t('Experiences.exp2.task2'),
-      t('Experiences.exp2.task3'),
-      t('Experiences.exp2.task4'),
-    ],
-    techs: ['JS', 'jQuery', 'CSS', 'PHP', 'SQL'],
-  },
-];
-
-export const getNetworks = (t: any): INetwork[] => [
-  {
-    url: 'https://github.com/fr2Dev',
-    icon: <Github />,
-    label: t('Links.github'),
-  },
-  {
-    url: 'https://www.linkedin.com/in/fran%C3%A7ois-degrincourt-a9a63572/',
-    icon: <LinkedIn />,
-    label: t('Links.linkedIn'),
-  },
-  {
-    url: 'https://twitter.com/fr2_Dev',
-    icon: <Twitter />,
-    label: t('Links.twitter'),
-  },
-];
+export default getProjects;
