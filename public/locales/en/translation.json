@@ -91,6 +91,13 @@
         "part3": ". Whether you have a question or just want to say hello, I'll try my best to get back to you!"
       }
   },
+  "Links": {
+    "GotoSite": "Go to the site",
+    "GotoGithub": "Go to the github page",
+    "github": "my github profile",
+    "linkedIn": "my linkedIn profile",
+    "twitter": "my github profile"
+  },
   "FrontEndDev": "Front End Developer",
   "GetInTouch":"Get in touch",
   "SayHi":"Say Hi",

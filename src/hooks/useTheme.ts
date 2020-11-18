@@ -13,7 +13,7 @@ const useTheme = () => {
     } else {
       updateTheme(prefDark ? 'dark' : 'default');
     }
-  }, []);
+  }, [prefDark]);
 
   const updateTheme = (theme: Theme) => {
     switch (theme) {

@@ -91,6 +91,13 @@
         "part3": ". Que vous ayez une question ou que vous vouliez simplement dire bonjour, je ferai de mon mieux pour vous répondre !"
       }
   },
+  "Links": {
+    "GotoSite": "Aller sur le site",
+    "GotoGithub": "Aller sur la page",
+    "github": "mon profil github",
+    "linkedIn": "mon profil linkedIn",
+    "twitter": "mon profil twitter"
+  },
   "FrontEndDev": "Développeur Front-end",
   "GetInTouch":"Me contacter",
   "SayHi":"Me contacter",

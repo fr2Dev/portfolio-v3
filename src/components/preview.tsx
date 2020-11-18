@@ -15,7 +15,7 @@ const Preview = ({ data, reversed }: PreviewProps) => {
 
   return (
     <Wrapper $reversed={reversed}>
-      <a href={url}>
+      <a href={url} aria-label={title} target="_blank" rel="noopener noreferrer">
         <img src={src} alt={alt} />
       </a>
       <div>

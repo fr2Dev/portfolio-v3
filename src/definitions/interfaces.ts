@@ -1,3 +1,4 @@
+import { JsxElement } from 'typescript';
 import { Theme } from './types';
 
 export interface IProject {
@@ -22,6 +23,12 @@ export interface IExperience {
   };
   tasks: string[];
   techs: string[];
+}
+
+export interface INetwork {
+  url: string;
+  label: string;
+  icon: JSX.Element;
 }
 
 export interface ISettings {

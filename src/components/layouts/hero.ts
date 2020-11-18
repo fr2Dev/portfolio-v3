@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import devices from '../../images/devices.svg';
 
 export const Hero = styled.section`
   display: grid;
@@ -18,21 +17,9 @@ export const Hero = styled.section`
     }
   }
 
-  h1 {
-    line-height: 1;
-    /* margin-top: 1rem;
-
-    @media only screen and (min-width: 768px) {
-      margin-top: 2rem;
-    } */
-  }
+  h1,
   h2 {
     line-height: 1;
-    /* margin-top: 0.5rem;
-
-    @media only screen and (min-width: 768px) {
-      margin-top: 1rem;
-    } */
   }
 
   a {

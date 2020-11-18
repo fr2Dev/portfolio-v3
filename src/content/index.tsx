@@ -1,4 +1,6 @@
-import { IProject, IExperience } from '../definitions/interfaces';
+import React from 'react';
+import { IProject, IExperience, INetwork } from '../definitions/interfaces';
+import { Github, Twitter, LinkedIn } from '../components/images';
 
 export const getLinks = (t: any) => [
   {
@@ -19,19 +21,8 @@ export const getLinks = (t: any) => [
   },
 ];
 
-// - [ ]  Init
-//     - [ ]  Home page (React, Typescript, Styled-Components) gh
-//     - [ ]  Portfolio v2 (HTML, SCSS) gh
-//     - [ ]  Natours (HTML , CSS)
-//     - [ ]  Vélo
-// - [ ]  More ...
-//     - [ ]  Yams Jest (Javascript, Jest, CSS) gh
-//     - [ ]  sandbox-typescript ⇒ rick & morty ( TVmaze API, Typescript, React) gh
-//     - [ ]  Hairdresser (Html, Scss) gh
-//     - [ ]  Sweat Café (Html, Scss) gh
-//     - [ ]  Webfirst ?  (Html, jquery, CSS)
-//     - [ ]  Portfolio v1  (Html, CSS)
 const getUrl = (name: string) => `./assets/images/thumbnails/${name}-min.png`;
+const geGithub = (repoName: string) => `https://github.com/fr2Dev/${repoName}`;
 
 export const getProjects = (t: any): IProject[] => [
   {
@@ -43,7 +34,7 @@ export const getProjects = (t: any): IProject[] => [
     title: t('Projects.project1.title'),
     content: t('Projects.project1.description'),
     techList: ['React', 'Typescript', 'Styled-Components', 'Weather API'],
-    github: 'https://github.com/fr2Dev/home-page',
+    github: geGithub('home-page'),
   },
   {
     url: '#',
@@ -74,7 +65,7 @@ export const getProjects = (t: any): IProject[] => [
     title: t('Projects.project4.title'),
     content: t('Projects.project4.description'),
     techList: ['Javascript', 'SCSS', 'HTML'],
-    github: 'https://github.com/fr2Dev/portfolio2.0',
+    github: geGithub('portfolio2.0'),
   },
   {
     url: '#',
@@ -85,7 +76,7 @@ export const getProjects = (t: any): IProject[] => [
     title: t('Projects.project5.title'),
     content: t('Projects.project5.description'),
     techList: ['React', 'Typescript', 'TVmaze API'],
-    github: 'https://github.com/fr2Dev/yams',
+    github: geGithub('yams'),
   },
   {
     url: '#',
@@ -106,7 +97,7 @@ export const getProjects = (t: any): IProject[] => [
     title: t('Projects.project7.title'),
     content: t('Projects.project7.description'),
     techList: ['Javascript', 'SCSS', 'HTML'],
-    github: 'https://github.com/fr2Dev/rick-and-morty',
+    github: geGithub('rick-and-morty'),
   },
   {
     url: '#',
@@ -162,5 +153,23 @@ export const getExperiences = (t: any): IExperience[] => [
       t('Experiences.exp2.task4'),
     ],
     techs: ['JS', 'jQuery', 'CSS', 'PHP', 'SQL'],
+  },
+];
+
+export const getNetworks = (t: any): INetwork[] => [
+  {
+    url: 'https://github.com/fr2Dev',
+    icon: <Github />,
+    label: t('Links.github'),
+  },
+  {
+    url: 'https://www.linkedin.com/in/fran%C3%A7ois-degrincourt-a9a63572/',
+    icon: <LinkedIn />,
+    label: t('Links.linkedIn'),
+  },
+  {
+    url: 'https://twitter.com/fr2_Dev',
+    icon: <Twitter />,
+    label: t('Links.twitter'),
   },
 ];

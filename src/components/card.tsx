@@ -16,12 +16,12 @@ const Card = ({ children, variant, externalLink, github }: CardProps) => {
         <BrowserNav>
           <span className="circles"></span>
           {github && (
-            <a href={github} target="_blank">
+            <a href={github} target="_blank" rel="noopener noreferrer">
               <Github />
             </a>
           )}
           {externalLink && (
-            <a href={externalLink} target="_blank">
+            <a href={externalLink} target="_blank" rel="noopener noreferrer">
               <NewWindow />
             </a>
           )}
