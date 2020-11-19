@@ -59,9 +59,9 @@ const Avatar = ({ title, titleId, ...props }: AvatarProps) => {
       <g mask="url(#prefix__a)">
         <path
           d="M132 264c66.274 0 120-53.726 120-120S198.274 24 132 24 12 77.726 12 144s53.726 120 120 120z"
-          fill="url(#prefix__paint0_linear)"
+          fill="url(#prefix__paint6_linear)"
         />
-        <path d="M252 24H12v240h240V24z" fill="url(#prefix__paint1_linear)" />
+        <path d="M252 24H12v240h240V24z" fill="url(#prefix__paint7_linear)" />
       </g>
       <mask id="prefix__b" maskUnits="userSpaceOnUse" x={0} y={0} width={264} height={264}>
         <path
@@ -215,7 +215,7 @@ const Avatar = ({ title, titleId, ...props }: AvatarProps) => {
       </g>
       <defs>
         <linearGradient
-          id="prefix__paint0_linear"
+          id="prefix__paint6_linear"
           x1={131.962}
           y1={263.724}
           x2={131.962}
@@ -227,7 +227,7 @@ const Avatar = ({ title, titleId, ...props }: AvatarProps) => {
           <stop offset={1} stopColor="gray" stopOpacity={0.1} />
         </linearGradient>
         <linearGradient
-          id="prefix__paint1_linear"
+          id="prefix__paint7_linear"
           x1={131.962}
           y1={263.724}
           x2={131.962}
