@@ -1,7 +1,9 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import { HelmetProvider } from 'react-helmet-async';
 import { GlobalStyle } from './style';
 import { useTheme } from './hooks';
+import { SEO } from './components';
 import { MainWrapper, Container } from './components/layouts';
 import {
   Header,
@@ -23,20 +25,23 @@ const App = () => {
 
   return (
     <MainWrapper className={classBrowser}>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle borderRadius={borderRadius} base={base} palette={palette} />
-        <Container className="App">
-          <Header updateTheme={updateTheme} />
-          <main>
-            <SectionHero />
-            <SectionAbout />
-            <SectionExperiences />
-            <SectionProjects />
-            <SectionContact />
-          </main>
-          <Footer />
-        </Container>
-      </ThemeProvider>
+      <HelmetProvider>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle borderRadius={borderRadius} base={base} palette={palette} />
+          <SEO />
+          <Container className="App">
+            <Header updateTheme={updateTheme} />
+            <main>
+              <SectionHero />
+              <SectionAbout />
+              <SectionExperiences />
+              <SectionProjects />
+              <SectionContact />
+            </main>
+            <Footer />
+          </Container>
+        </ThemeProvider>
+      </HelmetProvider>
     </MainWrapper>
   );
 };

@@ -12,3 +12,4 @@ export { default as ThemePicker } from './themePicker';
 export { default as LangPicker } from './langPicker';
 export { default as Settings } from './settings';
 export { default as RadioButton } from './radioButton';
+export { default as SEO } from './seo';
