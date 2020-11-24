@@ -1,0 +1,9 @@
+export { default as bike } from './bike-min.png';
+export { default as coffee } from './coffee-min.png';
+export { default as hairdresser } from './hairdresser-min.png';
+export { default as home } from './home-min.png';
+export { default as natours } from './natours-min.png';
+export { default as portfolioV1 } from './portfolio-v1-min.png';
+export { default as portfolioV2 } from './portfolio-v2-min.png';
+export { default as rickandmorty } from './rickandmorty-min.png';
+export { default as yams } from './yams-min.png';

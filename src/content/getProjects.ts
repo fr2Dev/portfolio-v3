@@ -1,6 +1,16 @@
 import { IProject } from '../definitions/interfaces';
+import {
+  bike,
+  coffee,
+  hairdresser,
+  home,
+  natours,
+  portfolioV1,
+  portfolioV2,
+  rickandmorty,
+  yams,
+} from '../images/thumbnails';
 
-const getUrl = (name: string) => `./assets/images/thumbnails/${name}-min.png`;
 const getGithub = (repoName: string) => `https://github.com/fr2Dev/${repoName}`;
 const getSite = (subDomain: string) => `https://${subDomain}.francoisdpro.eu`;
 
@@ -8,7 +18,7 @@ const getProjects = (t: any): IProject[] => [
   {
     url: getSite('home-page'),
     img: {
-      src: getUrl('home'),
+      src: home,
       alt: 'project fr2dev',
     },
     title: t('Projects.project1.title'),
@@ -19,7 +29,7 @@ const getProjects = (t: any): IProject[] => [
   {
     url: getSite('bike'),
     img: {
-      src: getUrl('bike'),
+      src: bike,
       alt: 'project fr2dev',
     },
     title: t('Projects.project2.title'),
@@ -29,7 +39,7 @@ const getProjects = (t: any): IProject[] => [
   {
     url: getSite('natours'),
     img: {
-      src: getUrl('natours'),
+      src: natours,
       alt: 'project fr2dev',
     },
     title: t('Projects.project3.title'),
@@ -39,7 +49,7 @@ const getProjects = (t: any): IProject[] => [
   {
     url: getSite('portfolio-v2'),
     img: {
-      src: getUrl('portfolio-v2'),
+      src: portfolioV2,
       alt: 'project fr2dev',
     },
     title: t('Projects.project4.title'),
@@ -50,7 +60,7 @@ const getProjects = (t: any): IProject[] => [
   {
     url: getSite('yams'),
     img: {
-      src: getUrl('yams'),
+      src: yams,
       alt: 'project fr2dev',
     },
     title: t('Projects.project5.title'),
@@ -61,7 +71,7 @@ const getProjects = (t: any): IProject[] => [
   {
     url: getSite('hairdresser'),
     img: {
-      src: getUrl('hairdresser'),
+      src: hairdresser,
       alt: 'project fr2dev',
     },
     title: t('Projects.project6.title'),
@@ -71,7 +81,7 @@ const getProjects = (t: any): IProject[] => [
   {
     url: getSite('rick-and-morty'),
     img: {
-      src: getUrl('rickandmorty'),
+      src: rickandmorty,
       alt: 'project fr2dev',
     },
     title: t('Projects.project7.title'),
@@ -82,7 +92,7 @@ const getProjects = (t: any): IProject[] => [
   {
     url: getSite('coffee'),
     img: {
-      src: getUrl('coffee'),
+      src: coffee,
       alt: 'project fr2dev',
     },
     title: t('Projects.project8.title'),
@@ -92,7 +102,7 @@ const getProjects = (t: any): IProject[] => [
   {
     url: getSite('portfolio-v1'),
     img: {
-      src: getUrl('portftolio-v1'),
+      src: portfolioV1,
       alt: 'project fr2dev',
     },
     title: t('Projects.project9.title'),
