@@ -44,13 +44,13 @@ const MenuMobile = () => {
 
   const children = (
     <nav>
-      <ButtonMenu id="toggle" open={open} onClick={() => (open ? close() : toggleNav())} />
+      <ButtonMenu id="toggle" open={open} onClick={open ? close : toggleNav} />
       <Wrapper as="ul" alignItems="center" $open={open} mobile aria-hidden={!open}>
         {links.map((link, i) => {
           const { href, name } = link;
           return (
             <ItemNav key={i.toString()}>
-              <a href={href} onClick={(e) => handleLinks(e)}>
+              <a href={href} onClick={handleLinks}>
                 {name}
               </a>
             </ItemNav>
