@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { rgba } from 'polished';
 import { normalize, reset, getCssVars } from './';
 import { DefaultTheme } from '../styled';
 
@@ -18,6 +19,19 @@ const GlobalStyle = createGlobalStyle<DefaultTheme>`
     /* *:focus {
       outline: 2px dashed yellowgreen !important;
     } */
+
+  html{
+      &::-webkit-scrollbar{
+          width: .75rem;
+      }
+      &::-webkit-scrollbar-thumb{
+          background-color: ${({ theme }) => rgba(theme.palette.primary.contrastText, 0.25)};
+          border-radius: var(--radius);
+      }
+      &::-webkit-scrollbar-track {
+          background: ${({ theme }) => theme.palette.primary.main};
+      }
+  }
 
   body {
     background-color: ${({ theme }) => theme.palette.primary.main};
