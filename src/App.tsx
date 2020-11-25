@@ -1,6 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { HelmetProvider } from 'react-helmet-async';
+import 'babel-polyfill';
 import { GlobalStyle } from './style';
 import { useTheme } from './hooks';
 import { SEO } from './components';
