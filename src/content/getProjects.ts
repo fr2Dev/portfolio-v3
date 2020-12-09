@@ -9,6 +9,7 @@ import {
   portfolioV2,
   rickandmorty,
   yams,
+  hearthstone,
 } from '../images/thumbnails';
 
 const getGithub = (repoName: string) => `https://github.com/fr2Dev/${repoName}`;
@@ -23,7 +24,7 @@ const getProjects = (t: any): IProject[] => [
     },
     title: t('Projects.project1.title'),
     content: t('Projects.project1.description'),
-    techList: ['React', 'Typescript', 'Styled-Components', 'Weather API'],
+    techList: ['React', 'Typescript', 'Styled-Components', 'Weather-API'],
     github: getGithub('home-page'),
   },
   {
@@ -34,7 +35,7 @@ const getProjects = (t: any): IProject[] => [
     },
     title: t('Projects.project2.title'),
     content: t('Projects.project2.description'),
-    techList: ['jQuery', 'CSS', 'Velib API'],
+    techList: ['jQuery', 'CSS', 'Velib-API'],
   },
   {
     url: getSite('natours'),
@@ -45,6 +46,17 @@ const getProjects = (t: any): IProject[] => [
     title: t('Projects.project3.title'),
     content: t('Projects.project3.description'),
     techList: ['SCSS', 'HTML'],
+  },
+  {
+    url: getSite('hearthstone'),
+    img: {
+      src: hearthstone,
+      alt: 'project fr2dev',
+    },
+    title: t('Projects.project10.title'),
+    content: t('Projects.project10.description'),
+    techList: ['React', 'Typescript', 'Redux', 'Styled-Components', 'Hearthstone-API'],
+    github: getGithub('hearthstone'),
   },
   {
     url: getSite('portfolio-v2'),

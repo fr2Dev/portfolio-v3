@@ -81,6 +81,10 @@
     "project9": {
       "title": "Portfolio v1",
       "description": "La première version de mon site portfolio."
+    },
+    "project10": {
+      "title": "Cartes Hearthstone",
+      "description": "Vous trouverez toutes les cartes standard du jeu Hearthstone"
     }
   },
   "Contact": {

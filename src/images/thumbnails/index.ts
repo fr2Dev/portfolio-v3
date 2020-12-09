@@ -7,3 +7,4 @@ export { default as portfolioV1 } from './portfolio-v1-min.png';
 export { default as portfolioV2 } from './portfolio-v2-min.png';
 export { default as rickandmorty } from './rickandmorty-min.png';
 export { default as yams } from './yams-min.png';
+export { default as hearthstone } from './hearthstone-min.png';
